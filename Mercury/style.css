@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url('fonts/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('fonts/Montserrat-Bold.otf');
+}
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('fonts/Montserrat-Regular.otf');
+}
+
+:root {
+    --color: #0e1a35;
+}
+
+
+html {
+    font-family: 'Roboto Regular';
+    font-size: 16px;
+    background: var(--color);
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2, h1 {
+    font-weight: normal;
+}
+
+/*------------Header start-----------*/
+
+.header {
+    min-height: 110vh;
+    background: url('images/Grid.png'),
+                url('images/Cardio.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, center;
+    background-size: 100%, 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.head {
+    min-width: 85%;
+    display: flex;
+    margin: 5.6vh auto;
+    justify-content: space-between;
+}
+
+.home {
+    padding-top: 10vh;
+    min-height: 27vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 10.5vw;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 2.5vw;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    transition: 0.5s;
+    color: #517ff5;
+}
+
+#login {
+    padding: 1.2vh 2.2vw;
+    border: solid #517ff5 1px;
+    border-radius: 2.2vw;
+    color: #517ff5;
+}
+
+.headings p {
+    padding-top: 1.5vh;
+    font-size: 2rem;
+    color: #8492af;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Roboto Thin';
+    font-size: 2.75rem;
+}
+
+.lt {
+    color: white;
+}
+
+.dk {
+    color: #0e1a35;
+}
+
+.button {
+    text-align: center;
+}
+
+.gs button {
+    color: white;
+    font-family: 'Roboto Bold';
+    background-color: #5584ff;
+    border: none;
+    border-radius: 2.7vw;
+    padding: 1.7vh 2.7vw;
+    font-size: 1em;
+}
+
+.dashboard img {
+    max-width: 40em;
+    object-fit: cover;
+}
+
+.dashboard {
+    display: block;
+    top: 15vh;
+    position: relative;
+    overflow-y: visible;
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35),
+                0px 0px 80px 0px rgba(039, 071, 144, 0.46); 
+    z-index: 150;
+}
+
+/*------------Header end-----------*/
+/*------------Features start-----------*/
+
+.features {
+    min-height: 80vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wrapper {
+   max-width: 80%; 
+}
+
+
+.graphs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-gap: 0 6.25rem;
+    grid-template-areas: 
+        "icon1 icon2 icon3"
+        "heads1 heads2 heads3"
+        "SeeMore1 SeeMore2 SeeMore3";
+}
+
+.item1 {
+    grid-area: icon1;
+}
+.item2 {
+    grid-area: heads1;
+}
+.item3 {
+    grid-area: SeeMore1;
+}
+.item6 {
+    grid-area: SeeMore2;
+}
+.item9 {
+    grid-area: SeeMore3;
+}
+
+.item4 {
+    grid-area: icon2;
+}
+
+.item7 {
+    grid-area: icon3;
+}
+
+.gritem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+.grtitle {
+    font-family: "Roboto Bold";
+    color: var(--color);
+    font-size: 1.3333rem;
+    padding: 1em 2em;
+    overflow-wrap: normal;
+}
+
+.stripe {
+    display: flex;
+    align-items: center;
+}
+
+.stripe:before,
+.stripe:after {
+    width: 12rem;
+    content: '';
+    display: block;
+    height: 1px;
+    background: #dadee7;
+}
+
+.simple {
+   color: #8492af;
+}
+
+.ft {
+    text-align: center;
+}
+
+.icon img {
+    object-fit: fill;
+    margin: 1em 4.5em;
+}
+
+.gritem button {
+    font-family: "Roboto Bold";
+    padding: 1rem 5.3rem; 
+    border: 1px solid #dadee7;
+    border-radius: 2.2vw;
+    background-color: #ffffff;
+    margin: 3em auto;
+}
+
+.gritem button a {
+    color: var(--color);
+}
+
+/*------------Features end-----------*/
+/*------------All you need start-----------*/
+
+.allYouNeed {
+    min-height: 80vh;
+    background: -moz-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%),
+                rgb(246, 247, 250);
+    background: -ms-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.ayn {
+    max-width: 90vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.screenimg img {
+    object-fit: contain;
+    width: 62vw;
+}
+
+.content {
+    min-width: 44%;
+    padding: 4rem;
+    box-sizing: border-box;
+}
+
+.dk {
+    padding-bottom: 0.6rem;
+}
+
+.content .simple {
+    padding: 0.6rem 3rem 0.6rem 0;
+}
+
+.fa-check-circle {
+    padding-right: 5px;
+}
+
+.checks {
+    color: #5886ff;
+    padding: 10px 0;
+}
+
+/*------------All you need end-----------*/
+/*------------Drag & Drop start-----------*/
+
+.drag-drop {
+    min-height: 70vh;
+    background: url('images/Grid.png'),
+                url('images/Cardio.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: 100%, 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.drag {
+    display: flex;
+    place-items: center;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.itemimg {
+    width: 100%;
+}
+
+/*------------Drag & Drop end-----------*/
+/*------------PSD start-----------*/
+/*------------PSD end-----------*/
+/*------------Pricing start-----------*/
+/*------------Pricing end-----------*/
+/*------------Footer start-----------*/
+/*------------Footer end-----------*/
