@@ -113,11 +113,13 @@
             <div class="drag wrapper">
                 <div class="items">
                     <div id="inP">
-                            <h3 class="legend" id="arrow-one">In Progress<div class="count">(3)</div></h3> 
+                            <h3 class="legend" id="arrow-one">In Progress <div class="count">(3)</div></h3> 
                         <ul>                        
                             <li class="itemimg"><img src="images/InProgress.png" alt="in progress items"></li>
-                            <li class="itemimg"><img src="images/dragging.png" alt="dragging item image"> </li>
-                            <img src="images/hand.png" alt="hand image">
+                            <li class="itemimg" id="prog">
+                                <img class="dragging" src="images/dragging.png" alt="dragging item image">
+                                <img id="hand" src="images/hand.png" alt="hand image">
+                            </li>
                         </ul>
                     </div>
                     <div id="done">

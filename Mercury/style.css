@@ -333,6 +333,7 @@ h2, h1 {
 .drag {
     display: flex;
     place-items: center;
+    margin: 10rem auto;
 }
 
 .items {
@@ -345,14 +346,36 @@ h2, h1 {
     width: 100%;
 }
 
+
+#prog {
+    position: relative;
+    height: 4.7rem;
+}
+
+.dragging {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.3rem;
+}
+
 .legend {
     color: white;
     position: relative;
+    margin: 1.9rem auto;
 }
 
 .count {
     display: inline-block;
     color: var(--color-grey);  
+}
+
+#hand {
+    width: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 98%;
+    box-shadow: #3a4866 10px 10px,
+                #3a4866 -10px -10px;
 }
 
 #arrow-one:after {
@@ -363,7 +386,6 @@ h2, h1 {
     color: var(--color-grey);
     display: inline-block;
     left: 95%;
-    /*-----test---line*/
 }
 
 /*------------Drag & Drop end-----------*/
