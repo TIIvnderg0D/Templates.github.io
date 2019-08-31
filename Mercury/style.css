@@ -323,7 +323,7 @@ h2, h1 {
     background: url('images/Grid.png'),
                 url('images/Cardio.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: 100% 0, center center;
+    background-position: 0 10%, center center;
     background-size: 100%, 100%;
     display: flex;
     align-items: center;
@@ -333,19 +333,25 @@ h2, h1 {
 .drag {
     display: flex;
     place-items: center;
-    margin: 10rem auto;
+    margin: 8rem auto;
 }
 
 .items {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-right: 10rem;   
 }
 
-.itemimg img{
+#inP {
+    margin-right: 3rem;
+}
+
+.itemimg img {
     width: 100%;
+    box-shadow: 0px 0px 80px 0px rgba(039, 071, 144, 0.46); 
+    z-index: 150;
 }
-
 
 #prog {
     position: relative;
@@ -353,9 +359,12 @@ h2, h1 {
 }
 
 .dragging {
+    width: 100%;
+    z-index: 150;
     position: absolute;
     top: 1.3rem;
     left: 1.3rem;
+    box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.76); 
 }
 
 .legend {
@@ -369,13 +378,23 @@ h2, h1 {
     color: var(--color-grey);  
 }
 
-#hand {
-    width: 2rem;
+.hand {
+    width: 1.6rem;
+    height: 1.8rem;
     position: absolute;
-    top: 100%;
+    top: 105%;
     left: 98%;
-    box-shadow: #3a4866 10px 10px,
-                #3a4866 -10px -10px;
+    background-color: rgba(132, 146, 175, 0.2);
+    box-shadow: rgba(132, 146, 175, 0.2) inset 0 0 0 5px,
+                rgba(132, 146, 175, 0.2) 0 0 0 1rem,
+                rgba(132, 146, 175, 0.2) 0 0 0 1.4rem;
+    border-radius: 50%;
+    z-index: 160;
+}
+
+#hand {
+    display: block;
+    object-fit: cover;
 }
 
 #arrow-one:after {
@@ -386,6 +405,40 @@ h2, h1 {
     color: var(--color-grey);
     display: inline-block;
     left: 95%;
+}
+
+#drop {
+    font-family: 'Roboto Medium';
+    text-align: center;
+    font-size: 1.15rem;
+    margin-top: 5px;
+    padding: 24px 40px;
+    border: dashed 1px var(--color-grey);
+    color: var(--color-grey);
+}
+
+.caption {
+    max-width: 30vw;
+
+}
+
+.caption .lt {
+    margin: 2.6rem auto;
+}
+
+.dd {
+    margin-bottom: 2.1rem;
+}
+
+[data-arrows="arrow"]::before {
+    color: #a5aec3;
+    display: block;
+    width: auto;
+    height: 13px;
+    margin-right: 1rem;
+    border: solid 1px #a5aec3;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 /*------------Drag & Drop end-----------*/

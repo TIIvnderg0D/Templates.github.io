@@ -116,9 +116,11 @@
                             <h3 class="legend" id="arrow-one">In Progress <div class="count">(3)</div></h3> 
                         <ul>                        
                             <li class="itemimg"><img src="images/InProgress.png" alt="in progress items"></li>
-                            <li class="itemimg" id="prog">
+                            <li id="prog">
                                 <img class="dragging" src="images/dragging.png" alt="dragging item image">
+                                <div class="hand">
                                 <img id="hand" src="images/hand.png" alt="hand image">
+                                    </div>
                             </li>
                         </ul>
                     </div>
@@ -126,7 +128,7 @@
                         <h3 class="legend">Completed <div class="count">(2)</div></h3>
                         <li class="itemimg"><img src="images/Done.png" alt="done items"></li>
                         <li>
-                            <p>Drop here</p>
+                            <p id="drop">Drop here</p>
                         </li>
                     </div>
                 </div>
@@ -136,8 +138,8 @@
                         labore et dolore magna aliqua. </p>
                     <p class="simple dd">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. </p>
-                    <i class="fa fa-caret-left"></i>
-                    <i class="fa fa-caret-right"></i>
+                    <a href="#done"><i data-arrows="arrow" class="fa fa-caret-left"></i></a>
+                    <a href="#done"><i data-arrows="arrow" class="fa fa-caret-right"></i></a>
                 </div>
             </div>
         </div>
