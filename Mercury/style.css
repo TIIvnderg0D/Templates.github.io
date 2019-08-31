@@ -466,8 +466,13 @@ h2, h1 {
 }
 
 .psd_caption {
-    max-width: 60vw;
+    max-width: 58vw;
     text-align: center;
+}
+
+.layout img {
+    width: 1100px;
+    height: 576px;
 }
 
 /*------------PSD end-----------*/
