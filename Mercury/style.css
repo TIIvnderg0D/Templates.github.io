@@ -408,6 +408,11 @@ h2, h1 {
     left: 95%;
 }
 
+.caption img {
+    color: var(--color-grey);
+    transform: scaleX(-1);
+}
+
 #drop {
     font-family: 'Roboto Medium';
     text-align: center;
