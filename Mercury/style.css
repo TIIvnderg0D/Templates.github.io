@@ -173,7 +173,7 @@ h2, h1 {
 }
 
 .wrapper {
-   max-width: 80%; 
+   max-width: 85%; 
 }
 
 
@@ -242,6 +242,7 @@ h2, h1 {
 
 .simple {
    color: var(--color-grey);
+   line-height: 1.3rem;
 }
 
 .ft {
@@ -271,10 +272,8 @@ h2, h1 {
 
 .allYouNeed {
     min-height: 80vh;
-    background: -moz-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%);
-    background: -webkit-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%),
-                rgb(246, 247, 250);
-    background: -ms-linear-gradient( 90deg, rgb(246,247,250) 0%, rgb(255,255,255) 100%);
+    background-color: #f6f7fa;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 0%, rgb(246,247,250) 20%);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -447,18 +446,23 @@ h2, h1 {
 /*------------PSD start-----------*/
 
 .psd {
-    background: #f6f7fa;
+    min-height: 110vh;
+    background-color: #f6f7fa;
+    background-image: linear-gradient(to bottom, rgb(246,247,250) 90%, rgb(255,255,255) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.psd .wrapper {
-    margin: 5.5rem auto;
+.psd-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
 }
 
 .dk {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .psd_header {
@@ -468,11 +472,72 @@ h2, h1 {
 .psd_caption {
     max-width: 58vw;
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .layout img {
-    width: 1100px;
-    height: 576px;
+    width: 61rem;
+    height: 32rem;
+}
+
+.pointer {
+    line-height: 3rem;
+    font-family: 'Roboto Bold';
+    font-size: 1.3rem;
+    color: var(--color-main);
+    border-bottom: solid 2px #5584ff; 
+}
+
+.pointer_wrapper {
+    min-width: 52%;
+    position: absolute;
+}
+
+.lower { 
+    left: 57%;
+    top: 54%;
+}
+
+.upper { 
+    top: 10%;
+    left: -7%;
+}
+
+.layout {
+    background-color: #f6f7fa;
+    position: relative;
+}
+
+.upper::after,
+.lower::before {
+    width: 25px;
+    height: 25px;
+    content: "";
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(85, 132, 255, 0.6);
+    background-color: rgb(85, 132, 255);
+    position: absolute; 
+}
+
+.upper::after {
+    top: 72%;
+    left: 100%;
+}
+
+.lower::before {
+    left: -4.5%;
+    top: 27%;
+}
+
+.bot {
+    text-align: end;
+}
+
+.ps {
+    margin-top: 1.5rem;
+    margin-left: 50%;
+    text-align: end;
+    max-width: 50%;
 }
 
 /*------------PSD end-----------*/
