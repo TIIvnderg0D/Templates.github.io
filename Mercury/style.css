@@ -382,7 +382,7 @@ h2, h1 {
     width: 1.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 105%;
+    top: 114%;
     left: 98%;
     background-color: rgba(132, 146, 175, 0.2);
     box-shadow: rgba(132, 146, 175, 0.2) inset 0 0 0 5px,
@@ -408,8 +408,11 @@ h2, h1 {
     left: 95%;
 }
 
-.caption img {
+.arrow {
     color: var(--color-grey);
+}
+
+.reverse {
     transform: scaleX(-1);
 }
 
@@ -425,7 +428,6 @@ h2, h1 {
 
 .caption {
     max-width: 30vw;
-
 }
 
 .caption .lt {
