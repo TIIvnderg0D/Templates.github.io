@@ -547,6 +547,78 @@ h2, h1 {
 
 /*------------PSD end-----------*/
 /*------------Pricing start-----------*/
+
+.pricing {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price {
+    text-align: center;
+}
+
+#price a {
+    font-family: 'Roboto Bold';
+    color: var(--color-main);
+    font-size: 4rem;
+}
+
+.perm {
+    font-family: 'Roboto Regular';
+    font-size: 1.3rem;
+    color: var(--color-grey);
+}
+
+.pritem {
+    box-shadow: 1px 1px 59.4px 0.6px rgba(14, 26, 53, 0.15);
+    z-index: 140;
+}
+
+.pritem h3 {
+    text-transform: uppercase;
+    color: var(--color-main);
+    font-size: 1.3rem;
+}
+
+.pritem_wrapper {
+    padding: 2.7rem 3.3rem;
+}
+
+.prc {
+    position: relative;
+}
+
+.prc::before {
+    font: normal normal normal 14px/1 FontAwesome;
+    
+    position: absolute;
+    font-size: 1.2rem;
+    color: var(--color-grey);
+    display: inline-block;
+    left: -10%;
+}
+
+.exclus::before {
+
+}
+
+.success::before {
+    color: #779fff;
+    content: "\f058";
+}
+
+.value {
+    font-size: 2.2rem;
+    align-items: center;
+}
+
+.costs {
+    display: flex;
+    justify-content: space-around;
+}
+
 /*------------Pricing end-----------*/
 /*------------Footer start-----------*/
 /*------------Footer end-----------*/
