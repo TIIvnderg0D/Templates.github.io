@@ -592,7 +592,6 @@ h2, h1 {
 
 .prc::before {
     font: normal normal normal 14px/1 FontAwesome;
-    
     position: absolute;
     font-size: 1.2rem;
     color: var(--color-grey);
@@ -601,7 +600,8 @@ h2, h1 {
 }
 
 .exclus::before {
-
+    color: #0e1a35;
+    content: "\f057";
 }
 
 .success::before {
@@ -617,7 +617,6 @@ h2, h1 {
 .costs {
     display: flex;
     justify-content: space-around;
-    /*testone*/
 }
 
 /*------------Pricing end-----------*/
