@@ -142,7 +142,7 @@ h2, h1 {
     background-color: #5584ff;
     border: none;
     border-radius: 2.7vw;
-    padding: 1.7vh 2.7vw;
+    padding: 1.5vh 3.1vw;
     font-size: 1em;
 }
 
@@ -565,6 +565,10 @@ h2, h1 {
     font-size: 4rem;
 }
 
+#price {
+    margin: 2.5rem auto;
+}
+
 .perm {
     font-family: 'Roboto Regular';
     font-size: 1.3rem;
@@ -577,36 +581,35 @@ h2, h1 {
 }
 
 .pritem h3 {
+    font-weight: 300;
     text-transform: uppercase;
     color: var(--color-main);
     font-size: 1.3rem;
 }
 
 .pritem_wrapper {
-    padding: 2.7rem 3.3rem;
+    padding: 2rem 3.3rem;
 }
 
 .prc {
     position: relative;
+    line-height: 2;
+    align-items: center;
+    display: flex;
 }
 
-.prc::before {
-    font: normal normal normal 14px/1 FontAwesome;
-    position: absolute;
-    font-size: 1.2rem;
-    color: var(--color-grey);
-    display: inline-block;
-    left: -10%;
+.prc i {
+    font-size: 1.4rem;
 }
 
-.exclus::before {
-    color: #0e1a35;
-    content: "\f057";
+.exclus i {
+    color: #f83c7b;
+    margin-right: 10px;
 }
 
-.success::before {
-    color: #779fff;
-    content: "\f058";
+.success i {
+    color: #5284ff;
+    margin-right: 5px;
 }
 
 .value {
@@ -619,6 +622,60 @@ h2, h1 {
     justify-content: space-around;
 }
 
+.prices_foot {
+    margin: 5.5rem auto;
+    max-width: 63%;
+}
+
+.pf {
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 3.8rem;
+}
+
+#jn {
+    color: white;
+    font-family: 'Roboto Bold';
+    background-color: #5584ff;
+    border: none;
+    border-radius: 2.7vw;
+    padding: 1.5vh 3.1vw;
+    font-size: 1em;
+}
+
 /*------------Pricing end-----------*/
 /*------------Footer start-----------*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_wrapper {
+    min-width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.8rem auto;
+}
+
+.footer_copywright p {
+    color: var(--color-grey);
+}
+
+.footer_menu {
+    display: flex;
+}
+
+.footer_menu li +  li {
+    margin-left: 3rem;
+}
+
+.footer_menu a {
+    color: var(--color-grey);
+}
+
+.socials a + a {
+    margin-left: 1rem;
+}
 /*------------Footer end-----------*/
