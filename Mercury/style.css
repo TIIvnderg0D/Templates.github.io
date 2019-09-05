@@ -32,7 +32,7 @@
 
 html {
     font-family: 'Roboto Regular';
-    font-size: 16px;
+    font-size: 18px;
     background: var(--color-main);
     scroll-behavior: smooth;
 }
@@ -59,7 +59,7 @@ h2, h1 {
 /*------------Header start-----------*/
 
 .header {
-    min-height: 110vh;
+    max-height: 110vh;
     background: url('images/Grid.png'),
                 url('images/Cardio.png');
     background-repeat: no-repeat, no-repeat;
@@ -233,7 +233,7 @@ h2, h1 {
 
 .stripe:before,
 .stripe:after {
-    width: 12rem;
+    width: 14rem;
     content: '';
     display: block;
     height: 1px;
@@ -382,7 +382,7 @@ h2, h1 {
     width: 1.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 114%;
+    top: 127%;
     left: 98%;
     background-color: rgba(132, 146, 175, 0.2);
     box-shadow: rgba(132, 146, 175, 0.2) inset 0 0 0 5px,
@@ -413,7 +413,7 @@ h2, h1 {
     text-align: center;
     font-size: 1.15rem;
     margin-top: 5px;
-    padding: 24px 40px;
+    padding: 1.7rem 2.2rem;
     border: dashed 1px var(--color-grey);
     color: var(--color-grey);
 }
@@ -451,7 +451,7 @@ h2, h1 {
 /*------------PSD start-----------*/
 
 .psd {
-    min-height: 110vh;
+    max-height: 110vh;
     background-color: #f6f7fa;
     background-image: linear-gradient(to bottom, rgb(246,247,250) 90%, rgb(255,255,255) 100%);
     display: flex;
@@ -477,7 +477,6 @@ h2, h1 {
 .psd_caption {
     max-width: 58vw;
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .layout img {
@@ -639,10 +638,32 @@ h2, h1 {
     background-color: #5584ff;
     border: none;
     border-radius: 2.7vw;
-    padding: 1.5vh 3.1vw;
+    padding: 1.5rem 3.1vw;
     font-size: 1em;
 }
 
+.button_stripe_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_stripe_wrapper::before,
+.button_stripe_wrapper::after {
+    width: 11rem;
+    content: '';
+    display: block;
+    height: 1px;
+    background: #dadee7;
+}
+
+.button_stripe_wrapper::after {
+    margin-left: 1.55rem;
+}
+
+.button_stripe_wrapper::before {
+    margin-right: 1.55rem;
+}
 /*------------Pricing end-----------*/
 /*------------Footer start-----------*/
 
@@ -679,3 +700,95 @@ h2, h1 {
     margin-left: 1rem;
 }
 /*------------Footer end-----------*/
+
+@media screen and (max-width: 1300px) {
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .header {
+        max-height: 90vh;
+    }
+
+    .head {
+        margin: 3.6vh auto;
+        max-height: 15vh;
+    }
+
+    .dashboard {
+        top: 10vh;
+    }
+    
+    .home {
+        padding-top: 6vh;
+    }
+
+    .psd {
+        max-height: 80vh;
+    }
+
+    .features {
+        min-height: 60vh;
+    }
+
+    .allYouNeed {
+        min-height: 60vh;
+        padding-top: 0;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .header {
+        max-height: 80vh;
+    }
+
+    .head {
+        margin: 1.6vh auto;
+        max-height: 5vh;
+    }
+
+    .dashboard {
+        top: 8vh;
+    }
+    
+    .home {
+        padding-top: 6vh;
+        min-height: 18vh;
+    }
+
+    .psd {
+        max-height: 80vh;
+    }
+
+    .features {
+        min-height: 50vh; 
+        
+    }
+
+    .allYouNeed {
+        min-height: 50vh;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
