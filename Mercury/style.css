@@ -59,7 +59,7 @@ h2, h1 {
 /*------------Header start-----------*/
 
 .header {
-    max-height: 110vh;
+    max-height: 110%;
     background: url('images/Grid.png'),
                 url('images/Cardio.png');
     background-repeat: no-repeat, no-repeat;
@@ -271,7 +271,7 @@ h2, h1 {
 /*------------All you need start-----------*/
 
 .allYouNeed {
-    min-height: 80vh;
+    min-height: 80%;
     background-color: #f6f7fa;
     background-image: linear-gradient(to bottom, rgb(255,255,255) 0%, rgb(246,247,250) 20%);
     display: flex;
@@ -318,11 +318,11 @@ h2, h1 {
 /*------------Drag & Drop start-----------*/
 
 .drag-drop {
-    max-height: 70vh;
+    max-height: 75%;
     background: url('images/Grid.png'),
                 url('images/Cardio.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: 0 10%, center center;
+    background-position: 0 3%, center center;
     background-size: 100%, 100%;
     display: flex;
     align-items: center;
@@ -382,7 +382,7 @@ h2, h1 {
     width: 1.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 127%;
+    top: 102%;
     left: 98%;
     background-color: rgba(132, 146, 175, 0.2);
     box-shadow: rgba(132, 146, 175, 0.2) inset 0 0 0 5px,
@@ -413,7 +413,7 @@ h2, h1 {
     text-align: center;
     font-size: 1.15rem;
     margin-top: 5px;
-    padding: 1.7rem 2.2rem;
+    padding: 1.4rem 2.2rem;
     border: dashed 1px var(--color-grey);
     color: var(--color-grey);
 }
@@ -451,7 +451,7 @@ h2, h1 {
 /*------------PSD start-----------*/
 
 .psd {
-    max-height: 110vh;
+    max-height: 110%;
     background-color: #f6f7fa;
     background-image: linear-gradient(to bottom, rgb(246,247,250) 90%, rgb(255,255,255) 100%);
     display: flex;
@@ -638,7 +638,7 @@ h2, h1 {
     background-color: #5584ff;
     border: none;
     border-radius: 2.7vw;
-    padding: 1.5rem 3.1vw;
+    padding: 1.5vh 3.1vw;
     font-size: 1em;
 }
 
