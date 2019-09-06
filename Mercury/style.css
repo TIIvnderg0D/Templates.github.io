@@ -300,12 +300,8 @@ h2, h1 {
 
 .content {
     min-width: 44%;
-    padding: 4rem;
+    padding: 1rem;
     box-sizing: border-box;
-}
-
-.dk {
-    padding-bottom: 0.6rem;
 }
 
 .content .simple {
@@ -361,7 +357,7 @@ h2, h1 {
 
 #prog {
     position: relative;
-    height: 4.7rem;
+    height: 4.5rem;
 }
 
 .dragging {
@@ -419,8 +415,8 @@ h2, h1 {
     font-family: 'Roboto Medium';
     text-align: center;
     font-size: 1.15rem;
-    margin-top: 5px;
-    padding: 1.4rem 2.2rem;
+    margin-top: 0.4rem;
+    padding: 1.3rem 2.2rem;
     border: dashed 1px var(--color-grey);
     color: var(--color-grey);
 }
@@ -841,16 +837,123 @@ h2, h1 {
     }
 
     .hand {
-        top: 160%;
-        left: 68%;
+        top: 158%;
+        left: 86%;
     }
 
     #drop {
-        width: 58%;
+        width: 57%;
+        padding: 2.3rem 2.2rem;
+        
+    }
+
+    #inP {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .legend {
+        width: 71%;
+        margin: 1.9rem 0;
+    }
+
+    #done .legend {
+        margin: 1.9rem auto;
+    }
+
+    .itemimg, .doneul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dragging {
+        left: 8.2rem;
+    }
+
+    .drag-drop {
+        background-position: 0 -50%, center center;
+    }
+
+    #done, #inP {
+        min-height: 27vh;
     }
 }
 
 @media screen and (max-width: 768px) {
 
+    html {
+        font-size: 8px;
+    }
+
+    .costs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pritem {
+        max-width: 50%;
+    }
+
+    #jn, #login, .gs button {
+        padding: 1rem 3.1vw;
+    }
+
+    .header {
+        max-height: 60vh;
+    }
+
+    .head {
+        margin: 1.6vh auto;
+        max-height: 3vh;
+    }
+
+    .dashboard {
+        top: 6vh;
+    }
     
+    .home {
+        padding-top: 3vh;
+        min-height: 12vh;
+    }
+
+    .allYouNeed {
+        min-height: 50vh;
+        justify-content: center;
+    }
+
+    .ayn-wrapper {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    .screenimg {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    [data-arrows="arrow"]::before {
+        padding: 3px 10px 10px 8px;
+    }
+
+    .pointer_wrapper {
+        display: static;
+    }
+
+    .upper::after,
+    .lower::before {
+        display: none;   
+    }
+    
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caption {
+        margin-top: 0;
+    }
+
 }
