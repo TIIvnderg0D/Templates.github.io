@@ -286,6 +286,13 @@ h2, h1 {
     overflow: hidden;
 }
 
+.ayn-wrapper {
+    margin: 3rem 0;
+    max-width: 90vw;
+    display: flex;
+    overflow: hidden;
+}
+
 .screenimg img {
     object-fit: contain;
     width: 62vw;
@@ -791,4 +798,59 @@ h2, h1 {
         width: 50px;
         height: 50px;
     }
+
+    .graphs {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12vh;
+    }
+
+    .ft {
+        max-width: 60%;
+    }
+
+    .stripe::before,
+    .stripe::after {
+        display: none;
+    }
+    
+    .item4::before,
+    .item6::after {
+        width: 80%;
+        content: '';
+        display: block;
+        height: 1px;
+        background: #dadee7;                   
+    }
+
+    .drag {
+        flex-direction: column;  
+    }
+
+    .caption {
+        margin-top: 10%;
+        max-width: 90vw;
+    }
+
+    .items {
+        margin-right: 0;
+    }
+
+    .itemimg img, .dragging {
+        width: 70%;
+    }
+
+    .hand {
+        top: 160%;
+        left: 68%;
+    }
+
+    #drop {
+        width: 58%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    
 }
