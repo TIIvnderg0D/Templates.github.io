@@ -1080,6 +1080,10 @@ h2, h1 {
         padding: 2.7rem 3rem;
     }
 
+    .done {
+        margin-top: 5rem;
+    }
+
     .caption {
         text-align: center;
     }
