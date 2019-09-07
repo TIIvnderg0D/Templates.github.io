@@ -70,6 +70,10 @@ h2, h1 {
     place-items: center;
 }
 
+.collapsed {
+    display: none;
+}
+
 .head {
     min-width: 85%;
     display: flex;
@@ -751,6 +755,14 @@ h2, h1 {
         width: 50px;
         height: 50px;
     }
+
+    .upper::after {
+        top: 62%;
+    }
+    
+    .lower::before {
+        top: 24%;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -837,14 +849,13 @@ h2, h1 {
     }
 
     .hand {
-        top: 158%;
-        left: 86%;
+        top: 161%;
+        left: 87%;
     }
 
     #drop {
         width: 57%;
         padding: 2.3rem 2.2rem;
-        
     }
 
     #inP {
@@ -880,6 +891,14 @@ h2, h1 {
     #done, #inP {
         min-height: 27vh;
     }
+
+    .upper::after {
+        top: 60%;
+    }
+    
+    .lower::before {
+        top: 22%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -888,13 +907,40 @@ h2, h1 {
         font-size: 8px;
     }
 
+    .logo {
+        max-width: 15.5vw;
+    }
+
+    .collapsed {
+        display: block;
+        font-size: 18px;
+        color: var(--color-grey);
+    }
+
+    #btn-menu {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
     .costs {
         flex-direction: column;
         align-items: center;
     }
 
     .pritem {
-        max-width: 50%;
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .pritem h3 {
+        font-size: 2rem;
+    }
+
+    #price a {
+        font-size: 8rem;
     }
 
     #jn, #login, .gs button {
@@ -935,25 +981,183 @@ h2, h1 {
     }
 
     [data-arrows="arrow"]::before {
-        padding: 3px 10px 10px 8px;
-    }
-
-    .pointer_wrapper {
-        display: static;
-    }
-
-    .upper::after,
-    .lower::before {
-        display: none;   
+        font-size: 18px;
+        padding: 5px 9px 8px 8px;
     }
     
     .layout {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .caption {
         margin-top: 0;
     }
 
+    .layout img {
+        margin-top: 2rem;
+    }
+
+    .pointer_wrapper {
+        position: relative;
+        min-width: 90%;
+        line-height: 2rem;
+    }
+
+    .upper::before,
+    .lower::before {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        content: "";
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px rgba(85, 132, 255, 0.6);
+        background-color: rgb(85, 132, 255);
+        position: absolute;
+    }   
+
+    .pointer {
+        font-size: 16px;
+    }
+
+    .upper {
+        left: 10%;
+        top: 0%;
+        order: 1;
+    }
+
+    .lower {
+        left: 10%;
+        top: 0%;
+        order: 2;
+    }
+
+    .upper::before,
+    .lower::before {
+        left: -8%;
+        top: 65%;
+    }
+
+    .ps {
+        display: none;
+    }
+
+    .bot {
+        text-align: start;
+    }
+
+    .upper::after {
+        display: none;   
+    }
+
+    .price {
+        margin-top: 10vh;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .prices_foot {
+        max-width: 95%;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+
+    .hand {
+        top: 195%;
+        left: 86%;
+    }
+
+    .dragging {
+        left: 9.2rem;
+    }
+
+    #drop {
+        padding: 2.7rem 3rem;
+    }
+
+    .caption {
+        text-align: center;
+    }
+
+    .layout img {    
+        width: 300px;
+        height: 150px;
+    }
+
+    .screenimg img {
+        width: 100vw;
+    }
+
+    .pointer_wrapper {
+        min-width: 80%;
+    }
+
+    .footer_wrapper {
+        flex-direction: column;
+    }
+
+    .footer_menu {
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .lt {
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .gs button {
+        padding: 0.5rem 5.1vw;
+    }
+
+    .dashboard img {
+        max-width: 70vw;
+    }
+
+    .pritem {
+        font-size: 10px;
+    }
+    
+    .layout img {    
+        width: 200px;
+        height: 100px;
+    }
+
+    .upper::before,
+    .lower::before {
+        width: 10px;
+        height: 10px;
+        left: -12%;
+        top: 80%;
+    }   
+
+    .pointer_wrapper {
+        min-width: 85%;
+    }
+
+    .button_stripe_wrapper::before,
+    .button_stripe_wrapper::after {
+        width: 8rem;
+    }   
+
+    .dragging {
+        left: 7rem;
+    }
+
+    .hand {
+        left: 87%;
+        top: 136%;
+    }
+
+    #drop {
+        padding: 2rem 2rem;
+    }
 }
