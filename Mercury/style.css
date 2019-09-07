@@ -962,7 +962,7 @@ h2, h1 {
     
     .home {
         padding-top: 3vh;
-        min-height: 12vh;
+        min-height: 15vh;
     }
 
     .allYouNeed {
@@ -1078,6 +1078,10 @@ h2, h1 {
 
     #drop {
         padding: 2.7rem 3rem;
+    }
+
+    #done {
+        margin-top: 5rem;
     }
 
     .caption {
