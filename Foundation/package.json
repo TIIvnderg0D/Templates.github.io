@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/TIIvnderg0D/Templates.github.io/issues"
   },
-  "homepage": "https://github.com/TIIvnderg0D/Templates.github.io#readme"
+  "homepage": "https://github.com/TIIvnderg0D/Templates.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-sass": "^4.0.2"
+  }
 }
