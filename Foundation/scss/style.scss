@@ -1,6 +1,97 @@
-@import 'normalize.css';
+@import 'normalize.scss';
 
-* {
-    padding: 0;
-    margin: 0;
+/* ======== Mixins ========*/
+
+@mixin font-montserrat {
+    font-family: 'Montserrat', sans-serif;
 }
+
+// ======== / Mixins ======== //
+
+li {
+    list-style-type: none;
+}
+
+.section-inner {
+    width: 61%;
+    height: 100%;
+    max-width: 1172px;
+    
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.section-outer {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+   //color: white;
+   text-decoration: none;  
+}
+
+html {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
+// ========== Header ========= //
+
+.header {
+
+    height: 826px;
+
+    i {
+        font-size: 1.6rem;
+    }
+
+    &__top__wrapper {
+        height: 17%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__top__icon img {
+        width: 5.9rem;
+        height: 5.9rem;
+        object-fit: cover;
+    }
+
+    &__top__menu {
+        display: flex;
+        place-items: center;
+    }
+
+    &__section {
+        height: 71%;
+    }
+
+}
+
+// ========== / Header ========= //
+
+// ========== Nav ========= //
+
+
+
+// ========== / Nav ========= //
+
+// ========== Main ========= //
+
+// ========== Section2 ========= //
+// ========== / Section2 ========= //
+// ========== Section3 ========= //
+// ========== / Section3 ========= //
+// ========== Section4 ========= //
+// ========== / Section4 ========= //
+// ========== Section5 ========= //
+// ========== / Section5 ========= //
+
+// ========== / Main ========= //

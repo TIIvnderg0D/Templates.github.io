@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a583a3f9d.js"></script>
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/all.min.css">
@@ -14,18 +15,35 @@
     <!------------Header-------------->
 
    <header class="section-outer header">
-        <div class="section-inner">
-            <div class="header__icon">
-                <img src="./images/logo.png" alt="icon logo">
-            </div>
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#" class="menu"><i class="fas fa-bars"></i></a></li>
+        <div class="section-inner section-inner__header">
+            <div class="header__top__wrapper">
+                <div class="header__top__icon">
+                    <a href="#"></a><img src="./images/logo.png" alt="icon logo"></a>
+                </div>
+                <ul class="header__top__menu">
+                    <li class="header__top__menu-item"><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="header__top__menu-item"><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="header__top__menu-item"><a href="#" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="header__top__menu-item"><a href="#" class="menu"><i class="fas fa-bars"></i></a></li>
                 </ul>
             </div>
+            <div class="header__section">
+                <div class="header__section__main mainheader_like">
+                    <h2 class="header__section__main-header">Building the
+                        world around us</h2>
+                    <p class="header__section__main-text">Still other clients have reserved for capital
+                        improvement projects and will work directly with our Design and Engineering team.</p>
+                    <a href="#" class="header__section__main-readmore">Read More</a>
+                </div>
+                <div class="header__section__slider slider-sqare">
+                    <p class="header__section__slider-content">01<span class="small">/03</span></p>
+                </div>
+                <div class="header__section__video cent-icon">
+                    <i class="far fa-play-circle"></i>
+                    <p class="header__section__video-text">Company video</p>
+                </div>
+            </div>
+        
         </div>
    </header>
 
@@ -35,6 +53,10 @@
 
    <nav class="nav">
         <div class="nav__wrapper">
+            <div class="nav__wrapper__heading">
+                <h3>Navigation</h3>
+                <i class="fas fa-times"></i>
+            </div>
             <ul class="nav__wrapper__menu">
                 <li class="nav__wrapper__menu__item">Home</li>
                 <li class="nav__wrapper__menu__item">Services
@@ -80,29 +102,6 @@
    <!-----------Main--------------->
    
    <main class="main">
-
-    <!--======== Section 1 ==========-->
-
-    <section class="section-outer section-block1">
-        <div class="section-inner">
-            <div class="section-block1__main mainheader_like">
-                <h2 class="section-block1__main-header">BUILDING THE 
-                        WORLD AROUND US</h2>
-                <p class="section-block1__main-text">Still other clients have reserved for capital 
-                    improvement projects and will work directly with our Design and Engineering team.</p>
-                <a href="#" class="section-block1__main-readmore">Read More</a>
-            </div>
-            <div class="section-block1__slider slider-sqare">
-                <p class="section-block1__slider-content">01<span class="small">/03</span></p>
-            </div>
-            <div class="section-block1__video cent-icon">
-                <i class="far fa-play-circle"></i>
-                <p class="section-block1__video-text">Company video</p>
-            </div>
-        </div>
-    </section>  
-
-    <!--======== /Section 1 ==========-->
 
     <!--======== Section 2 ===========-->
 
@@ -231,7 +230,7 @@
            </div>  
            <div class="section-block4__news">
                <h2 class="section-block4__news-header">News</h2>
-               <date>12 february, 2015</date>
+               <time datetime="2015-02-12">12 february, 2015</time>
                <p class="section-block4__news-text">Project Design and Engineering Services</p>
                <p class="section-block4__news-comments">23 comments</p>
            </div>   
