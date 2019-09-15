@@ -1,22 +1,160 @@
 @import 'normalize.scss';
 
+// ========  Variables ======== //
+
+:root {
+    --color-yellow: #ffe400;
+    --color-blue: #2297d8;
+    --color-black: #363636;
+
+}
+
+// ======== / Variables ======== //
+
 /* ======== Mixins ========*/
 
 @mixin font-montserrat {
     font-family: 'Montserrat', sans-serif;
 }
 
+@mixin for-phone-only {
+    @media screen and (max-width: 479px) { @content; }
+  }
+
+@mixin for-bigscreen-phone {
+    @media screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+
+@mixin for-tablet-portrait-up {
+    @media screen and (min-width: 600px) and (max-width: 899px) { @content; }
+  }
+
+@mixin for-tablet-landscape-up {
+    @media screen and (min-width: 900px) and (max-width: 1199px) { @content; }
+  }
+
+@mixin for-desktop-up {
+    @media screen and (min-width: 1200px) and (max-width: 1800px) { @content; }
+  }
+
+@mixin for-big-desktop-up {
+    @media screen and (min-width: 1800px)  { @content; }
+  } 
+
+@mixin article-block {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        width: 60%;
+        text-transform: uppercase;
+        color: var(--color-black);
+        font-weight: 700;
+        margin: 0;
+
+        @include for-phone-only {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
+    }
+
+    h2:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid var(--color-black);
+        content: ""; 
+        display: inline-block;
+    }
+
+    p {
+        color: var(--color-black);
+        line-height: 1.9;
+
+        @include for-phone-only {
+            line-height: 1.2;
+        }
+    }
+
+    a {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: white;
+        background-color: var(--color-black);
+        padding: 1.22em 1.8em;
+        text-transform: uppercase;
+        align-self: flex-start;
+    }
+       
+}
+
+@mixin slider-square {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+
+    p {
+        justify-content: center;
+        position: relative;
+        color: var(--color-black);
+        font-size: 3rem;
+        letter-spacing: 3px;
+        text-align: center;
+        display: flex;
+        line-height: 0.9; 
+    }
+
+    p::before,
+    p::after {
+        cursor: pointer;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 4rem;
+        color: #6c6c6c;
+        position: absolute;
+        left: 50%;
+    }
+
+    p::after {
+        top: 5.4rem;  
+        content: "\f0d9";
+        
+        @include for-phone-only {
+            left: 5.4rem; 
+            top: 0;
+        }
+
+    }
+
+    p::before {
+        bottom: 5.4rem; 
+        content: "\f0da"; 
+
+        @include for-phone-only {
+            bottom: 0;
+            left: 65%;
+            right: 5.4rem; 
+        }
+    }
+
+    .small {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin cent-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 // ======== / Mixins ======== //
 
-:root {
-    --color-yellow: #ffe400;
-    --color-blue: #2297d8;
-    --color-black: #363636;
-}
-
-li {
-    list-style-type: none;
-}
+// ======== General ======== //
 
 .section-inner {
     width: 61%;
@@ -28,16 +166,27 @@ li {
         flex-direction: column;
         justify-content: space-between;
     }
+
+    @include for-phone-only {
+        width: 95%;
+    }
+
+    @include for-bigscreen-phone {
+        width: 91%;
+    }
+
+    @include for-tablet-portrait-up  {
+        width: 91%;
+    }
+
+    @include for-tablet-landscape-up  {
+        width: 81%;
+    }
 }
 
 .section-outer {
     display: flex;
     justify-content: center;
-}
-
-a {
-   //color: white;
-   text-decoration: none;  
 }
 
 html {
@@ -47,17 +196,41 @@ html {
     padding: 0;
 }
 
+a {
+   color: white;
+   text-decoration: none;  
+}
+
 ul {
     padding-inline-start: 0;
 }
+
+li {
+    list-style-type: none;
+}
+
+// ======== / General ======== //
 
 // ========== Header ========= //
 
 .header {
 
     height: 826px;
-    background-image: url("/images/centenario.pg"),
-    ;
+    background: url("/images/centenario.png"),
+                      url("/images/gt86.png"); 
+    background-repeat: no-repeat, no-repeat;
+    background-position: -47.5% 0, 200% 0;
+
+    @media screen and (min-width: 1200px) {
+        background: url("/images/centenario.png"),
+                      url("/images/gt86.png"); 
+        background-repeat: no-repeat, no-repeat;
+        background-position: -100% 0, 150% 0;
+    }
+
+    @include for-tablet-portrait-up  {
+        background: url("/images/centenario.png") no-repeat 50% 0;
+    }
 
     i {
         font-size: 1.5em;
@@ -85,31 +258,87 @@ ul {
 
     &__section {
         height: 71%;
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 50% 50%;
 
         &__main {
-            padding: 2.7rem 2.1rem;
             background-color: var(--color-yellow);
+            padding: 2.7rem 2.1rem;
+            grid-column: 1;
+            grid-row: 1;
+            @include article-block;
+        }
 
-            &-header {
-                max-width: 50%;
-                font-size: 2rem;
-                text-transform: uppercase;
-                color: var(--color-black);
-                font-weight: 700;
+        &__slider {
+            @include slider-square;
+            background-color: white;
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        &__video {
+            @include cent-icon;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-blue);
+            grid-column: 2;
+            grid-row: 2;
+
+            i {
+                font-size: 6.5rem;
             }
 
             &-text {
-                color: var(--color-black);
-                line-height: 1.9;
-            }
-
-            &-readmore {
+                line-height: 1.5;
+                text-transform: uppercase;
                 font-size: 0.8rem;
             }
         }
     }
 
+    @media screen and (min-width: 480px) {
     
+        &__section {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 60% 40%;
+
+            &__main {
+                grid-column: span 2;
+            }
+
+            &__slider {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }   
+    }
+
+
+
+    @media screen and (max-width: 479px) {
+    
+        &__section {
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 25% 25%;
+
+            &__main {
+                grid-column: 1;
+            }
+
+            &__slider {
+                
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            &__video {
+                grid-row: 3;
+                grid-column: 1;
+            }
+        }
+
+    }
 
 }
 
