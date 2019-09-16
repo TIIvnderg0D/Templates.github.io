@@ -2,12 +2,20 @@
 
 // ========  Variables ======== //
 
-:root {
-    --color-yellow: #ffe400;
-    --color-blue: #2297d8;
-    --color-black: #363636;
+    $color-yellow: #ffe400;
+    $color-blue: #2297d8;
+    $color-black: #363636;
 
-}
+    $screen-phone: 480px;
+    $screen-tablet: 600px;
+    $screen-tablet-landscape: 900px;
+    $screen-desktop: 1200px;
+    $screen-big-desktop: 1800px;
+
+    $screen-phone-max: 599px;
+    $screen-tablet-max: 899px;
+    $screen-tablet-landscape-max: 1199px;
+    $screen-desktop-max: 1799px;
 
 // ======== / Variables ======== //
 
@@ -17,35 +25,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-@mixin for-phone-only {
-    @media screen and (max-width: 479px) { @content; }
-  }
+@mixin article-block($color) {
 
-@mixin for-bigscreen-phone {
-    @media screen and (min-width: 480px) and (max-width: 599px) { @content; }
-  }
-
-@mixin for-tablet-portrait-up {
-    @media screen and (min-width: 600px) and (max-width: 899px) { @content; }
-  }
-
-@mixin for-tablet-landscape-up {
-    @media screen and (min-width: 900px) and (max-width: 1199px) { @content; }
-  }
-
-@mixin for-desktop-up {
-    @media screen and (min-width: 1200px) and (max-width: 1800px) { @content; }
-  }
-
-@mixin for-big-desktop-up {
-    @media screen and (min-width: 1800px)  { @content; }
-  } 
-
-@mixin article-block {
-
+    background-color: $color;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;   
 
     h2 {
         display: flex;
@@ -53,11 +38,11 @@
         font-size: 2rem;
         width: 60%;
         text-transform: uppercase;
-        color: var(--color-black);
+        color: $color-black;
         font-weight: 700;
         margin: 0;
 
-        @include for-phone-only {
+        @media screen and (max-width: $screen-phone) {
             font-size: 1.5rem;
             width: 90%; 
         }
@@ -66,16 +51,16 @@
     h2:after {
         width: 40px;
         padding-top: 1.21rem; 
-        border-bottom: 5px solid var(--color-black);
+        border-bottom: 5px solid $color-black;
         content: ""; 
         display: inline-block;
     }
 
     p {
-        color: var(--color-black);
+        color: $color-black;
         line-height: 1.9;
 
-        @include for-phone-only {
+        @media screen and (max-width: $screen-phone) {
             line-height: 1.2;
         }
     }
@@ -84,10 +69,51 @@
         font-size: 0.8rem;
         font-weight: 400;
         color: white;
-        background-color: var(--color-black);
+        background-color: $color-black;
         padding: 1.22em 1.8em;
         text-transform: uppercase;
         align-self: flex-start;
+    }
+       
+}
+
+@mixin arrow-block {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+
+    h3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        width: 60%;
+        color: $color-black;
+        font-weight: 700;
+        margin: 0;
+
+        @media screen and (max-width: $screen-phone) {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
+    }
+
+    h3:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+        display: inline-block;
+    }
+
+    p {
+        color: $color-black;
+        line-height: 1.9;
+
+        @media screen and (max-width: $screen-phone) {
+            line-height: 1.2;
+        }
     }
        
 }
@@ -96,11 +122,12 @@
     display: flex;
     flex-direction: column;
     place-content: center;
+    background-color: white;
 
     p {
         justify-content: center;
         position: relative;
-        color: var(--color-black);
+        color: $color-black;
         font-size: 3rem;
         letter-spacing: 3px;
         text-align: center;
@@ -122,7 +149,7 @@
         top: 5.4rem;  
         content: "\f0d9";
         
-        @include for-phone-only {
+        @media screen and (max-width: $screen-phone) {
             left: 5.4rem; 
             top: 0;
         }
@@ -133,7 +160,7 @@
         bottom: 5.4rem; 
         content: "\f0da"; 
 
-        @include for-phone-only {
+        @media screen and (max-width: $screen-phone) {
             bottom: 0;
             left: 65%;
             right: 5.4rem; 
@@ -145,7 +172,8 @@
     }
 }
 
-@mixin cent-icon {
+@mixin cent-icon($color) {
+    background-color: $color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,24 +195,18 @@
         justify-content: space-between;
     }
 
-    @include for-phone-only {
-        width: 95%;
-    }
-
-    @include for-bigscreen-phone {
+    @media screen and (max-width: $screen-phone) {
         width: 91%;
     }
 
-    @include for-tablet-portrait-up  {
-        width: 91%;
-    }
-
-    @include for-tablet-landscape-up  {
+    @media screen and (min-width: $screen-phone) and (max-width: $screen-big-desktop) {
         width: 81%;
     }
+
 }
 
 .section-outer {
+    background: linear-gradient(to right, #f5f5f5 97%, #e6e3e3 100%);
     display: flex;
     justify-content: center;
 }
@@ -219,17 +241,17 @@ li {
     background: url("/images/centenario.png"),
                       url("/images/gt86.png"); 
     background-repeat: no-repeat, no-repeat;
-    background-position: -47.5% 0, 200% 0;
+    background-position: -47.5% 0, 100% 0;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (max-width: $screen-desktop) {
+        background: url("/images/centenario.png") no-repeat 50% 0;
+    }
+
+    @media screen and (min-width: $screen-desktop) and (max-width: $screen-big-desktop) {
         background: url("/images/centenario.png"),
                       url("/images/gt86.png"); 
         background-repeat: no-repeat, no-repeat;
-        background-position: -100% 0, 150% 0;
-    }
-
-    @include for-tablet-portrait-up  {
-        background: url("/images/centenario.png") no-repeat 50% 0;
+        background-position: 0 0, 150% 0;
     }
 
     i {
@@ -254,6 +276,23 @@ li {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: $screen-tablet-landscape) {
+            display: none;
+        }
+
+        &__hidden {
+            display: none;
+
+            @media screen and (max-width: $screen-tablet-landscape) {
+                display: block;
+
+                a {
+                    font-size: 24px;
+                }
+            }
+
+        }
     }
 
     &__section {
@@ -263,25 +302,22 @@ li {
         grid-template-rows: 50% 50%;
 
         &__main {
-            background-color: var(--color-yellow);
+            @include article-block($color-yellow);
             padding: 2.7rem 2.1rem;
             grid-column: 1;
             grid-row: 1;
-            @include article-block;
         }
 
         &__slider {
             @include slider-square;
-            background-color: white;
             grid-column: 3;
             grid-row: 1;
         }
 
         &__video {
-            @include cent-icon;
+            @include cent-icon($color-blue);
             cursor: pointer;
             color: white;
-            background-color: var(--color-blue);
             grid-column: 2;
             grid-row: 2;
 
@@ -297,7 +333,7 @@ li {
         }
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {
     
         &__section {
             grid-template-columns: 50% 50%;
@@ -316,7 +352,7 @@ li {
 
 
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: $screen-phone) {
     
         &__section {
             grid-template-columns: 100%;
@@ -346,13 +382,42 @@ li {
 
 // ========== Nav ========= //
 
-
+.nav {
+    display: none;
+}
 
 // ========== / Nav ========= //
 
 // ========== Main ========= //
 
 // ========== Section2 ========= //
+
+.section-block2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+
+    &__heading {
+        @include article-block(white);
+        justify-content: flex-start;
+        padding: 2rem 2.1rem;
+    }
+
+    [class*="-arrow"] {
+        @include arrow-block;
+        padding: 2.1rem;
+    }
+
+    &__slider {
+        @include slider-square;
+        
+        p::after {
+            color: $color-yellow;
+        }
+    }
+}
+
 // ========== / Section2 ========= //
 // ========== Section3 ========= //
 // ========== / Section3 ========= //
