@@ -178,6 +178,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+
+    i {
+        font-size: 6.5rem;
+    }
+
+    &-text {
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08px;
+    }
+
+    @media screen and (max-width: $screen-phone)  {
+        
+        i {
+            font-size: 4rem;
+        }
+    }
+    
 }
 
 // ======== / Mixins ======== //
@@ -315,20 +336,9 @@ li {
 
         &__video {
             @include cent-icon($color-blue);
-            cursor: pointer;
             color: white;
             grid-column: 2;
             grid-row: 2;
-
-            i {
-                font-size: 6.5rem;
-            }
-
-            &-text {
-                line-height: 1.5;
-                text-transform: uppercase;
-                font-size: 0.8rem;
-            }
         }
     }
 
@@ -390,11 +400,10 @@ li {
 .section-block2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: 50% 50%;
     grid-auto-flow: row;
 
     &__heading {
-        min-height: 290px;
         @include article-block(white);
         justify-content: flex-start;
         padding: 2rem 2.1rem;
@@ -446,6 +455,7 @@ li {
 
     @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {     
         grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(4, 400px);
 
         i {
             display: none;
@@ -455,25 +465,147 @@ li {
     @media screen and (max-width: $screen-desktop) { 
         &__slider {
             grid-row: 1;
+            order: 2;
+        }
+
+        &__heading {
+            grid-row: 1;
+            order: 1;
+        }
+
+        .right-arrow {
+            order: 5;
+        }
+
+        .block2-image3 {
+            order: 4;
         }
     } 
 
     @media screen and (max-width: $screen-tablet) {  
         grid-template-columns: 100%;
+        grid-template-rows: repeat(auto-fill, minmax(200px, 290px));
+
+        &__heading {
+            justify-content: center;
+        }
 
         &__slider {
             grid-row: 2;
+            min-height: 250px;
         }
 
         i {
             display: none;
         }
     }
-    
+
+    @media screen and (max-width: $screen-phone) {  
+        &__slider {
+            min-height: 150px;
+        }
+    }
 }
 
 // ========== / Section2 ========= //
+
 // ========== Section3 ========= //
+
+.section-block3 {
+
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    min-height: 293px;
+
+    .pdf {
+        @include cent-icon($color-yellow);
+    }
+    
+    .contact-us {
+        color: white;
+    }
+
+    &__square {
+        @include cent-icon($color-blue);
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        background-image: url('/images/gt86.png');
+        background-position-x: 10%; 
+        
+        &-form {
+            width: 100%;
+            border-bottom: 1px solid white;
+            font-size: 1.3rem;
+            line-height: 2.4;
+            white-space: nowrap;
+
+            input, button {
+                border: none;
+                background-color: inherit;
+                color: white;
+            }
+
+            input::placeholder {
+                color: white;
+            }
+
+            input {
+                width: 95%;
+            }
+
+            button {
+                padding: 0;
+            }
+
+            i {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__form-wrapper {
+        width: 1192px;
+        background-image: url('/images/gt86.png');
+    }
+
+    @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {     
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(2, 300px);
+
+        &__search {
+            grid-column: span 2;
+
+            &-form {
+
+                input {
+                    width: 96.5%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-phone) {     
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 150px);
+
+        &__search {
+
+            &-form {
+
+                input {
+                    font-size: 1rem;
+                    width: 92%;
+                }
+            }
+        }
+    }
+
+}
+
 // ========== / Section3 ========= //
 // ========== Section4 ========= //
 // ========== / Section4 ========= //
