@@ -5,6 +5,7 @@
     $color-yellow: #ffe400;
     $color-blue: #2297d8;
     $color-black: #363636;
+    $color-text: #a0a0a0;
 
     $screen-phone: 480px;
     $screen-tablet: 600px;
@@ -36,7 +37,7 @@
         display: flex;
         flex-direction: column;
         font-size: 2rem;
-        width: 60%;
+        width: 73%;
         text-transform: uppercase;
         color: $color-black;
         font-weight: 700;
@@ -73,8 +74,7 @@
         padding: 1.22em 1.8em;
         text-transform: uppercase;
         align-self: flex-start;
-    }
-       
+    }   
 }
 
 @mixin arrow-block {
@@ -88,7 +88,7 @@
         display: flex;
         flex-direction: column;
         font-size: 1.3rem;
-        width: 60%;
+        width: 75%;
         color: $color-black;
         font-weight: 700;
         margin: 0;
@@ -108,7 +108,7 @@
     }
 
     p {
-        color: $color-black;
+        color: $color-text;
         line-height: 1.9;
 
         @media screen and (max-width: $screen-phone) {
@@ -153,7 +153,6 @@
             left: 5.4rem; 
             top: 0;
         }
-
     }
 
     p::before {
@@ -178,7 +177,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
 
     i {
@@ -199,6 +197,37 @@
         }
     }
     
+}
+
+@mixin critic-block($color) {
+
+    background-color: $color;
+    padding: 1.9rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    &__text p {
+        color: $color-text;
+        line-height: 1.6rem;
+        text-align: center;
+    }
+
+    &__author-name {
+        font-weight: 700;
+    }
+
+    i {
+        color:#ffae00;
+    }
+
 }
 
 // ======== / Mixins ======== //
@@ -407,6 +436,10 @@ li {
         @include article-block(white);
         justify-content: flex-start;
         padding: 2rem 2.1rem;
+        
+        p {
+            color: $color-text;
+        }
     }
 
     [class*="-arrow"] {
@@ -529,12 +562,19 @@ li {
         @include cent-icon($color-blue);
     }
 
-    &__search {
+    &__form-wrapper {
+        width: 959px;
+        max-width: 49.5vw;
         display: flex;
         align-items: center;
-        padding: 0 30px;
         background-image: url('/images/gt86.png');
         background-position-x: 10%; 
+    }
+
+    &__search {
+        max-width: 525px;
+        width: 72%;
+        padding: 0 30px;
         
         &-form {
             width: 100%;
@@ -567,18 +607,18 @@ li {
         }
     }
 
-    &__form-wrapper {
-        width: 1192px;
-        background-image: url('/images/gt86.png');
-    }
-
     @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {     
         grid-template-columns: 50% 50%;
         grid-template-rows: repeat(2, 300px);
 
-        &__search {
+        &__form-wrapper {
+            max-width: 81vw;
             grid-column: span 2;
+        }
 
+        &__search {
+            max-width: 95%;
+            width: 93%;
             &-form {
 
                 input {
@@ -592,8 +632,14 @@ li {
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 150px);
 
-        &__search {
+        &__form-wrapper {
+            max-width: none;
+            width: 100%;
+        }
 
+        &__search {
+            max-width: 95%;
+            width: 93%;
             &-form {
 
                 input {
@@ -607,7 +653,59 @@ li {
 }
 
 // ========== / Section3 ========= //
+
 // ========== Section4 ========= //
+
+.section-block4 {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(293px, 1fr));
+
+    &__ratings {
+        @include critic-block(white);
+        grid-column: span 2;
+    }
+
+    .milk::after {
+        position: absolute;
+        top: 90%;
+        left: 51%;
+        width: 27px;
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+    }
+
+    .milk::before {
+        position: absolute;
+        top: 90%;
+        left: 44%;
+        width: 27px;
+        border-bottom: 5px solid $color-text;
+        content: ""; 
+    }
+
+    &__slogan {
+        @include article-block(white);
+        grid-column: span 2;
+        padding: 2.7rem 2.1rem;
+        background: url('/images/centenario.png');
+    }
+
+    .cb-small {
+        grid-column: span 1;
+    }
+
+    .milk {
+        background-color: #fcf3d3;
+        position: relative;
+    }
+
+    &__ratings__img img {
+        max-width: 60px;
+    }
+}
+
 // ========== / Section4 ========= //
 // ========== Section5 ========= //
 // ========== / Section5 ========= //
