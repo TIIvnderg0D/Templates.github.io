@@ -989,6 +989,12 @@ li {
             display: inline-block;
         }
 
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
         &-text {      
             padding: 1rem;
             border: none;
@@ -1005,7 +1011,7 @@ li {
             border: none;
             color: white;
             text-align: right;
-            padding-top: 2.6rem;
+            padding: 2.4rem 0;
         }
     }
 }
