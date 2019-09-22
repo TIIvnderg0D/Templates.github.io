@@ -439,6 +439,35 @@ li {
             margin-block-end: 0;
             color: $color-black;
         }
+
+        i {
+            font-size: 1.9rem;
+        }
+    }
+
+    &__menu {
+
+        &__item {
+            color: $color-text;
+            border-bottom: 1px solid #f8f8f8;
+            line-height: 2.9rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+        
+            &__list {
+                line-height: 2.6rem;
+                font-size: 1rem;
+                padding: 20px;
+            }
+        }
+
+        &__item:hover {
+            color: $color-blue; 
+        }
+
+        .active:focus {
+            color: $color-blue;
+        }
     }
 }
 
