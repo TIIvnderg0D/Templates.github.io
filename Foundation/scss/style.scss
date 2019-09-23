@@ -428,6 +428,12 @@ li {
     background-color: white;
     padding: 4.2rem 2.1rem;
 
+    &__wrapper {
+        min-height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__heading {
 
         display: flex;
@@ -449,15 +455,32 @@ li {
 
         &__item {
             color: $color-text;
-            border-bottom: 1px solid #f8f8f8;
-            line-height: 2.9rem;
-            font-size: 1.1rem;
-            cursor: pointer;
+
+            &-text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.1rem;
+                cursor: pointer;
+                line-height: 2.9rem;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                border-bottom: 1px solid #f8f8f8;
+            }
         
             &__list {
                 line-height: 2.6rem;
                 font-size: 1rem;
                 padding: 20px;
+                border-bottom: 1px solid #f8f8f8;
+
+                &-open {
+                    color: $color-text;
+                }
+
+                &-open:hover {
+                    color: $color-blue;
+                }
             }
         }
 
@@ -468,6 +491,25 @@ li {
         .active:focus {
             color: $color-blue;
         }
+
+        .opened:after {
+            color: $color-text;
+            content: "\f0d7";
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+
+        .opened {
+            color: $color-blue;
+        }
+
+        .grouped:after {
+            content: "\f0da";
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+
+    &__contacts {
+        color: $color-text;
     }
 }
 
