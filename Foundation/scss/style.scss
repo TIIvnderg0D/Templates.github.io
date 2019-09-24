@@ -148,7 +148,7 @@
     }
 
     p::after {
-        top: 5.4rem;  
+        top: 4.9rem;  
         content: "\f0d9";
         
         @media screen and (max-width: $screen-phone) {
@@ -289,23 +289,11 @@ li {
 // ========== Header ========= //
 
 .header {
-
     height: 826px;
     background: url("/images/centenario.png"),
                       url("/images/gt86.png"); 
     background-repeat: no-repeat, no-repeat;
     background-position: -47.5% 0, 100% 0;
-
-    @media screen and (max-width: $screen-desktop) {
-        background: url("/images/centenario.png") no-repeat 50% 0;
-    }
-
-    @media screen and (min-width: $screen-desktop) and (max-width: $screen-big-desktop) {
-        background: url("/images/centenario.png"),
-                      url("/images/gt86.png"); 
-        background-repeat: no-repeat, no-repeat;
-        background-position: 0 0, 150% 0;
-    }
 
     i {
         font-size: 1.5em;
@@ -374,6 +362,17 @@ li {
         }
     }
 
+    @media screen and (max-width: $screen-desktop) {
+        background: url("/images/centenario.png") no-repeat 50% 0;
+    }
+
+    @media screen and (min-width: $screen-desktop) and (max-width: $screen-big-desktop) {
+        background: url("/images/centenario.png"),
+                      url("/images/gt86.png"); 
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0 0, 150% 0;
+    }
+
     @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {
     
         &__section {
@@ -420,8 +419,8 @@ li {
 // ========== Nav ========= //
 
 .nav {
-    position: fixed;
-    height: 100vh;
+    position: absolute;
+    height: 328%;
     top: 0%;
     right: 0%;
     z-index: 2;
@@ -435,7 +434,6 @@ li {
     }
 
     &__heading {
-
         display: flex;
         justify-content: space-between;
         h3 {
@@ -467,6 +465,11 @@ li {
                 margin-block-end: 0;
                 border-bottom: 1px solid #f8f8f8;
             }
+
+            &-text:hover {
+                transition: 0.3s;
+                color: $color-blue; 
+            }
         
             &__list {
                 line-height: 2.6rem;
@@ -479,17 +482,10 @@ li {
                 }
 
                 &-open:hover {
+                    transition: 0.3s;
                     color: $color-blue;
                 }
             }
-        }
-
-        &__item:hover {
-            color: $color-blue; 
-        }
-
-        .active:focus {
-            color: $color-blue;
         }
 
         .opened:after {
@@ -503,13 +499,80 @@ li {
         }
 
         .grouped:after {
+            color: $color-text;
             content: "\f0da";
             font: normal normal normal 14px/1 FontAwesome;
+        }
+
+        . ul {
+            display: none;
         }
     }
 
     &__contacts {
+        padding-top: 5.5rem;
         color: $color-text;
+
+        &__icon {       
+            font-size: 1.4rem;
+            line-height: 1.4rem;    
+            letter-spacing: 1px;
+            padding: 0.8rem 0;
+        }
+
+        &__address {
+
+            p {
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+
+            &-article {
+                line-height: 1.6rem;
+                padding-bottom: 1.7rem;
+            }
+
+            &-phone, &-schedule {
+                line-height: 2rem;
+            }
+
+            &-email {
+                line-height: 2rem;
+                color: $color-blue;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__search {
+        padding-top: 6.1rem;
+
+        &__form {
+            border: 1px solid $color-text;
+            display: flex;
+            justify-content: space-between;
+
+            &-input {
+                color: $color-text;
+                border: none;
+                font-size: 1.1rem;
+                line-height: 2.6rem;
+                padding: 0 1rem;
+            }
+
+            &-button {
+                color: $color-text;
+                background-color: inherit;
+                border: none;
+                padding: 0 11px;
+                font-size: 1.2rem;
+                line-height: 1.4rem; 
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-big-desktop) {
+        display: none;
     }
 }
 
@@ -1236,6 +1299,7 @@ li {
 
         &-item:hover,
         &-item:focus {
+            transition: 0.3s;
             color: $color-blue;
         }
     }
