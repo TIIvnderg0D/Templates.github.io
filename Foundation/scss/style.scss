@@ -427,6 +427,10 @@ li {
     background-color: white;
     padding: 4.2rem 2.1rem;
 
+    &.close {
+        display: none;
+    }
+
     &__wrapper {
         min-height: 90%;
         display: flex;
@@ -445,6 +449,7 @@ li {
         }
 
         i {
+            cursor: pointer;
             font-size: 1.9rem;
         }
     }
@@ -479,6 +484,7 @@ li {
 
                 &-open {
                     color: $color-text;
+                    cursor: pointer;
                 }
 
                 &-open:hover {
@@ -486,29 +492,36 @@ li {
                     color: $color-blue;
                 }
             }
+
+            ul {
+                display: none;
+            }
+
+            &.open .submenu {
+                color: $color-blue;
+            }
+
+            .submenu:after {
+                color: $color-text;
+                content: "\f0da";
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+
+            &.open .submenu:after {
+                color: $color-text;
+                content: "\f0d7";
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+
+            &.open ul {
+                display: block;
+            }
         }
 
-        .submenu-rev:after {
-            color: $color-text;
-            content: "\f0d7";
-            font: normal normal normal 14px/1 FontAwesome;
-        }
+        
 
-        .submenu-rev {
-            color: $color-blue;
-        }
+        
 
-        .submenu:after {
-            color: $color-text;
-            content: "\f0da";
-            font: normal normal normal 14px/1 FontAwesome;
-        }
-
-        .hidden {
-            transition: transform 2s;
-            transform: translateY(-100%);
-            transform: 
-        }
     }
 
     &__contacts {
@@ -725,8 +738,9 @@ li {
         max-width: 49.5vw;
         display: flex;
         align-items: center;
-        background-image: url('/images/240zg.png');
+        background-image: url('/images/challenger_new.jpg');
         background-position-x: 10%; 
+        background-position-y: 40%; 
     }
 
     &__search {
@@ -849,7 +863,7 @@ li {
         @include article-block(white);
         grid-column: span 2;
         padding: 2.7rem 2.1rem;
-        background: url('/images/amg.png');
+        background: url('/images/m2.jpg'), no-repeat;
     }
 
     .cb-small {
@@ -968,10 +982,22 @@ li {
     }
 
     .construction {
-        background-image: url('/images/gt500.png');
+        background-image: url('/images/charger.jpg');
+        background-position-y: 50%;
+        background-size: cover;
+
+        p {
+            color: $color-blue;
+        }
     }
     .procurement {
-        background-image: url('/images/f-type.png');
+        background-image: url('/images/charger_.jpg');
+        background-position-y: 50%;
+        background-size: cover;
+
+        p {
+            color: $color-blue;
+        }
     }
 
     @media screen and (min-width: $screen-tablet-landscape) and (max-width: $screen-desktop) {
@@ -1275,6 +1301,7 @@ li {
     justify-content: space-between;
     padding: 2.1rem 0;
     line-height: 2rem;
+    color: $color-text;
 
     &__copyright {
 
