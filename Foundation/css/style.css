@@ -677,17 +677,25 @@ li {
         -o-transition: 0.3s;
         transition: 0.3s;
         color: #2297d8; }
-  .nav__menu .opened:after {
+  .nav__menu .submenu-rev:after {
     color: #a0a0a0;
     content: "\f0d7";
     font: normal normal normal 14px/1 FontAwesome; }
-  .nav__menu .opened {
+  .nav__menu .submenu-rev {
     color: #2297d8; }
-  .nav__menu .grouped:after {
+  .nav__menu .submenu:after {
     color: #a0a0a0;
     content: "\f0da";
     font: normal normal normal 14px/1 FontAwesome; }
-  .nav__menu .grouped ul {
+  .nav__menu .hidden {
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
     display: none; }
   .nav__contacts {
     padding-top: 5.5rem;

@@ -1,9 +1,14 @@
-const menuWrapper = document.querySelector('.opened-wrapper');
-const menuItem = document.querySelector('.opened');
+const menuText = document.querySelector('.submenu-rev');
+const menuItem = document.querySelector('.revealed');
 
-function subMenu() {
-
-    menuItem.classList.remove('opened');
-    menuItem.classList.add('grouped');
+/*function subMenu() {
+    menuItem.classList.remove('revealed');
+    menuItem.classList.add('hidden');
+    menuText.classList.remove('submenu-rev');
+    menuText.classList.add('submenu');
 }
-menuItem.addEventListener('click', subMenu);
+menuText.addEventListener('click', subMenu);*/
+
+menuText.onclick = function() {
+    menuItem.classList.toggle('open');
+}

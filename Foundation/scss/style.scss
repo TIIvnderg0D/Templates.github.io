@@ -488,24 +488,26 @@ li {
             }
         }
 
-        .opened:after {
+        .submenu-rev:after {
             color: $color-text;
             content: "\f0d7";
             font: normal normal normal 14px/1 FontAwesome;
         }
 
-        .opened {
+        .submenu-rev {
             color: $color-blue;
         }
 
-        .grouped:after {
+        .submenu:after {
             color: $color-text;
             content: "\f0da";
             font: normal normal normal 14px/1 FontAwesome;
         }
 
-        . ul {
-            display: none;
+        .hidden {
+            transition: transform 2s;
+            transform: translateY(-100%);
+            transform: 
         }
     }
 
