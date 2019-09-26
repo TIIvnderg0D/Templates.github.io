@@ -20,7 +20,7 @@
 
 // ======== / Variables ======== //
 
-/* ======== Mixins ========*/
+/* ======== Mixins ======== */
 
 @mixin font-montserrat {
     font-family: 'Montserrat', sans-serif;
@@ -333,6 +333,39 @@ li {
                 }
             }
         }
+
+        .shopping-cart {
+            position: relative;
+        }
+
+        #shopping-cart:after {   
+            position: absolute;
+            top: -50%;
+            right: -60%;
+            padding: 2px 3px;
+            font-size: 0.8rem;
+            content: "99";
+            color: $color-black;
+            background-color: $color-yellow;
+        }
+
+        .shopping-cart__wrapper {
+            right: -60.5px;
+            top: 45px;
+            width: 293px;
+            padding: 1.6rem;
+            background-color: white;
+            position: absolute;
+            /*display: none;*/
+
+            i {
+                position: absolute;
+                color: white;
+                font-size: 3rem;
+                top: -8%;
+                right: 17%;
+            }
+        }
     }
 
     &__section {
@@ -517,11 +550,6 @@ li {
                 display: block;
             }
         }
-
-        
-
-        
-
     }
 
     &__contacts {
@@ -821,7 +849,6 @@ li {
             }
         }
     }
-
 }
 
 // ========== / Section3 ========= //
@@ -1264,7 +1291,7 @@ li {
     @media screen and (max-width: $screen-phone) {
         
         grid-template-columns: 100%;
-        grid-template-rows: repeat(4, minmax(293px, 1fr));
+        grid-template-rows: 45% 14% 14% 27%;
 
         &__main {
             grid-row: 1;
