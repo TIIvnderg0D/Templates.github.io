@@ -116,8 +116,7 @@
         @media screen and (max-width: $screen-phone) {
             line-height: 1.2;
         }
-    }
-       
+    }  
 }
 
 @mixin slider-square {
@@ -197,8 +196,7 @@
         i {
             font-size: 4rem;
         }
-    }
-    
+    } 
 }
 
 @mixin critic-block($color) {
@@ -229,7 +227,6 @@
     i {
         color:#ffae00;
     }
-
 }
 
 // ======== / Mixins ======== //
@@ -254,7 +251,6 @@
     @media screen and (min-width: $screen-phone) and (max-width: $screen-big-desktop) {
         width: 81%;
     }
-
 }
 
 .section-outer {
@@ -310,6 +306,92 @@ li {
         width: 5.9rem;
         height: 5.9rem;
         object-fit: cover;
+        cursor: pointer;
+
+        @media screen and (max-width: $screen-phone) {
+            
+            img {
+            width: 4.5rem;
+            height: 4.5rem;
+            }
+        }
+    }
+
+    &__top__hidden {
+        display: none;
+
+        @media screen and (max-width: $screen-tablet-landscape) {
+            display: block;
+
+            &__menu {
+                position: relative;
+            }
+
+            &__menu__wrapper {
+                display: none;
+                width: 200px;
+                box-shadow: 0 0 35px rgba(0, 0, 0, 0.52);
+
+                &.open {
+                    display: block;
+                    right: 0%;
+                    top: 150%;
+                    position: absolute;
+                    background-color: $color-blue;
+                    border: 1px solid white;
+                }
+
+                .caret {
+                    position: absolute;
+                    color: $color-blue;
+                    font-size: 3rem;
+                    top: -20%;
+                    right: 1%;
+                }
+
+                .caret:hover {
+                    transform: none;
+                    color: $color-blue;
+                }
+            }
+
+            &__menu__list {
+                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-block-start: 0;
+                margin-block-end: 0;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                &-item + &-item {
+                    border-top: 1px solid white;
+                }
+
+                p {
+                    cursor: pointer;
+                }
+
+                i {
+                    padding-left: 10px;
+                    font-size: 20px;  
+                }
+
+                i:hover {
+                    transition: 0.3s;
+                    color: $color-yellow;
+                }
+            }
+
+            a {
+                font-size: 24px;
+            }
+        }
     }
 
     &__top__menu {
@@ -320,18 +402,6 @@ li {
 
         @media screen and (max-width: $screen-tablet-landscape) {
             display: none;
-        }
-
-        &__hidden {
-            display: none;
-
-            @media screen and (max-width: $screen-tablet-landscape) {
-                display: block;
-
-                a {
-                    font-size: 24px;
-                }
-            }
         }
 
         .shopping-cart {
@@ -359,6 +429,7 @@ li {
                     display: flex;
                     padding: 10px;
                     margin-bottom: 10px;
+                    cursor: pointer;
 
                     &:hover {
                         background-color: $color-yellow;
@@ -412,6 +483,11 @@ li {
                 right: 19.5%;
             }
 
+            i:hover {
+                color: white;
+                transform: none;
+            }
+
             &__sum {
                 padding: 25px 10px;
                 line-height: 20px;
@@ -419,7 +495,7 @@ li {
                 margin-block-start: 0;
                 margin-block-end: 0;
 
-               span {
+                span {
                    color: $color-black;
                    font-size: 18px;
                    font-weight: 500;
@@ -454,6 +530,12 @@ li {
             }
         }
 
+        i:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
+            color: $color-blue;
+        }
+
         .shopping-cart__wrapper.open {
             display: block;
             box-sizing: border-box;
@@ -485,6 +567,12 @@ li {
             @include slider-square;
             grid-column: 3;
             grid-row: 1;
+        }
+
+        &__video {
+            i:hover {
+                color: white;
+            }
         }
 
         &__video {

@@ -8,8 +8,11 @@ const menuText3 = menuItem3.querySelector('.submenu');
 const menuText4 = menuItem4.querySelector('.submenu');
 const nav = document.querySelector('.nav');
 const closeNav = document.getElementById('nav-close');
+const menuHeader = document.getElementById('menu');
 const cart = document.getElementById('shopping-cart');
 const cartOpen = document.querySelector('.shopping-cart__wrapper');
+const menuAdaptIcon = document.querySelector('.menu');
+const menuAdapt = document.querySelector('.header__top__hidden__menu__wrapper');
 
 
 
@@ -33,6 +36,14 @@ closeNav.onclick = function() {
     nav.classList.add('close');
 }
 
+menuHeader.onclick = function() {
+    nav.classList.toggle('close');
+}
+
 cart.onclick = function() {
     cartOpen.classList.toggle('open');
+}
+
+menuAdaptIcon.onclick = function() {
+    menuAdapt.classList.toggle('open');
 }
