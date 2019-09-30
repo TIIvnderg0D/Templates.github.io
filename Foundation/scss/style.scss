@@ -680,6 +680,10 @@ li {
         &__item {
             color: $color-text;
 
+            a {
+                color: $color-text;  
+            }
+
             &-text {
                 display: flex;
                 justify-content: space-between;
