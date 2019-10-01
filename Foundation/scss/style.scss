@@ -699,6 +699,11 @@ li {
             &-text:hover {
                 transition: 0.3s;
                 color: $color-blue; 
+                
+                a {
+                    transition: 0.3s;
+                    color: $color-blue;  
+                }
             }
         
             &__list {
@@ -1541,6 +1546,10 @@ li {
             cursor: pointer;
         }
 
+        a {
+            color: $color-text;
+        }
+
         &-item + &-item {
             padding-left: 2.2rem;
         }
@@ -1549,6 +1558,12 @@ li {
         &-item:focus {
             transition: 0.3s;
             color: $color-blue;
+
+            a:hover,
+            a:focus {
+                transition: 0.3s;
+                color: $color-blue; 
+            }
         }
     }
 

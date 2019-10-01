@@ -12,9 +12,7 @@ const menuHeader = document.getElementById('menu');
 const cart = document.getElementById('shopping-cart');
 const cartOpen = document.querySelector('.shopping-cart__wrapper');
 const menuAdaptIcon = document.querySelector('.menu');
-const menuAdapt = document.querySelector('.header__top__hidden__menu__wrapper');
-
-
+const menuAdapt = document.querySelector('.hidden-menu');
 
 menuText1.onclick = function() {
     menuItem1.classList.toggle('open');
