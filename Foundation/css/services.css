@@ -409,7 +409,7 @@ li {
   background: url("/images/centenario.png"), url("/images/gt86.png");
   background-repeat: no-repeat, no-repeat;
   background-position: -47.5% 0, 100% 0;
-  height: 349px;
+  height: 348px;
 }
 
 .header-s i {
@@ -745,6 +745,12 @@ li {
   color: #363636;
 }
 
+/* --------------- Nav --------------- */
+.nav-s {
+  height: 127.5%;
+}
+
+/* ---------------/ Nav --------------- */
 .section-s {
   display: -ms-grid;
   display: grid;

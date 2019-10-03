@@ -205,7 +205,7 @@ li {
                       url("/images/gt86.png"); 
     background-repeat: no-repeat, no-repeat;
     background-position: -47.5% 0, 100% 0;
-    height: 349px;
+    height: 348px;
 
     i {
         font-size: 1.5em;
@@ -487,6 +487,14 @@ li {
         }
     }
 }
+
+/* --------------- Nav --------------- */
+
+.nav-s {
+    height: 127.5%;
+}
+
+/* ---------------/ Nav --------------- */
 
 .section-s {
     display: grid;
