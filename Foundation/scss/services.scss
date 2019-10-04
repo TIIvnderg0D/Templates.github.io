@@ -691,7 +691,7 @@ li {
 
     @media screen and (min-width: $screen-tablet-landscape) and (max-width: $screen-desktop) {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
-        grid-template-rows: repeat(6);
+        grid-template-rows: repeat(6, 293px);
 
         &__news {
             grid-column: 3;

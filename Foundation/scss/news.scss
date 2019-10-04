@@ -696,44 +696,10 @@ li {
 
     @media screen and (min-width: $screen-tablet-landscape) and (max-width: $screen-desktop) {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
-        grid-template-rows: repeat(6);
-
-        &__news {
-            grid-column: 3;
-            grid-row: 1;
-        }
-
-        &__subscribe {
-            grid-column: 3;
-            grid-row: 3;
-        }
-
-        .cent-icon {
-            grid-column: 3;
-            grid-row: 4;
-        }
-
-        .pdf {
-            grid-column: 3;
-            grid-row: 2;
-        }
-
-        .s-image5 {
-            grid-column: 2;
-            grid-row: 4;
-        }
-
-        :nth-last-child(3) {
-            grid-column: span 2;
-            grid-row: 5;
-        }
-
-        :nth-last-child(6) {
-            grid-column: span 2;
-            grid-row: 6;
-        }
+        grid-template-rows: repeat(6, 293px);
 
         &__images {
+            grid-column: span 1;
             max-height: 293px;
         }
     }
@@ -742,39 +708,20 @@ li {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
         grid-template-rows: repeat(8, 293px);
 
-        .s-image5 {
-            grid-column: 2;
-            grid-row: 5;
-        }
-
-        .s-image6 {
-            grid-column: 2;
-            grid-row: 7;
-        }
-
-        :nth-last-child(3) {
-            grid-column: 1;
-            grid-row: 6;
-        }
-
-        :nth-last-child(6) {
-            grid-column: 1;
-            grid-row: 7;
-        }
-
-        &__news {
-            grid-column: 2;
-            grid-row: 4;
+        &__images {
+            grid-column: span 1;
+            max-height: 293px;
         }
     }
 
     @media screen and (max-width: $screen-phone-max) {
         grid-template-columns: 100%;
-        grid-template-rows: auto;
+        grid-template-rows: repeat(16, minmax(200px, 293px));
 
         &__images {
             overflow: hidden;
             max-height: 293px;
+            max-width: 100%;
 
             p {
                 min-width: 10px;
@@ -785,24 +732,8 @@ li {
             min-height: 200px;
         }
 
-        &__news {
-            grid-row: 7;
-        }
-
-        .s-image5 {
-            grid-row: 10;
-        }
-
-        .s-image4 {
-            grid-row: 13;
-        }
-
-        :nth-last-child(6) {
-            grid-row: 14;
-        }
-
-        &__subscribe {
-            grid-row: 11;
+        .slider-square {
+            min-height: 200px; 
         }
     }
 }

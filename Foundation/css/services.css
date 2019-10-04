@@ -1075,8 +1075,8 @@ li {
   .section-s {
     -ms-grid-columns: (minmax(200px, 1fr))[3];
         grid-template-columns: repeat(3, minmax(200px, 1fr));
-    -ms-grid-rows: ()[6];
-        grid-template-rows: repeat(6);
+    -ms-grid-rows: (293px)[6];
+        grid-template-rows: repeat(6, 293px);
   }
   .section-s__news {
     -ms-grid-column: 3;
