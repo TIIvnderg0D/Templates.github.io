@@ -151,7 +151,7 @@
         content: "\f0d9";
         
         @media screen and (max-width: $screen-phone) {
-            left: 5.4rem; 
+            left: 20%; 
             top: 0;
         }
     }
@@ -162,8 +162,7 @@
 
         @media screen and (max-width: $screen-phone) {
             bottom: 0;
-            left: 65%;
-            right: 5.4rem; 
+            left: 70%;
         }
     }
 
@@ -1497,6 +1496,7 @@ li {
         &__square {
             grid-column: 1;
             grid-row: 3;
+            min-height: 150px;
         }
 
         &__image {

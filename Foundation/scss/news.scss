@@ -178,7 +178,7 @@ $screen-desktop-max: 1799px;
         content: "\f0d9";
         
         @media screen and (max-width: $screen-phone) {
-            left: 5.4rem; 
+            left: 20%;
             top: 0;
         }
     }
@@ -189,8 +189,7 @@ $screen-desktop-max: 1799px;
 
         @media screen and (max-width: $screen-phone) {
             bottom: 0;
-            left: 65%;
-            right: 5.4rem; 
+            left: 70%; 
         }
     }
 
@@ -549,6 +548,8 @@ li {
 
 /* ---------------/ Nav --------------- */
 
+/* --------------- Section --------------- */
+
 .section-n {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -719,6 +720,7 @@ li {
         grid-template-rows: repeat(16, minmax(200px, 293px));
 
         &__images {
+            grid-column: span 1;
             overflow: hidden;
             max-height: 293px;
             max-width: 100%;
@@ -736,4 +738,19 @@ li {
             min-height: 200px; 
         }
     }
+
+    @media screen and (max-width: $screen-phone) {
+        
+        .slider-square {
+            p::after {
+                left: 10%;
+            }
+
+            p::before {
+                left: 82%;
+            }
+        }
+    }
 }
+
+/* ---------------/ Section --------------- */

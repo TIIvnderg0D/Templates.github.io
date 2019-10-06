@@ -751,6 +751,7 @@ li {
 }
 
 /* ---------------/ Nav --------------- */
+/* --------------- Section --------------- */
 .section-n {
   display: -ms-grid;
   display: grid;
@@ -1009,7 +1010,7 @@ li {
 
 @media screen and (max-width: 480px) {
   .section-n__slider p::after {
-    left: 5.4rem;
+    left: 20%;
     top: 0;
   }
 }
@@ -1022,8 +1023,7 @@ li {
 @media screen and (max-width: 480px) {
   .section-n__slider p::before {
     bottom: 0;
-    left: 65%;
-    right: 5.4rem;
+    left: 70%;
   }
 }
 
@@ -1110,6 +1110,7 @@ li {
         grid-template-rows: repeat(16, minmax(200px, 293px));
   }
   .section-n__images {
+    grid-column: span 1;
     overflow: hidden;
     max-height: 293px;
     max-width: 100%;
@@ -1124,3 +1125,14 @@ li {
     min-height: 200px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .section-n .slider-square p::after {
+    left: 10%;
+  }
+  .section-n .slider-square p::before {
+    left: 82%;
+  }
+}
+
+/* ---------------/ Section --------------- */
