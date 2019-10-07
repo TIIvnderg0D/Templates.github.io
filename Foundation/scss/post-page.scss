@@ -550,6 +550,112 @@ li {
 
 /* --------------- Section1 --------------- */
 
+.section-p1 {
 
+    &__main {
+        @include article-block(white);
+
+        &__socials {
+            display: flex;
+        }
+    }
+
+    &__square {
+        @include cent-icon($color-yellow);
+    }
+
+    &__slider {
+        @include slider-square;
+    }
+
+    &__small-wrap {
+        min-width: 1254px;
+        min-height: 293px;
+        display: flex;
+        background-image: url('/images/challenger_new.jpg');
+
+        .slider-square {   
+            min-width: 293px;
+
+            p::after {
+                top: 3.4rem;
+            }
+
+            p::before {
+                bottom: 3.4rem;
+            }
+        }
+    }
+
+    &__big-wrap {
+
+        .slider-square {
+
+            p::after {
+                color: $color-yellow;
+            }
+        }
+    }
+
+    &__news {
+        background-color: $color-blue;
+        color: white;
+        padding: 2.1rem;
+        position: relative;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;     
+        }
+
+        &__wrapper::after {
+            cursor: pointer;
+            position: absolute;
+            top: 90%;
+            width: 27px;
+            border-bottom: 5px solid white;
+            content: "";
+        }
+
+        &-header {
+            font-size: 2rem;
+            letter-spacing: 0.18px;
+            text-transform: uppercase;
+            /*margin-block-end: 0;*/
+            margin-block-start: 0;
+        }
+
+        &-text {
+            font-size: 1.3rem;
+            margin-block-start: 0.5em;
+        }
+
+        &-comments a, &-time {
+            color: #8bcffb;
+        }
+    }
+
+    &__news::after {
+        cursor: pointer;
+        position: absolute;
+        top: 90%;
+        left: 40%;
+        width: 27px;
+        border-bottom: 5px solid white;
+        opacity: 0.2;
+        content: "";
+    }
+
+    &__news::before {
+        cursor: pointer;
+        position: absolute;
+        top: 90%;
+        left: 26%;
+        width: 27px;
+        border-bottom: 5px solid white;
+        opacity: 0.2;
+        content: "";
+    }
+}
 
 /* ---------------/ Section1 --------------- */
