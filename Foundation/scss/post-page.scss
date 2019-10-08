@@ -557,9 +557,9 @@ li {
         flex-direction: column;
         justify-content: space-between;
         padding: 2.1rem 0;
-        background-color: rgba(0,0,0,0);
+        background-color: lightblue;
         box-sizing: border-box;
-        min-height: 293px;
+        height: 293px;
 
         &-header {
             display: flex;
@@ -571,11 +571,6 @@ li {
             width: 88%;
             color: #f5f5f5;
             margin: 0;     
-
-            @media screen and (max-width: $screen-phone) {
-                font-size: 1.5rem;
-                width: 90%; 
-            }
         }
 
         h2:after {
@@ -626,7 +621,8 @@ li {
 
     &__small-over-wrap {
         position: absolute;
-        width: 81%;
+        max-width: 1547px;
+        width: 31%;
         min-height: 293px;
         overflow: visible; 
         background-color: lightblue;
@@ -642,7 +638,7 @@ li {
 
         .slider-square {   
             min-width: 293px;
-            background-color: rgba(0,0,0,0);
+            background-color: lightblue;
 
             p::after {
                 top: 3.4rem;
@@ -656,7 +652,8 @@ li {
 
     &__big-over-wrap {
         position: absolute;
-        width: 1547px;
+        max-width: 1547px;
+        width: 75%;
         min-height: 586px;
         overflow: visible; 
         background: url('/images/challenger_new.jpg');
@@ -767,8 +764,26 @@ li {
         content: "";
     }
 
-    @media screen and (max-width: $screen-desktop-max) {
+    @media screen and (min-width: $screen-desktop) and (max-width: $screen-desktop-max) {
 
+        &__main {
+
+            &-header {       
+                font-size: 2.2rem;
+                width: 90%;  
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-phone) {
+
+        &__main {
+
+            &-header {       
+                font-size: 1.5rem;
+                width: 90%; 
+            }
+        }
     }
 }
 

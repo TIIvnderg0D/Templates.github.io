@@ -764,10 +764,10 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2.1rem 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: lightblue;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 293px;
+  height: 293px;
 }
 
 .section-p1__main-header {
@@ -785,13 +785,6 @@ li {
   width: 88%;
   color: #f5f5f5;
   margin: 0;
-}
-
-@media screen and (max-width: 480px) {
-  .section-p1__main-header {
-    font-size: 1.5rem;
-    width: 90%;
-  }
 }
 
 .section-p1__main h2:after {
@@ -932,7 +925,8 @@ li {
 
 .section-p1__small-over-wrap {
   position: absolute;
-  width: 81%;
+  max-width: 1547px;
+  width: 31%;
   min-height: 293px;
   overflow: visible;
   background-color: lightblue;
@@ -951,7 +945,7 @@ li {
 
 .section-p1__small-wrap .slider-square {
   min-width: 293px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: lightblue;
 }
 
 .section-p1__small-wrap .slider-square p::after {
@@ -964,7 +958,8 @@ li {
 
 .section-p1__big-over-wrap {
   position: absolute;
-  width: 1547px;
+  max-width: 1547px;
+  width: 75%;
   min-height: 586px;
   overflow: visible;
   background: url("/images/challenger_new.jpg");
@@ -1090,6 +1085,20 @@ li {
   border-bottom: 5px solid white;
   opacity: 0.2;
   content: "";
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1799px) {
+  .section-p1__main-header {
+    font-size: 2.2rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-p1__main-header {
+    font-size: 1.5rem;
+    width: 90%;
+  }
 }
 
 /* ---------------/ Section1 --------------- */
