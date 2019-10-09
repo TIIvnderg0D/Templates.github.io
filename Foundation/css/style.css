@@ -1897,7 +1897,7 @@ li {
   cursor: pointer;
   position: absolute;
   top: 90%;
-  left: 40%;
+  left: 120px;
   width: 27px;
   border-bottom: 5px solid white;
   opacity: 0.2;
@@ -1908,7 +1908,7 @@ li {
   cursor: pointer;
   position: absolute;
   top: 90%;
-  left: 26%;
+  left: 75px;
   width: 27px;
   border-bottom: 5px solid white;
   opacity: 0.2;
