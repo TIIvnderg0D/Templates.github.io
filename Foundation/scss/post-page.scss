@@ -1067,15 +1067,15 @@ li {
                 position: relative;
             }
 
-            .mainbr-replied::before  {
+            .mainbr-replied::after  {
                 position: absolute;
                 width: 1px;
-                height: calc(100% - 60px);
-                top: -75%;
-                left: 50%;
+                height: calc(100% - 78px);
+                bottom: 0;
+                left: -50%;
                 border-left: 1px solid #bebebe;
                 content: ""; 
-                display: inline-block;  
+                display: inline-block; 
             }    
 
             &__headwrapper {
@@ -1144,9 +1144,81 @@ li {
         }
     }
 
+    &__form {
+        background-color: #333538;
+        padding: 4.2rem 2.1rem;
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 1.2;     
+            margin-block-end: 0;
+            margin-block-start: 0;
+        }
+
+        &-subheader {
+            color: #989898;
+            text-transform: uppercase;
+            margin-block-end: 0;
+            margin-block-start: 0;
+            padding-top: 1rem;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 263px 1fr;
+            grid-template-rows: repeat(3, 45px);
+            grid-gap: 2.1rem;
+            padding: 2.1rem 0;
+
+            .form-name, .form-website, .form-message {
+                border: none;
+                color: $color-text;
+                background-color: #4f4f4f;
+            }
+
+            .form-message {
+                padding: 1.3rem;
+                resize: none;
+                grid-row: 1/span 3;
+                grid-column: 2;
+            }
+
+            .form-name, .form-website, .form-email {
+                grid-column: 1;
+                padding: 0 1rem;
+            }
+
+            .form-email {
+                background-color: inherit;
+                color: white;
+                border: 1px solid #8d8d8e;
+            }
+
+            .form-email::placeholder {               
+                color: white;
+                opacity: 100%;
+            }
+        }
+
+        &-button {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: $color-black;
+            background-color: white;
+            padding: 1.2rem 1.7rem;
+            align-self: flex-end;
+        }
+    }
+
     &__sidebar {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         max-width: 293px;
 
         &__square {
@@ -1202,6 +1274,100 @@ li {
         }
     }
 
+    @media screen and (max-width: $screen-desktop) {
+    
+        flex-direction: column;
+
+        &__sidebar {
+            min-width: 280px;
+            max-width: 1200px;
+            order: 1;
+            flex-direction: row;   
+            flex-wrap: wrap;         
+
+            &__images {
+                width: 293px;
+                flex: 1 1 293px;
+                
+            }
+
+            &__video {
+                min-width: 293px;
+                flex: 1 1 293px;
+            }
+
+            &__square {
+                min-width: 293px;
+                flex: 1 1 293px;
+
+                .fas {
+                    display: none;
+                }
+            }
+
+            &__longitem {
+                max-height: 293px;
+                flex: 1 1 293px;
+            }
+        }
+
+        &__content {
+            order: 2;
+        }
+    }
+
+    @media screen and (max-width: $screen-tablet-max) {
+
+        &__sidebar {       
+
+            &__images {
+                width: 293px;
+                max-height: 200px;
+                flex: 1 1 293px;
+            }
+
+            &__video {
+                min-width: 293px;
+                max-height: 200px;
+                flex: 1 1 293px;
+            }
+
+            &__square {
+                max-height: 200px;
+                min-width: 293px;
+                flex: 1 1 293px;
+
+                .fas {
+                    display: none;
+                }
+            }
+
+            &__longitem {
+                max-height: 200px;
+                flex: 1 1 293px;
+            }
+        }
+
+        &__comments {
+
+            &__item {
+
+                &__text {
+                    padding-left: 1.4rem;
+                }
+
+                &__text-author {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &__text-postdate {
+                    padding-left: 0;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
 }
 
 /* ---------------/ Section2 --------------- */
