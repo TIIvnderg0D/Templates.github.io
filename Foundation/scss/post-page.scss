@@ -1196,7 +1196,7 @@ li {
             .form-email {
                 background-color: inherit;
                 color: white;
-                border: 1px solid #8d8d8e;
+                border: 1px solid #4f4f4f;
             }
 
             .form-email::placeholder {               
@@ -1364,6 +1364,54 @@ li {
                 &__text-postdate {
                     padding-left: 0;
                     padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-phone-max) {
+    
+        &__form {
+
+            &__wrapper {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 45px);
+
+                .form-message {
+                    grid-row: 4/span 3;
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-phone) {
+    
+        &__main {
+            padding: 1.8rem;
+
+            &-paragraph {
+                font-size: 0.9rem;
+            }
+
+            &-paragraph-assigned {
+                font-size: 1rem;
+                margin: 3rem 0;
+                padding-left: 2.1rem;
+            }
+
+            &-paragraph-bold {
+                font-size: 1rem;
+                margin: 3rem 0;
+            }
+        }
+
+        &__comments {
+            
+            &__item {
+
+                &__text-content {
+                    font-size: 0.9rem;
                 }
             }
         }

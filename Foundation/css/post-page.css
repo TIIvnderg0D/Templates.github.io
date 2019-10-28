@@ -1549,7 +1549,7 @@ li {
 .section-p2__form__wrapper .form-email {
   background-color: inherit;
   color: white;
-  border: 1px solid #8d8d8e;
+  border: 1px solid #4f4f4f;
 }
 
 .section-p2__form__wrapper .form-email::-webkit-input-placeholder {
@@ -1812,6 +1812,43 @@ li {
   .section-p2__comments__item__text-postdate {
     padding-left: 0;
     padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .section-p2__form__wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (45px)[6];
+        grid-template-rows: repeat(6, 45px);
+  }
+  .section-p2__form__wrapper .form-message {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 3;
+    grid-row: 4/span 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-p2__main {
+    padding: 1.8rem;
+  }
+  .section-p2__main-paragraph {
+    font-size: 0.9rem;
+  }
+  .section-p2__main-paragraph-assigned {
+    font-size: 1rem;
+    margin: 3rem 0;
+    padding-left: 2.1rem;
+  }
+  .section-p2__main-paragraph-bold {
+    font-size: 1rem;
+    margin: 3rem 0;
+  }
+  .section-p2__comments__item__text-content {
+    font-size: 0.9rem;
   }
 }
 
