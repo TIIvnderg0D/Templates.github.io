@@ -1,0 +1,21 @@
+/* ======== Mixins ======== */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
