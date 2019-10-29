@@ -1046,7 +1046,7 @@ li {
         &__item {
             position: relative;
             display: flex;
-            padding-top: 18px;
+            padding-top: 1.3rem;
    
             .replied {
                 position: relative;
@@ -1219,7 +1219,7 @@ li {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        max-width: 293px;
+        min-width: 293px;
 
         &__square {
             @include cent-icon(#3f729b);
@@ -1371,6 +1371,25 @@ li {
 
     @media screen and (max-width: $screen-phone-max) {
     
+        &__comments {
+
+            &__item {
+                flex-direction: column;
+
+                &__img {
+                    padding-bottom: 1rem; 
+                }
+
+                .replied::after {
+                    display: none;
+                }
+
+                &__text {
+                    padding-left: 0;
+                }
+            }
+        }
+
         &__form {
 
             &__wrapper {
@@ -1410,8 +1429,16 @@ li {
             
             &__item {
 
-                &__text-content {
-                    font-size: 0.9rem;
+                &__text {
+
+                    &-content {
+                        font-size: 0.9rem;
+                        padding-bottom: 2rem;
+                    }
+
+                    &-postdate {
+                        line-height: 1.3;
+                    }
                 }
             }
         }
