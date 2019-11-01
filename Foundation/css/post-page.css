@@ -20,7 +20,6 @@ li {
   list-style-type: none;
 }
 
-.sizing:focus,
 .sizing:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -515,6 +514,13 @@ li {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08px;
+}
+
+.section-p1__square i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 480px) {
@@ -1189,6 +1195,10 @@ li {
   padding: 2.1rem 0;
 }
 
+.section-p2__form__wrapper-input:active, .section-p2__form__wrapper-input:focus {
+  border: 1px solid #2297d8 !important;
+}
+
 .section-p2__form__wrapper .form-name, .section-p2__form__wrapper .form-website, .section-p2__form__wrapper .form-message {
   border: none;
   color: #a0a0a0;
@@ -1292,6 +1302,13 @@ li {
   letter-spacing: 0.08px;
 }
 
+.section-p2__sidebar__square i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 480px) {
   .section-p2__sidebar__square i {
     font-size: 4rem;
@@ -1351,6 +1368,13 @@ li {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08px;
+}
+
+.section-p2__sidebar__video i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 480px) {

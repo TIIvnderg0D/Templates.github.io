@@ -20,7 +20,6 @@ li {
   list-style-type: none;
 }
 
-.sizing:focus,
 .sizing:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -602,7 +601,7 @@ li {
 
 .section-n__subscribe-text {
   padding: 1rem;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .section-n__subscribe-text::-webkit-input-placeholder {
@@ -621,6 +620,10 @@ li {
   color: #2297d8;
 }
 
+.section-n__subscribe-text:focus, .section-n__subscribe-text:active {
+  border: 1px solid #ffe400;
+}
+
 .section-n__subscribe-button {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -629,6 +632,13 @@ li {
   color: white;
   text-align: right;
   padding: 2.4rem 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+}
+
+.section-n__subscribe-button:hover {
+  color: #ffe400;
 }
 
 .section-n__slider {
@@ -723,6 +733,13 @@ li {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08px;
+}
+
+.section-n__square i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 480px) {

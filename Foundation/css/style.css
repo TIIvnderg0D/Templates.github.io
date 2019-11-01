@@ -20,7 +20,6 @@ li {
   list-style-type: none;
 }
 
-.sizing:focus,
 .sizing:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -578,6 +577,13 @@ li {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08px;
+}
+
+.header__section__video i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 480px) {
@@ -1203,6 +1209,13 @@ li {
   letter-spacing: 0.08px;
 }
 
+.section-block3 .pdf i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 480px) {
   .section-block3 .pdf i {
     font-size: 4rem;
@@ -1240,6 +1253,13 @@ li {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08px;
+}
+
+.section-block3__square i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 480px) {
@@ -1873,6 +1893,13 @@ li {
   letter-spacing: 0.08px;
 }
 
+.section-block5__square i:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 480px) {
   .section-block5__square i {
     font-size: 4rem;
@@ -2015,7 +2042,7 @@ li {
 
 .section-block5__subscribe-text {
   padding: 1rem;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .section-block5__subscribe-text::-webkit-input-placeholder {
@@ -2034,6 +2061,10 @@ li {
   color: #2297d8;
 }
 
+.section-block5__subscribe-text:focus, .section-block5__subscribe-text:active {
+  border: 1px solid #ffe400;
+}
+
 .section-block5__subscribe-button {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -2042,6 +2073,13 @@ li {
   color: white;
   text-align: right;
   padding: 2.4rem 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+}
+
+.section-block5__subscribe-button:hover {
+  color: #ffe400;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {

@@ -188,6 +188,11 @@ $screen-desktop-max: 1799px;
         letter-spacing: 0.08px;
     }
 
+    i:hover {
+        transition: 0.3s;
+        transform: scale(1.1);  
+    }
+
     @media screen and (max-width: $screen-phone)  {
         
         i {
@@ -249,10 +254,9 @@ li {
     list-style-type: none;
 }
 
-.sizing:focus,
 .sizing:hover {
-        transition: 0.3s;
-        transform: scale(1.05);
-    }
+    transition: 0.3s;
+    transform: scale(1.05);
+}
 
 // ======== / General ======== //

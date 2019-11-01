@@ -955,6 +955,11 @@
             grid-gap: 2.1rem;
             padding: 2.1rem 0;
 
+            &-input:active,
+            &-input:focus {
+                border: 1px solid $color-blue !important;
+            }
+
             .form-name, .form-website, .form-message {
                 border: none;
                 color: $color-text;

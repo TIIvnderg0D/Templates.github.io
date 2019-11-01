@@ -405,7 +405,6 @@
     }
 
     &__subscribe {
-        
         z-index: 150;
         padding: 2.1rem;
         background-color: $color-blue;
@@ -438,11 +437,16 @@
 
         &-text {      
             padding: 1rem;
-            border: none;
+            border: 1px solid transparent;
         }
 
         &-text::placeholder {
             color: $color-blue;
+        }
+
+        &-text:focus,
+        &-text:active {
+            border: 1px solid $color-yellow;
         }
         
         &-button {
@@ -453,6 +457,12 @@
             color: white;
             text-align: right;
             padding: 2.4rem 0;
+            align-self: flex-end;
+            cursor: pointer;
+        }
+
+        &-button:hover {
+            color: $color-yellow;
         }
     }
 
