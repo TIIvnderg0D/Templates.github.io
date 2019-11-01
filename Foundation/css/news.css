@@ -20,6 +20,14 @@ li {
   list-style-type: none;
 }
 
+.sizing:focus,
+.sizing:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .section-inner {
   width: 61%;
   height: 100%;

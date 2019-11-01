@@ -21,209 +21,208 @@ $screen-desktop-max: 1799px;
 /* ======== Mixins ======== */
 
 @mixin font-montserrat {
-font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @mixin article-block($color) {
-background-color: $color;
-display: flex;
-flex-direction: column;
-justify-content: space-between;   
-
-h2 {
+    background-color: $color;
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
-    width: 73%;
-    text-transform: uppercase;
-    color: $color-black;
-    font-weight: 700;
-    margin: 0;
+    justify-content: space-between;   
 
-    @media screen and (max-width: $screen-phone) {
-        font-size: 1.5rem;
-        width: 90%; 
-    }
-}
+    h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        width: 73%;
+        text-transform: uppercase;
+        color: $color-black;
+        font-weight: 700;
+        margin: 0;
 
-h2:after {
-    width: 40px;
-    padding-top: 1.21rem; 
-    border-bottom: 5px solid $color-black;
-    content: ""; 
-    display: inline-block;
-}
-
-p {
-    color: $color-black;
-    line-height: 1.6rem;
-
-    @media screen and (max-width: $screen-phone) {
-        line-height: 1.2;
+        @media screen and (max-width: $screen-phone) {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
     }
 
-    @media screen and (min-width: $screen-phone) and (max-width: $screen-tablet-landscape-max) {
-        font-size: 1.5rem;
+    h2:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+        display: inline-block;
     }
-}
 
-a {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: white;
-    background-color: $color-black;
-    padding: 1.22em 1.8em;
-    text-transform: uppercase;
-    align-self: flex-start;
-}   
+    p {
+        color: $color-black;
+        line-height: 1.6rem;
+
+        @media screen and (max-width: $screen-phone) {
+            line-height: 1.2;
+        }
+
+        @media screen and (min-width: $screen-phone) and (max-width: $screen-tablet-landscape-max) {
+            font-size: 1.5rem;
+        }
+    }
+
+    a {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: white;
+        background-color: $color-black;
+        padding: 1.22em 1.8em;
+        text-transform: uppercase;
+        align-self: flex-start;
+    }  
 }
 
 @mixin arrow-block {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-background-color: white;
-
-h3 {
     display: flex;
     flex-direction: column;
-    font-size: 1.3rem;
-    width: 75%;
-    color: $color-black;
-    font-weight: 700;
-    margin: 0;
+    justify-content: flex-start;
+    background-color: white;
 
-    @media screen and (max-width: $screen-phone) {
-        font-size: 1.5rem;
-        width: 90%; 
+    h3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        width: 75%;
+        color: $color-black;
+        font-weight: 700;
+        margin: 0;
+
+        @media screen and (max-width: $screen-phone) {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
     }
-}
 
-h3:after {
-    width: 40px;
-    padding-top: 1.21rem; 
-    border-bottom: 5px solid $color-black;
-    content: ""; 
-    display: inline-block;
-}
-
-p {
-    color: $color-text;
-    line-height: 1.9;
-
-    @media screen and (max-width: $screen-phone) {
-        line-height: 1.2;
+    h3:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+        display: inline-block;
     }
-}  
+
+    p {
+        color: $color-text;
+        line-height: 1.9;
+
+        @media screen and (max-width: $screen-phone) {
+            line-height: 1.2;
+        }
+    }  
 }
 
 @mixin slider-square {
-display: flex;
-flex-direction: column;
-place-content: center;
-background-color: white;
-
-p {
-    justify-content: center;
-    position: relative;
-    color: $color-black;
-    font-size: 3rem;
-    letter-spacing: 3px;
-    text-align: center;
     display: flex;
-    line-height: 0.9; 
-}
+    flex-direction: column;
+    place-content: center;
+    background-color: white;
 
-p::before,
-p::after {
-    cursor: pointer;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 4rem;
-    color: #6c6c6c;
-    position: absolute;
-    left: 50%;
-}
-
-p::after {
-    top: 4.9rem;  
-    content: "\f0d9";
-    
-    @media screen and (max-width: $screen-phone) {
-        left: 20%; 
-        top: 0;
+    p {
+        justify-content: center;
+        position: relative;
+        color: $color-black;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        text-align: center;
+        display: flex;
+        line-height: 0.9; 
     }
-}
 
-p::before {
-    bottom: 5.4rem; 
-    content: "\f0da"; 
-
-    @media screen and (max-width: $screen-phone) {
-        bottom: 0;
-        left: 70%;
+    p::before,
+    p::after {
+        cursor: pointer;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 4rem;
+        color: #6c6c6c;
+        position: absolute;
+        left: 50%;
     }
-}
 
-.small {
-    font-size: 1.5rem;
-}
+    p::after {
+        top: 4.9rem;  
+        content: "\f0d9";
+        
+        @media screen and (max-width: $screen-phone) {
+            left: 20%; 
+            top: 0;
+        }
+    }
+
+    p::before {
+        bottom: 5.4rem; 
+        content: "\f0da"; 
+
+        @media screen and (max-width: $screen-phone) {
+            bottom: 0;
+            left: 70%;
+        }
+    }
+
+    .small {
+        font-size: 1.5rem;
+    }
 }
 
 @mixin cent-icon($color) {
-background-color: $color;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-cursor: pointer;
+    background-color: $color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
-i {
-    font-size: 5rem;
-}
-
-&-text {
-    line-height: 1.5;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.08px;
-}
-
-@media screen and (max-width: $screen-phone)  {
-    
     i {
-        font-size: 4rem;
+        font-size: 5rem;
     }
-} 
+
+    &-text {
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08px;
+    }
+
+    @media screen and (max-width: $screen-phone)  {
+        
+        i {
+            font-size: 4rem;
+        }
+    } 
 }
 
 @mixin critic-block($color) {
+    background-color: $color;
+    padding: 1.9rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-background-color: $color;
-padding: 1.9rem 2.2rem;
-display: flex;
-flex-direction: column;
-align-items: center;
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
 
-&__wrapper {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
+    &__text p {
+        color: $color-text;
+        line-height: 1.6rem;
+        text-align: center;
+    }
 
-&__text p {
-    color: $color-text;
-    line-height: 1.6rem;
-    text-align: center;
-}
+    &__author-name {
+        font-weight: 700;
+    }
 
-&__author-name {
-    font-weight: 700;
-}
-
-i {
-    color:#ffae00;
-}
+    i {
+        color:#ffae00;
+    }
 }
 
 // ======== / Mixins ======== //
@@ -231,23 +230,29 @@ i {
 // ======== General ======== //
 
 html {
-@include font-montserrat;
-font-size: 14px;
-margin: 0;
-padding: 0;
+    @include font-montserrat;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-color: white;
-text-decoration: none;  
+    color: white;
+    text-decoration: none;  
 }
 
 ul {
-padding-inline-start: 0;
+    padding-inline-start: 0;
 }
 
 li {
-list-style-type: none;
+    list-style-type: none;
 }
+
+.sizing:focus,
+.sizing:hover {
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
 
 // ======== / General ======== //

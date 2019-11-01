@@ -469,6 +469,11 @@
                 &-open:hover {
                     transition: 0.3s;
                     color: $color-blue;
+
+                    a {
+                        transition: 0.3s;
+                        color: $color-blue;  
+                    }
                 }
             }
 
