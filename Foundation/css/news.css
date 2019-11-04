@@ -403,10 +403,18 @@ li {
   font-weight: 400;
   line-height: 0.8;
   font-size: 2rem;
+  border: 3px solid transparent;
 }
 
 .header-n__section-button a {
   color: #363636;
+}
+
+.header-n__section-button:hover, .header-n__section-button:focus {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #ffe400;
+  border: 3px solid #363636;
 }
 
 /* --------------- Nav --------------- */
@@ -736,10 +744,10 @@ li {
 }
 
 .section-n__square i:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 480px) {

@@ -189,8 +189,8 @@ $screen-desktop-max: 1799px;
     }
 
     i:hover {
-        transition: 0.3s;
-        transform: scale(1.1);  
+        transition: 1.8s;
+        transform: rotateY(360deg);  
     }
 
     @media screen and (max-width: $screen-phone)  {

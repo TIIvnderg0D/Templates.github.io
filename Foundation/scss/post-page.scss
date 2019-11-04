@@ -312,10 +312,18 @@
             font-weight: 400;
             line-height: 0.8;
             font-size: 2rem;
+            border: 3px solid transparent;
 
             a {
                 color: $color-black;
             }
+        }
+
+        &-button:hover,
+        &-button:focus {
+            transition: 0.3s;
+            background-color: $color-yellow;
+            border: 3px solid $color-black;
         }
     }
 }
@@ -383,6 +391,11 @@
 
             &-item + &-item {
                 padding-left: 1.1rem;
+            }
+
+            i:hover {
+                transition: 0.3s;
+                transform: scale(1.3);  
             }
         }
 
@@ -791,12 +804,19 @@
             }
 
             &-itemTag {
-                padding: 0.7rem 1rem;
-                border: 1px solid #bebebe;
                 margin-left: 0.75rem;
                 
                 a {
+                    padding: 0.7rem 1rem;
+                    border: 1px solid #bebebe;
                     color: #bebebe; 
+                }
+
+                a:hover,
+                a:focus {
+                    background-color: $color-yellow;
+                    color: $color-black;
+                    border-color: $color-black;
                 }
             }
         }

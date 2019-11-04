@@ -216,19 +216,23 @@ li {
   position: relative;
 }
 
-.header__top__menu #shopping-cart:after {
-  position: absolute;
-  top: -50%;
-  right: -60%;
-  padding: 2px 3px;
-  font-size: 0.8rem;
-  content: "99";
-  color: #363636;
-  background-color: #ffe400;
-}
-
 .header__top__menu .shopping-cart__wrapper {
   display: none;
+}
+
+.header__top__menu .shopping-cart__wrapper.open {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  right: -60.5px;
+  top: 45px;
+  width: 293px;
+  padding: 2.1rem 1.4rem;
+  background-color: white;
+  position: absolute;
+  z-index: 200;
+  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
 }
 
 .header__top__menu .shopping-cart__wrapper__list {
@@ -355,10 +359,26 @@ li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-height: 46px;
-  padding: 12px 0;
+  padding: 12px 5px;
   line-height: 20px;
   color: #2297d8;
   text-transform: uppercase;
+}
+
+.header__top__menu .shopping-cart__wrapper__buttons-view:hover, .header__top__menu .shopping-cart__wrapper__buttons-view:focus {
+  color: #363636;
+  background-color: #ffe400;
+}
+
+.header__top__menu #shopping-cart:after {
+  position: absolute;
+  top: -50%;
+  right: -60%;
+  padding: 2px 3px;
+  font-size: 0.8rem;
+  content: "99";
+  color: #363636;
+  background-color: #ffe400;
 }
 
 .header__top__menu i:hover {
@@ -367,21 +387,6 @@ li {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #2297d8;
-}
-
-.header__top__menu .shopping-cart__wrapper.open {
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  right: -60.5px;
-  top: 45px;
-  width: 293px;
-  padding: 2.1rem 1.4rem;
-  background-color: white;
-  position: absolute;
-  z-index: 200;
-  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
 }
 
 .header__section {
@@ -580,10 +585,10 @@ li {
 }
 
 .header__section__video i:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 480px) {
@@ -1098,6 +1103,8 @@ li {
 .section-block2__images {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-height: 293px;
+  max-width: 293px;
 }
 
 .section-block2__images img {
@@ -1109,8 +1116,8 @@ li {
   .section-block2 {
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    -ms-grid-rows: (400px)[4];
-        grid-template-rows: repeat(4, 400px);
+    -ms-grid-rows: (minmax(293px, 300px))[4];
+        grid-template-rows: repeat(4, minmax(293px, 300px));
   }
   .section-block2 i {
     display: none;
@@ -1210,10 +1217,10 @@ li {
 }
 
 .section-block3 .pdf i:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 480px) {
@@ -1256,10 +1263,10 @@ li {
 }
 
 .section-block3__square i:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 480px) {
@@ -1853,7 +1860,7 @@ li {
 .section-block5__main-view {
   text-align: center;
   padding: 1.5em 1.8em !important;
-  min-width: 41%;
+  max-width: 130px !important;
   background-color: #ffe400 !important;
   color: #363636 !important;
   font-weight: 700 !important;
@@ -1894,10 +1901,10 @@ li {
 }
 
 .section-block5__square i:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 480px) {
