@@ -123,6 +123,14 @@ $screen-desktop-max: 1799px;
     place-content: center;
     background-color: white;
 
+    .slider-wrapper {
+        position: relative;
+    }
+
+    .hidden-slide {
+        display: none;
+    }
+
     p {
         justify-content: center;
         position: relative;
@@ -145,7 +153,7 @@ $screen-desktop-max: 1799px;
     }
 
     p::after {
-        top: 4.9rem;  
+        top: 5.2rem;  
         content: "\f0d9";
         
         @media screen and (max-width: $screen-phone) {

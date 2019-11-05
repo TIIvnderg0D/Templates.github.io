@@ -493,6 +493,14 @@ li {
   grid-row: 1;
 }
 
+.header__section__slider .slider-wrapper {
+  position: relative;
+}
+
+.header__section__slider .hidden-slide {
+  display: none;
+}
+
 .header__section__slider p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -519,7 +527,7 @@ li {
 }
 
 .header__section__slider p::after {
-  top: 4.9rem;
+  top: 5.2rem;
   content: "\f0d9";
 }
 
@@ -867,8 +875,8 @@ li {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
+  -ms-grid-rows: (293px)[2];
+      grid-template-rows: repeat(2, 293px);
   grid-auto-flow: row;
 }
 
@@ -1043,6 +1051,14 @@ li {
   background-color: white;
 }
 
+.section-block2__slider .slider-wrapper {
+  position: relative;
+}
+
+.section-block2__slider .hidden-slide {
+  display: none;
+}
+
 .section-block2__slider p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1069,7 +1085,7 @@ li {
 }
 
 .section-block2__slider p::after {
-  top: 4.9rem;
+  top: 5.2rem;
   content: "\f0d9";
 }
 
@@ -1114,13 +1130,20 @@ li {
 
 @media screen and (min-width: 480px) and (max-width: 1200px) {
   .section-block2 {
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-    -ms-grid-rows: (minmax(293px, 300px))[4];
-        grid-template-rows: repeat(4, minmax(293px, 300px));
+    -ms-grid-columns: 293px 1fr;
+        grid-template-columns: 293px 1fr;
+    -ms-grid-rows: (293px)[4];
+        grid-template-rows: repeat(4, 293px);
   }
   .section-block2 i {
     display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .section-block2__heading {
+    -ms-grid-column: 2;
+    grid-column: 2;
   }
 }
 
@@ -1170,6 +1193,9 @@ li {
   }
   .section-block2 i {
     display: none;
+  }
+  .section-block2__images {
+    max-width: none;
   }
 }
 
@@ -1928,6 +1954,14 @@ li {
   z-index: 150;
 }
 
+.section-block5__slider .slider-wrapper {
+  position: relative;
+}
+
+.section-block5__slider .hidden-slide {
+  display: none;
+}
+
 .section-block5__slider p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1954,7 +1988,7 @@ li {
 }
 
 .section-block5__slider p::after {
-  top: 4.9rem;
+  top: 5.2rem;
   content: "\f0d9";
 }
 
