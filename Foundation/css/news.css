@@ -661,6 +661,18 @@ li {
   background-color: white;
 }
 
+.section-n__slider .slider-wrapper {
+  position: relative;
+}
+
+.section-n__slider .hidden-slide {
+  opacity: 0;
+}
+
+.section-n__slider .current-slide {
+  opacity: 1;
+}
+
 .section-n__slider p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -674,6 +686,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .section-n__slider p::before,
@@ -687,7 +701,7 @@ li {
 }
 
 .section-n__slider p::after {
-  top: 4.9rem;
+  top: 5.2rem;
   content: "\f0d9";
 }
 

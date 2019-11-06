@@ -497,11 +497,7 @@ li {
   position: relative;
 }
 
-.header__section__slider .hidden-slide {
-  display: none;
-}
-
-.header__section__slider p {
+.header__section__slider ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -514,10 +510,23 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.header__section__slider p::before,
-.header__section__slider p::after {
+.header__section__slider li {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__section__slider *:target ~ #slide-1 {
+  opacity: 0;
+}
+
+.header__section__slider ul::before,
+.header__section__slider ul::after {
   cursor: pointer;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 4rem;
@@ -526,25 +535,25 @@ li {
   left: 50%;
 }
 
-.header__section__slider p::after {
+.header__section__slider ul::after {
   top: 5.2rem;
   content: "\f0d9";
 }
 
 @media screen and (max-width: 480px) {
-  .header__section__slider p::after {
+  .header__section__slider ul::after {
     left: 20%;
     top: 0;
   }
 }
 
-.header__section__slider p::before {
+.header__section__slider ul::before {
   bottom: 5.4rem;
   content: "\f0da";
 }
 
 @media screen and (max-width: 480px) {
-  .header__section__slider p::before {
+  .header__section__slider ul::before {
     bottom: 0;
     left: 70%;
   }
@@ -1055,11 +1064,7 @@ li {
   position: relative;
 }
 
-.section-block2__slider .hidden-slide {
-  display: none;
-}
-
-.section-block2__slider p {
+.section-block2__slider ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1072,10 +1077,23 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.section-block2__slider p::before,
-.section-block2__slider p::after {
+.section-block2__slider li {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-block2__slider *:target ~ #slide-1 {
+  opacity: 0;
+}
+
+.section-block2__slider ul::before,
+.section-block2__slider ul::after {
   cursor: pointer;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 4rem;
@@ -1084,25 +1102,25 @@ li {
   left: 50%;
 }
 
-.section-block2__slider p::after {
+.section-block2__slider ul::after {
   top: 5.2rem;
   content: "\f0d9";
 }
 
 @media screen and (max-width: 480px) {
-  .section-block2__slider p::after {
+  .section-block2__slider ul::after {
     left: 20%;
     top: 0;
   }
 }
 
-.section-block2__slider p::before {
+.section-block2__slider ul::before {
   bottom: 5.4rem;
   content: "\f0da";
 }
 
 @media screen and (max-width: 480px) {
-  .section-block2__slider p::before {
+  .section-block2__slider ul::before {
     bottom: 0;
     left: 70%;
   }
@@ -1958,11 +1976,7 @@ li {
   position: relative;
 }
 
-.section-block5__slider .hidden-slide {
-  display: none;
-}
-
-.section-block5__slider p {
+.section-block5__slider ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1975,10 +1989,23 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.section-block5__slider p::before,
-.section-block5__slider p::after {
+.section-block5__slider li {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-block5__slider *:target ~ #slide-1 {
+  opacity: 0;
+}
+
+.section-block5__slider ul::before,
+.section-block5__slider ul::after {
   cursor: pointer;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 4rem;
@@ -1987,25 +2014,25 @@ li {
   left: 50%;
 }
 
-.section-block5__slider p::after {
+.section-block5__slider ul::after {
   top: 5.2rem;
   content: "\f0d9";
 }
 
 @media screen and (max-width: 480px) {
-  .section-block5__slider p::after {
+  .section-block5__slider ul::after {
     left: 20%;
     top: 0;
   }
 }
 
-.section-block5__slider p::before {
+.section-block5__slider ul::before {
   bottom: 5.4rem;
   content: "\f0da";
 }
 
 @media screen and (max-width: 480px) {
-  .section-block5__slider p::before {
+  .section-block5__slider ul::before {
     bottom: 0;
     left: 70%;
   }

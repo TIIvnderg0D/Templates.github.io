@@ -556,6 +556,18 @@ li {
   background-color: white;
 }
 
+.section-p1__slider .slider-wrapper {
+  position: relative;
+}
+
+.section-p1__slider .hidden-slide {
+  opacity: 0;
+}
+
+.section-p1__slider .current-slide {
+  opacity: 1;
+}
+
 .section-p1__slider p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -569,6 +581,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .section-p1__slider p::before,
@@ -582,7 +596,7 @@ li {
 }
 
 .section-p1__slider p::after {
-  top: 4.9rem;
+  top: 5.2rem;
   content: "\f0d9";
 }
 
