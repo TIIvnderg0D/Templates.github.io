@@ -82,9 +82,24 @@
                 </div>
                 <div class="header__section__slider slider-square">
                         <ul class="header__section__slider__wrapper">
-                           <li class="header__section__slider__wrapper-item" id="slide-1">01<span class="small">/03</span></li> 
-                           <li class="header__section__slider__wrapper-item" id="slide-2">02<span class="small">/03</span></li> 
-                           <li class="header__section__slider__wrapper-item" id="slide-3">03<span class="small">/03</span></li> 
+                            <input type="radio" name="arrows" id="i1" checked>
+                            <input type="radio" name="arrows" id="i2">
+                            <input type="radio" name="arrows" id="i3">
+                           <li class="header__section__slider__wrapper-item" id="slide-1">
+                               <label for="i3" class="sideArrow-pre"></label> 
+                               <label for="i2" class="sideArrow-next"></label> 
+                               <span class="bigOne">01</span><span class="small">/03</span>
+                            </li> 
+                           <li class="header__section__slider__wrapper-item" id="slide-2">
+                               <label for="i1" class="sideArrow-pre"></label> 
+                               <label for="i3" class="sideArrow-next"></label> 
+                               <span class="bigOne">02</span><span class="small">/03</span>
+                            </li> 
+                           <li class="header__section__slider__wrapper-item" id="slide-3">
+                               <label for="i2" class="sideArrow-pre"></label> 
+                               <label for="i1" class="sideArrow-next"></label> 
+                               <span class="bigOne">03</span><span class="small">/03</span>
+                            </li> 
                         </ul>
                 </div>
                 <div class="header__section__video cent-icon">

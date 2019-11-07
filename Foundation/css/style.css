@@ -487,6 +487,35 @@ li {
           flex-direction: column;
   place-content: center;
   background-color: white;
+  /*ul::before,
+    ul::after {
+        cursor: pointer;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 4rem;
+        color: #6c6c6c;
+        position: absolute;
+        left: 50%;
+    }
+
+    ul::after {
+        top: 5.2rem;  
+        content: "\f0d9";
+        
+        @media screen and (max-width: $screen-phone) {
+            left: 20%; 
+            top: 0;
+        }
+    }
+
+    ul::before {
+        bottom: 5.4rem; 
+        content: "\f0da"; 
+
+        @media screen and (max-width: $screen-phone) {
+            bottom: 0;
+            left: 70%;
+        }
+    }*/
   -ms-grid-column: 3;
   grid-column: 3;
   -ms-grid-row: 1;
@@ -501,6 +530,9 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   color: #363636;
   font-size: 3rem;
@@ -510,8 +542,6 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
 }
 
 .header__section__slider li {
@@ -519,44 +549,40 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
 }
 
-.header__section__slider *:target ~ #slide-1 {
-  opacity: 0;
+.header__section__slider #i1:checked ~ #slide-1,
+.header__section__slider #i2:checked ~ #slide-2,
+.header__section__slider #i3:checked ~ #slide-3 {
+  z-index: 9;
 }
 
-.header__section__slider ul::before,
-.header__section__slider ul::after {
-  cursor: pointer;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 4rem;
-  color: #6c6c6c;
+.header__section__slider #i1, .header__section__slider #i2, .header__section__slider #i3 {
+  display: none;
+}
+
+.header__section__slider .sideArrow-pre, .header__section__slider .sideArrow-next {
   position: absolute;
   left: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-box-shadow: -2px -2px #6c6c6c;
+          box-shadow: -2px -2px #6c6c6c;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  z-index: 99;
 }
 
-.header__section__slider ul::after {
-  top: 5.2rem;
-  content: "\f0d9";
+.header__section__slider .sideArrow-pre {
+  bottom: 6.4rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 480px) {
-  .header__section__slider ul::after {
-    left: 20%;
-    top: 0;
-  }
-}
-
-.header__section__slider ul::before {
-  bottom: 5.4rem;
-  content: "\f0da";
-}
-
-@media screen and (max-width: 480px) {
-  .header__section__slider ul::before {
-    bottom: 0;
-    left: 70%;
-  }
+.header__section__slider .sideArrow-next {
+  top: 6.4rem;
 }
 
 .header__section__slider .small {
@@ -1058,6 +1084,35 @@ li {
           flex-direction: column;
   place-content: center;
   background-color: white;
+  /*ul::before,
+    ul::after {
+        cursor: pointer;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 4rem;
+        color: #6c6c6c;
+        position: absolute;
+        left: 50%;
+    }
+
+    ul::after {
+        top: 5.2rem;  
+        content: "\f0d9";
+        
+        @media screen and (max-width: $screen-phone) {
+            left: 20%; 
+            top: 0;
+        }
+    }
+
+    ul::before {
+        bottom: 5.4rem; 
+        content: "\f0da"; 
+
+        @media screen and (max-width: $screen-phone) {
+            bottom: 0;
+            left: 70%;
+        }
+    }*/
 }
 
 .section-block2__slider .slider-wrapper {
@@ -1068,6 +1123,9 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   color: #363636;
   font-size: 3rem;
@@ -1077,8 +1135,6 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
 }
 
 .section-block2__slider li {
@@ -1086,44 +1142,40 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
 }
 
-.section-block2__slider *:target ~ #slide-1 {
-  opacity: 0;
+.section-block2__slider #i1:checked ~ #slide-1,
+.section-block2__slider #i2:checked ~ #slide-2,
+.section-block2__slider #i3:checked ~ #slide-3 {
+  z-index: 9;
 }
 
-.section-block2__slider ul::before,
-.section-block2__slider ul::after {
-  cursor: pointer;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 4rem;
-  color: #6c6c6c;
+.section-block2__slider #i1, .section-block2__slider #i2, .section-block2__slider #i3 {
+  display: none;
+}
+
+.section-block2__slider .sideArrow-pre, .section-block2__slider .sideArrow-next {
   position: absolute;
   left: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-box-shadow: -2px -2px #6c6c6c;
+          box-shadow: -2px -2px #6c6c6c;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  z-index: 99;
 }
 
-.section-block2__slider ul::after {
-  top: 5.2rem;
-  content: "\f0d9";
+.section-block2__slider .sideArrow-pre {
+  bottom: 6.4rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 480px) {
-  .section-block2__slider ul::after {
-    left: 20%;
-    top: 0;
-  }
-}
-
-.section-block2__slider ul::before {
-  bottom: 5.4rem;
-  content: "\f0da";
-}
-
-@media screen and (max-width: 480px) {
-  .section-block2__slider ul::before {
-    bottom: 0;
-    left: 70%;
-  }
+.section-block2__slider .sideArrow-next {
+  top: 6.4rem;
 }
 
 .section-block2__slider .small {
@@ -1967,6 +2019,35 @@ li {
           flex-direction: column;
   place-content: center;
   background-color: white;
+  /*ul::before,
+    ul::after {
+        cursor: pointer;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 4rem;
+        color: #6c6c6c;
+        position: absolute;
+        left: 50%;
+    }
+
+    ul::after {
+        top: 5.2rem;  
+        content: "\f0d9";
+        
+        @media screen and (max-width: $screen-phone) {
+            left: 20%; 
+            top: 0;
+        }
+    }
+
+    ul::before {
+        bottom: 5.4rem; 
+        content: "\f0da"; 
+
+        @media screen and (max-width: $screen-phone) {
+            bottom: 0;
+            left: 70%;
+        }
+    }*/
   -ms-grid-column: 3;
   grid-column: 3;
   z-index: 150;
@@ -1980,6 +2061,9 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   color: #363636;
   font-size: 3rem;
@@ -1989,8 +2073,6 @@ li {
   display: -ms-flexbox;
   display: flex;
   line-height: 0.9;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
 }
 
 .section-block5__slider li {
@@ -1998,44 +2080,40 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
 }
 
-.section-block5__slider *:target ~ #slide-1 {
-  opacity: 0;
+.section-block5__slider #i1:checked ~ #slide-1,
+.section-block5__slider #i2:checked ~ #slide-2,
+.section-block5__slider #i3:checked ~ #slide-3 {
+  z-index: 9;
 }
 
-.section-block5__slider ul::before,
-.section-block5__slider ul::after {
-  cursor: pointer;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 4rem;
-  color: #6c6c6c;
+.section-block5__slider #i1, .section-block5__slider #i2, .section-block5__slider #i3 {
+  display: none;
+}
+
+.section-block5__slider .sideArrow-pre, .section-block5__slider .sideArrow-next {
   position: absolute;
   left: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-box-shadow: -2px -2px #6c6c6c;
+          box-shadow: -2px -2px #6c6c6c;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  z-index: 99;
 }
 
-.section-block5__slider ul::after {
-  top: 5.2rem;
-  content: "\f0d9";
+.section-block5__slider .sideArrow-pre {
+  bottom: 6.4rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 480px) {
-  .section-block5__slider ul::after {
-    left: 20%;
-    top: 0;
-  }
-}
-
-.section-block5__slider ul::before {
-  bottom: 5.4rem;
-  content: "\f0da";
-}
-
-@media screen and (max-width: 480px) {
-  .section-block5__slider ul::before {
-    bottom: 0;
-    left: 70%;
-  }
+.section-block5__slider .sideArrow-next {
+  top: 6.4rem;
 }
 
 .section-block5__slider .small {

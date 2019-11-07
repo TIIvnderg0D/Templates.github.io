@@ -129,26 +129,54 @@ $screen-desktop-max: 1799px;
 
     ul {
         justify-content: center;
+        align-items: center;
         position: relative;
         color: $color-black;
         font-size: 3rem;
         letter-spacing: 3px;
         text-align: center;
         display: flex;
-        line-height: 0.9; 
-        transition: 1s ease-in-out;
+        line-height: 0.9;   
     }
 
     li {
         position: absolute;
         display: flex; 
+        z-index: -1;   
     }
 
-    *:target ~ #slide-1 {
-        opacity: 0;
+    #i1:checked ~ #slide-1,
+    #i2:checked ~ #slide-2,
+    #i3:checked ~ #slide-3 {
+        z-index: 9;
     }
 
-    ul::before,
+
+    #i1, #i2, #i3 {
+        display: none;
+    }
+
+    .sideArrow-pre, .sideArrow-next {
+        position: absolute;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        box-shadow: -2px -2px #6c6c6c;
+        transform: rotate(135deg);
+        z-index: 99;
+    }
+
+    .sideArrow-pre {
+        bottom: 6.4rem; 
+        transform: rotate(-45deg);
+    }
+
+    .sideArrow-next {
+        top: 6.4rem; 
+    }
+
+    /*ul::before,
     ul::after {
         cursor: pointer;
         font: normal normal normal 14px/1 FontAwesome;
@@ -176,7 +204,7 @@ $screen-desktop-max: 1799px;
             bottom: 0;
             left: 70%;
         }
-    }
+    }*/
 
     .small {
         font-size: 1.5rem;

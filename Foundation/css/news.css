@@ -665,15 +665,7 @@ li {
   position: relative;
 }
 
-.section-n__slider .hidden-slide {
-  opacity: 0;
-}
-
-.section-n__slider .current-slide {
-  opacity: 1;
-}
-
-.section-n__slider p {
+.section-n__slider ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -690,8 +682,19 @@ li {
   transition: 1s ease-in-out;
 }
 
-.section-n__slider p::before,
-.section-n__slider p::after {
+.section-n__slider li {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-n__slider *:target ~ #slide-1 {
+  opacity: 0;
+}
+
+.section-n__slider ul::before,
+.section-n__slider ul::after {
   cursor: pointer;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 4rem;
@@ -700,25 +703,25 @@ li {
   left: 50%;
 }
 
-.section-n__slider p::after {
+.section-n__slider ul::after {
   top: 5.2rem;
   content: "\f0d9";
 }
 
 @media screen and (max-width: 480px) {
-  .section-n__slider p::after {
+  .section-n__slider ul::after {
     left: 20%;
     top: 0;
   }
 }
 
-.section-n__slider p::before {
+.section-n__slider ul::before {
   bottom: 5.4rem;
   content: "\f0da";
 }
 
 @media screen and (max-width: 480px) {
-  .section-n__slider p::before {
+  .section-n__slider ul::before {
     bottom: 0;
     left: 70%;
   }
