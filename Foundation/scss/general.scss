@@ -167,6 +167,12 @@ $screen-desktop-max: 1799px;
         z-index: 99;
     }
 
+    [class^="sideArrow"]:hover {
+        transform: translate(200px, 0);
+        opacity: 0;
+        transition: 0.5s ease-in-out, 0.5s;
+    }
+
     .sideArrow-pre {
         bottom: 6.4rem; 
         transform: rotate(-45deg);
