@@ -151,9 +151,8 @@ $screen-desktop-max: 1799px;
         z-index: 9;
     }
 
-
     #i1, #i2, #i3 {
-        display: none;
+       display: none;
     }
 
     .sideArrow-pre, .sideArrow-next {
@@ -167,12 +166,6 @@ $screen-desktop-max: 1799px;
         z-index: 99;
     }
 
-    [class^="sideArrow"]:hover {
-        transform: translate(200px, 0);
-        opacity: 0;
-        transition: 0.5s ease-in-out, 0.5s;
-    }
-
     .sideArrow-pre {
         bottom: 6.4rem; 
         transform: rotate(-45deg);
@@ -181,7 +174,6 @@ $screen-desktop-max: 1799px;
     .sideArrow-next {
         top: 6.4rem; 
     }
-
     /*ul::before,
     ul::after {
         cursor: pointer;

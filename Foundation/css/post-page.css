@@ -638,6 +638,14 @@ li {
   z-index: 99;
 }
 
+.section-p1__slider [class^="sideArrow"]:hover {
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out, 0.5s;
+  transition: 0.5s ease-in-out, 0.5s;
+}
+
 .section-p1__slider .sideArrow-pre {
   bottom: 6.4rem;
   -webkit-transform: rotate(-45deg);
