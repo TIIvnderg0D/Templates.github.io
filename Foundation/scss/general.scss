@@ -123,10 +123,6 @@ $screen-desktop-max: 1799px;
     place-content: center;
     background-color: white;
 
-    .slider-wrapper {
-        position: relative;
-    }
-
     ul {
         justify-content: center;
         align-items: center;
@@ -147,11 +143,24 @@ $screen-desktop-max: 1799px;
 
     #i1:checked ~ #slide-1,
     #i2:checked ~ #slide-2,
-    #i3:checked ~ #slide-3 {
+    #i3:checked ~ #slide-3,
+    #s2i1:checked ~ #s2-slide-1,
+    #s2i2:checked ~ #s2-slide-2,
+    #s5i1:checked ~ #s5-slide-1,
+    #s5i2:checked ~ #s5-slide-2,
+    #s5i3:checked ~ #s5-slide-3,
+    #s5i4:checked ~ #s5-slide-4,
+    #s5i5:checked ~ #s5-slide-5,
+    #s5i6:checked ~ #s5-slide-6,
+    #s5i7:checked ~ #s5-slide-7,
+    #s5i8:checked ~ #s5-slide-8,
+    #s5i9:checked ~ #s5-slide-9 {
         z-index: 9;
     }
 
-    #i1, #i2, #i3 {
+    #i1, #i2, #i3, #s2i1, #s2i2, #s5i1, 
+    #s5i2, #s5i3, #s5i4, #s5i5, #s5i6, #s5i7,
+    #s5i8, #s5i9 {
        display: none;
     }
 
