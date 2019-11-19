@@ -156,6 +156,7 @@ $screen-desktop-max: 1799px;
     #s5i8:checked ~ #s5-slide-8,
     #s5i9:checked ~ #s5-slide-9 {
         z-index: 9;
+        background-color: red;
     }
 
     #i1, #i2, #i3, #s2i1, #s2i2, #s5i1, 

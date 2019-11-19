@@ -563,6 +563,7 @@ li {
 .header__section__slider #s5i8:checked ~ #s5-slide-8,
 .header__section__slider #s5i9:checked ~ #s5-slide-9 {
   z-index: 9;
+  background-color: red;
 }
 
 .header__section__slider #i1, .header__section__slider #i2, .header__section__slider #i3, .header__section__slider #s2i1, .header__section__slider #s2i2, .header__section__slider #s5i1,
@@ -1165,6 +1166,7 @@ li {
 .section-block2__slider #s5i8:checked ~ #s5-slide-8,
 .section-block2__slider #s5i9:checked ~ #s5-slide-9 {
   z-index: 9;
+  background-color: red;
 }
 
 .section-block2__slider #i1, .section-block2__slider #i2, .section-block2__slider #i3, .section-block2__slider #s2i1, .section-block2__slider #s2i2, .section-block2__slider #s5i1,
@@ -2112,6 +2114,7 @@ li {
 .section-block5__slider #s5i8:checked ~ #s5-slide-8,
 .section-block5__slider #s5i9:checked ~ #s5-slide-9 {
   z-index: 9;
+  background-color: red;
 }
 
 .section-block5__slider #i1, .section-block5__slider #i2, .section-block5__slider #i3, .section-block5__slider #s2i1, .section-block5__slider #s2i2, .section-block5__slider #s5i1,
