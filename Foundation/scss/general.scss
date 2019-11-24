@@ -132,13 +132,14 @@ $screen-desktop-max: 1799px;
         letter-spacing: 3px;
         text-align: center;
         display: flex;
-        line-height: 0.9;   
+        line-height: 0.9;
     }
 
     li {
         position: absolute;
         display: flex; 
-        z-index: -1;   
+        z-index: -1;  
+        background-color: white; 
     }
 
     #i1:checked ~ #slide-1,
@@ -154,14 +155,18 @@ $screen-desktop-max: 1799px;
     #s5i6:checked ~ #s5-slide-6,
     #s5i7:checked ~ #s5-slide-7,
     #s5i8:checked ~ #s5-slide-8,
-    #s5i9:checked ~ #s5-slide-9 {
+    #s5i9:checked ~ #s5-slide-9,
+    #ni1:checked ~ #n-slide-1,
+    #ni2:checked ~ #n-slide-2,
+    #ni3:checked ~ #n-slide-3,
+    #p1i1:checked ~ #p1-slide-1,
+    #p1i2:checked ~ #p1-slide-2 {
         z-index: 9;
-        background-color: red;
     }
 
     #i1, #i2, #i3, #s2i1, #s2i2, #s5i1, 
     #s5i2, #s5i3, #s5i4, #s5i5, #s5i6, #s5i7,
-    #s5i8, #s5i9 {
+    #s5i8, #s5i9, #ni1, #ni2, #ni3, #p1i1, #p1i2 {
        display: none;
     }
 
@@ -179,40 +184,21 @@ $screen-desktop-max: 1799px;
     .sideArrow-pre {
         bottom: 6.4rem; 
         transform: rotate(-45deg);
+
+        @media screen and (max-width: $screen-phone) {
+            left: -30%; 
+            bottom: 0;
+        }
     }
 
     .sideArrow-next {
         top: 6.4rem; 
-    }
-    /*ul::before,
-    ul::after {
-        cursor: pointer;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: 4rem;
-        color: #6c6c6c;
-        position: absolute;
-        left: 50%;
-    }
 
-    ul::after {
-        top: 5.2rem;  
-        content: "\f0d9";
-        
         @media screen and (max-width: $screen-phone) {
-            left: 20%; 
             top: 0;
+            left: 110%;
         }
     }
-
-    ul::before {
-        bottom: 5.4rem; 
-        content: "\f0da"; 
-
-        @media screen and (max-width: $screen-phone) {
-            bottom: 0;
-            left: 70%;
-        }
-    }*/
 
     .small {
         font-size: 1.5rem;

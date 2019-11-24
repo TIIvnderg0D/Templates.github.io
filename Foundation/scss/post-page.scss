@@ -340,6 +340,8 @@
 
 .section-p1 {
 
+    z-index: 1;
+
     &__main { 
         display: flex;
         flex-direction: column;
@@ -432,14 +434,7 @@
         .slider-square {   
             min-width: 293px;
             background-color: lightblue;
-
-            p::after {
-                top: 3.4rem;
-            }
-
-            p::before {
-                bottom: 3.4rem;
-            }
+            z-index: 0;
         }
     }
 
@@ -465,10 +460,10 @@
         .slider-square {
             grid-column: 1;
             grid-row: 1;
-            z-index: 2;
+            z-index: 1;
 
-            p::after {
-                color: $color-yellow;
+            .sideArrow-pre {
+                box-shadow: -2px -2px $color-yellow;
             }
         }
 
@@ -487,7 +482,7 @@
             &__image {
                 grid-column: 1/span 3;
                 grid-row: span 1/2; 
-                z-index: 1;
+                z-index: 0;
 
                 img {
                     width: 100%;
@@ -664,21 +659,21 @@
     }
 
     @media screen and (max-width: $screen-phone-max) {
+
         &__small-wrap {
             flex-direction: column;
 
             .slider-square {
                 order: 1;
-                min-height: 150px;
 
-                p:after {
-                    left: 23%;
-                    top: 0;
+                .sideArrow-pre {
+                    left: -50px !important;
+                    bottom: 20%;
                 }
-                
-                p:before {
-                    left: 70%;
-                    bottom: 0;
+        
+                .sideArrow-next {
+                    left: 50px !important;
+                    top: 20%;
                 }
             }
 

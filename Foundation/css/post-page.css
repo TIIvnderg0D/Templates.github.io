@@ -424,6 +424,10 @@ li {
 
 /* ---------------/ Nav --------------- */
 /* --------------- Section1 --------------- */
+.section-p1 {
+  z-index: 1;
+}
+
 .section-p1__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -554,35 +558,6 @@ li {
           flex-direction: column;
   place-content: center;
   background-color: white;
-  /*ul::before,
-    ul::after {
-        cursor: pointer;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: 4rem;
-        color: #6c6c6c;
-        position: absolute;
-        left: 50%;
-    }
-
-    ul::after {
-        top: 5.2rem;  
-        content: "\f0d9";
-        
-        @media screen and (max-width: $screen-phone) {
-            left: 20%; 
-            top: 0;
-        }
-    }
-
-    ul::before {
-        bottom: 5.4rem; 
-        content: "\f0da"; 
-
-        @media screen and (max-width: $screen-phone) {
-            bottom: 0;
-            left: 70%;
-        }
-    }*/
 }
 
 .section-p1__slider ul {
@@ -609,6 +584,7 @@ li {
   display: -ms-flexbox;
   display: flex;
   z-index: -1;
+  background-color: white;
 }
 
 .section-p1__slider #i1:checked ~ #slide-1,
@@ -624,13 +600,18 @@ li {
 .section-p1__slider #s5i6:checked ~ #s5-slide-6,
 .section-p1__slider #s5i7:checked ~ #s5-slide-7,
 .section-p1__slider #s5i8:checked ~ #s5-slide-8,
-.section-p1__slider #s5i9:checked ~ #s5-slide-9 {
+.section-p1__slider #s5i9:checked ~ #s5-slide-9,
+.section-p1__slider #ni1:checked ~ #n-slide-1,
+.section-p1__slider #ni2:checked ~ #n-slide-2,
+.section-p1__slider #ni3:checked ~ #n-slide-3,
+.section-p1__slider #p1i1:checked ~ #p1-slide-1,
+.section-p1__slider #p1i2:checked ~ #p1-slide-2 {
   z-index: 9;
 }
 
 .section-p1__slider #i1, .section-p1__slider #i2, .section-p1__slider #i3, .section-p1__slider #s2i1, .section-p1__slider #s2i2, .section-p1__slider #s5i1,
 .section-p1__slider #s5i2, .section-p1__slider #s5i3, .section-p1__slider #s5i4, .section-p1__slider #s5i5, .section-p1__slider #s5i6, .section-p1__slider #s5i7,
-.section-p1__slider #s5i8, .section-p1__slider #s5i9 {
+.section-p1__slider #s5i8, .section-p1__slider #s5i9, .section-p1__slider #ni1, .section-p1__slider #ni2, .section-p1__slider #ni3, .section-p1__slider #p1i1, .section-p1__slider #p1i2 {
   display: none;
 }
 
@@ -653,8 +634,22 @@ li {
           transform: rotate(-45deg);
 }
 
+@media screen and (max-width: 480px) {
+  .section-p1__slider .sideArrow-pre {
+    left: -30%;
+    bottom: 0;
+  }
+}
+
 .section-p1__slider .sideArrow-next {
   top: 6.4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .section-p1__slider .sideArrow-next {
+    top: 0;
+    left: 110%;
+  }
 }
 
 .section-p1__slider .small {
@@ -684,14 +679,7 @@ li {
 .section-p1__small-wrap .slider-square {
   min-width: 293px;
   background-color: lightblue;
-}
-
-.section-p1__small-wrap .slider-square p::after {
-  top: 3.4rem;
-}
-
-.section-p1__small-wrap .slider-square p::before {
-  bottom: 3.4rem;
+  z-index: 0;
 }
 
 .section-p1__big-over-wrap {
@@ -722,11 +710,12 @@ li {
   grid-column: 1;
   -ms-grid-row: 1;
   grid-row: 1;
-  z-index: 2;
+  z-index: 1;
 }
 
-.section-p1__big-wrap .slider-square p::after {
-  color: #ffe400;
+.section-p1__big-wrap .slider-square .sideArrow-pre {
+  -webkit-box-shadow: -2px -2px #ffe400;
+          box-shadow: -2px -2px #ffe400;
 }
 
 .section-p1__big-wrap .cent-icon {
@@ -750,7 +739,7 @@ li {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: span 1/2;
-  z-index: 1;
+  z-index: 0;
 }
 
 .section-p1__big-wrap .section-p1__image img {
@@ -922,15 +911,14 @@ li {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    min-height: 150px;
   }
-  .section-p1__small-wrap .slider-square p:after {
-    left: 23%;
-    top: 0;
+  .section-p1__small-wrap .slider-square .sideArrow-pre {
+    left: -50px !important;
+    bottom: 20%;
   }
-  .section-p1__small-wrap .slider-square p:before {
-    left: 70%;
-    bottom: 0;
+  .section-p1__small-wrap .slider-square .sideArrow-next {
+    left: 50px !important;
+    top: 20%;
   }
   .section-p1__small-wrap .article-block {
     -webkit-box-ordinal-group: 3;

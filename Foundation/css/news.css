@@ -659,35 +659,6 @@ li {
           flex-direction: column;
   place-content: center;
   background-color: white;
-  /*ul::before,
-    ul::after {
-        cursor: pointer;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: 4rem;
-        color: #6c6c6c;
-        position: absolute;
-        left: 50%;
-    }
-
-    ul::after {
-        top: 5.2rem;  
-        content: "\f0d9";
-        
-        @media screen and (max-width: $screen-phone) {
-            left: 20%; 
-            top: 0;
-        }
-    }
-
-    ul::before {
-        bottom: 5.4rem; 
-        content: "\f0da"; 
-
-        @media screen and (max-width: $screen-phone) {
-            bottom: 0;
-            left: 70%;
-        }
-    }*/
 }
 
 .section-n__slider ul {
@@ -729,13 +700,16 @@ li {
 .section-n__slider #s5i6:checked ~ #s5-slide-6,
 .section-n__slider #s5i7:checked ~ #s5-slide-7,
 .section-n__slider #s5i8:checked ~ #s5-slide-8,
-.section-n__slider #s5i9:checked ~ #s5-slide-9 {
+.section-n__slider #s5i9:checked ~ #s5-slide-9,
+.section-n__slider #ni1:checked ~ #n-slide-1,
+.section-n__slider #ni2:checked ~ #n-slide-2,
+.section-n__slider #ni3:checked ~ #n-slide-3 {
   z-index: 9;
 }
 
 .section-n__slider #i1, .section-n__slider #i2, .section-n__slider #i3, .section-n__slider #s2i1, .section-n__slider #s2i2, .section-n__slider #s5i1,
 .section-n__slider #s5i2, .section-n__slider #s5i3, .section-n__slider #s5i4, .section-n__slider #s5i5, .section-n__slider #s5i6, .section-n__slider #s5i7,
-.section-n__slider #s5i8, .section-n__slider #s5i9 {
+.section-n__slider #s5i8, .section-n__slider #s5i9, .section-n__slider #ni1, .section-n__slider #ni2, .section-n__slider #ni3 {
   display: none;
 }
 
@@ -758,8 +732,22 @@ li {
           transform: rotate(-45deg);
 }
 
+@media screen and (max-width: 480px) {
+  .section-n__slider .sideArrow-pre {
+    left: -30%;
+    bottom: 0;
+  }
+}
+
 .section-n__slider .sideArrow-next {
   top: 6.4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .section-n__slider .sideArrow-next {
+    top: 0;
+    left: 110%;
+  }
 }
 
 .section-n__slider .small {
