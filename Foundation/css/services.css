@@ -192,6 +192,83 @@ li {
   }
 }
 
+.header-s__top__page {
+  position: relative;
+}
+
+.header-s__top__page__menu {
+  display: none;
+}
+
+.header-s__top__page__menu.open {
+  display: block;
+  right: -25%;
+  top: 175%;
+  position: absolute;
+  background-color: #2297d8;
+  border: 1px solid white;
+}
+
+.header-s__top__page__menu .caret {
+  position: absolute;
+  color: #2297d8;
+  font-size: 3rem;
+  top: -20%;
+  right: 0%;
+}
+
+.header-s__top__page__menu .caret:hover {
+  -webkit-transform: none;
+          transform: none;
+  color: #2297d8;
+}
+
+.header-s__top__page__menu__list {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.header-s__top__page__menu__list-item {
+  line-height: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-s__top__page__menu__list-item + .header-s__top__page__menu__list-item {
+  border-top: 1px solid white;
+}
+
+.header-s__top__page__menu__list a {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.header-s__top__page__menu__list a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffe400;
+}
+
 .header-s__top__menu {
   width: 17%;
   display: -webkit-box;

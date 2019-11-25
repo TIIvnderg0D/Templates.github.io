@@ -9,6 +9,7 @@ const menuText4 = menuItem4.querySelector('.submenu');
 const nav = document.querySelector('.nav');
 const closeNav = document.getElementById('nav-close');
 const menuHeader = document.getElementById('menu');
+const pageMenu = document.querySelector('.page-menu');
 const cart = document.getElementById('shopping-cart');
 const cartOpen = document.querySelector('.shopping-cart__wrapper');
 const menuAdaptIcon = document.querySelector('.menu');
@@ -35,7 +36,7 @@ closeNav.onclick = function() {
 }
 
 menuHeader.onclick = function() {
-    nav.classList.toggle('close');
+    pageMenu.classList.toggle('open');
 }
 
 cart.onclick = function() {

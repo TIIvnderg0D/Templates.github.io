@@ -192,6 +192,83 @@ li {
   }
 }
 
+.header-p__top__page {
+  position: relative;
+}
+
+.header-p__top__page__menu {
+  display: none;
+}
+
+.header-p__top__page__menu.open {
+  display: block;
+  right: -25%;
+  top: 175%;
+  position: absolute;
+  background-color: #2297d8;
+  border: 1px solid white;
+}
+
+.header-p__top__page__menu .caret {
+  position: absolute;
+  color: #2297d8;
+  font-size: 3rem;
+  top: -20%;
+  right: 0%;
+}
+
+.header-p__top__page__menu .caret:hover {
+  -webkit-transform: none;
+          transform: none;
+  color: #2297d8;
+}
+
+.header-p__top__page__menu__list {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.header-p__top__page__menu__list-item {
+  line-height: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-p__top__page__menu__list-item + .header-p__top__page__menu__list-item {
+  border-top: 1px solid white;
+}
+
+.header-p__top__page__menu__list a {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.header-p__top__page__menu__list a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffe400;
+}
+
 .header-p__top__menu {
   width: 17%;
   display: -webkit-box;
@@ -440,7 +517,7 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2.1rem 0;
-  background-color: lightblue;
+  background-color: midnightblue;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 293px;
@@ -662,7 +739,7 @@ li {
   width: 31%;
   min-height: 293px;
   overflow: visible;
-  background-color: lightblue;
+  background-color: midnightblue;
   z-index: 0;
   left: 0;
 }
@@ -678,7 +755,7 @@ li {
 
 .section-p1__small-wrap .slider-square {
   min-width: 293px;
-  background-color: lightblue;
+  background-color: midnightblue;
   z-index: 0;
 }
 
