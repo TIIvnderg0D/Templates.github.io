@@ -70,7 +70,7 @@ li {
 }
 
 .header-p {
-  background: url("/images/centenario.png"), url("/images/gt86.png");
+  background: url("../images/centenario.png"), url("../images/gt86.png");
   background-repeat: no-repeat, no-repeat;
   background-position: -47.5% 0, 100% 0;
   height: 348px;
@@ -213,7 +213,7 @@ li {
   position: absolute;
   color: #2297d8;
   font-size: 3rem;
-  top: -20%;
+  top: -15%;
   right: 0%;
 }
 
@@ -765,7 +765,7 @@ li {
   width: 75%;
   min-height: 586px;
   overflow: visible;
-  background: url("/images/challenger_new.jpg");
+  background: url("../images/challenger_new.jpg");
   background-position-y: 20%;
   z-index: 0;
   left: -55.5%;
@@ -1525,7 +1525,7 @@ li {
 .section-p2__sidebar__longitem {
   height: 586px;
   background-color: #d7d7d7;
-  background-image: url("/images/gt86.png");
+  background-image: url("../images/gt86.png");
 }
 
 .section-p2__sidebar__longitem-header {

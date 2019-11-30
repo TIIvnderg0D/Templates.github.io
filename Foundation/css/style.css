@@ -72,7 +72,7 @@ li {
 
 .header {
   height: 826px;
-  background: url("/images/centenario.png"), url("/images/gt86.png");
+  background: url("../images/centenario.png"), url("../images/gt86.png");
   background-repeat: no-repeat, no-repeat;
   background-position: -47.5% 0, 100% 0;
 }
@@ -214,7 +214,7 @@ li {
   position: absolute;
   color: #2297d8;
   font-size: 3rem;
-  top: -20%;
+  top: -15%;
   right: 0%;
 }
 
@@ -719,13 +719,13 @@ li {
 
 @media screen and (max-width: 1200px) {
   .header {
-    background: url("/images/centenario.png") no-repeat 50% 0;
+    background: url("../images/centenario.png") no-repeat 50% 0;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1800px) {
   .header {
-    background: url("/images/centenario.png"), url("/images/gt86.png");
+    background: url("../images/centenario.png"), url("../images/gt86.png");
     background-repeat: no-repeat, no-repeat;
     background-position: 0 0, 150% 0;
   }
@@ -1458,7 +1458,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("/images/challenger_new.jpg");
+  background-image: url("../images/challenger_new.jpg");
   background-position-x: 10%;
   background-position-y: 40%;
 }
@@ -1641,7 +1641,7 @@ li {
           justify-content: space-between;
   grid-column: span 2;
   padding: 2.7rem 2.1rem;
-  background: url("/images/m2.jpg"), no-repeat;
+  background: url("../images/m2.jpg"), no-repeat;
 }
 
 .section-block4__slogan h2 {
@@ -1831,7 +1831,7 @@ li {
 }
 
 .section-block4 .construction {
-  background-image: url("/images/charger.jpg");
+  background-image: url("../images/charger.jpg");
   background-position-y: 50%;
   background-size: cover;
 }
@@ -1841,7 +1841,7 @@ li {
 }
 
 .section-block4 .procurement {
-  background-image: url("/images/charger_.jpg");
+  background-image: url("../images/charger_.jpg");
   background-position-y: 50%;
   background-size: cover;
 }

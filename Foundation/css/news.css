@@ -70,7 +70,7 @@ li {
 }
 
 .header-n {
-  background: url("/images/centenario.png"), url("/images/gt86.png");
+  background: url("../images/centenario.png"), url("../images/gt86.png");
   background-repeat: no-repeat, no-repeat;
   background-position: -47.5% 0, 100% 0;
   height: 348px;
@@ -213,7 +213,7 @@ li {
   position: absolute;
   color: #2297d8;
   font-size: 3rem;
-  top: -20%;
+  top: -15%;
   right: 0%;
 }
 
