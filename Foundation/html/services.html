@@ -9,56 +9,62 @@
     <script src="https://kit.fontawesome.com/7a583a3f9d.js"></script>
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Foundation</title>
 </head>
 
 <body>
     <!------------Header-------------->
 
-    <header class="section-outer header">
-        <div class="section-inner section-inner__header">
-            <div class="header__top__wrapper">
-                <div class="header__top__icon">
-                    <a href="#"></a><img src="/images/logo.png" alt="icon logo"></a>
+    <header class="section-outer-s header-s">
+        <div class="section-inner section-inner__header-s">
+            <div class="header-s__top__wrapper">
+                <div class="header-s__top__icon">
+                    <a href="../index.html"><img src="../images/logo-white.png" alt="icon logo"></a>
                 </div>
-                <div class="header__top__hidden">
-                    <div class="header__top__hidden__menu"><a href="#" class="menu"><i class="fas fa-bars"></i></a>
-                        <div class="header__top__hidden__menu__wrapper">
+                <div class="header-s__top__hidden">
+                    <div class="header-s__top__hidden__menu"><a href="#" class="menu"><i class="fas fa-bars"></i></a>
+                        <div class="header-s__top__hidden__menu__wrapper hidden-menu">
                             <i class="fas fa-caret-up caret"></i>
-                            <ul class="header__top__hidden__menu__list">
-                            <li class="header__top__hidden__menu__list-item">
-                                <p>Facebook</p>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="header__top__hidden__menu__list-item">
-                                <p>Twitter</p>
-                                <a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li class="header__top__hidden__menu__list-item">
-                                <p>Shopping Cart</p>
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a></li>       
+                            <ul class="header-s__top__hidden__menu__list">
+                                <li class="header-s__top__hidden__menu__list-item">
+                                    <p>Facebook</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="header-s__top__hidden__menu__list-item">
+                                    <p>Twitter</p>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="header-s__top__hidden__menu__list-item">
+                                    <p>Shopping Cart</p>
+                                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <ul class="header__top__menu">
-                    <li class="header__top__menu-item"><a href="#" id="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="header__top__menu-item"><a href="#" id="twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li class="header__top__menu-item shopping-cart"><a href="#" id="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+                <ul class="header-s__top__menu">
+                    <li class="header-s__top__menu-item"><a href="#" id="facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="header-s__top__menu-item"><a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="header-s__top__menu-item shopping-cart"><a href="#" id="shopping-cart"><i
+                                class="fas fa-shopping-cart"></i></a>
                         <div class="shopping-cart__wrapper">
                             <i class="fas fa-caret-up"></i>
                             <ul class="shopping-cart__wrapper__list">
-                                <li class="shopping-cart__wrapper__list-item"> 
-                                    <img src="./images/mustang.png" alt="item photo">
+                                <li class="shopping-cart__wrapper__list-item">
+                                    <img src="../images/mustang.png" alt="item photo">
                                     <div class="list-item__wrapper">
-                                    <p class="list-item__wrapper-name">Drill for Real</p>
-                                    <p class="list-item__wrapper-cost">1 x $59.00</p>
+                                        <p class="list-item__wrapper-name">Drill for Real</p>
+                                        <p class="list-item__wrapper-cost">1 x $59.00</p>
                                     </div>
                                 </li>
                                 <li class="shopping-cart__wrapper__list-item">
-                                    <img src="./images/project8.png" alt="item photo">
+                                    <img src="../images/project8.png" alt="item photo">
                                     <div class="list-item__wrapper">
-                                    <p class="list-item__wrapper-name">Drill Mill Brill <span>(2)</span></p>
-                                    <p class="list-item__wrapper-cost">1 x $29.00</p>
+                                        <p class="list-item__wrapper-name">Drill Mill Brill <span>(2)</span></p>
+                                        <p class="list-item__wrapper-cost">1 x $29.00</p>
                                     </div>
                                 </li>
                             </ul>
@@ -69,11 +75,26 @@
                             </div>
                         </div>
                     </li>
-                    <li class="header__top__menu-item"><a href="#" id="menu"><i class="fas fa-bars"></i></a></li>
+                    <li class="header__top__page"><a href="#" id="menu"><i class="fas fa-bars"></i></a>
+                        <div class="header__top__page__menu page-menu">
+                            <i class="fas fa-caret-up caret"></i>
+                            <ul class="header__top__page__menu__list">
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="../index.html">Home</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="services.html">Services</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="news.html">News & Events</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="post.html">Detailed News</a>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div class="header__section">
-
+            <div class="header-s__section">
+                <h1 class="header-s__section-button">
+                    <a href="#">Our Services</a></h1>
             </div>
 
         </div>
@@ -83,19 +104,20 @@
 
     <!----------Navigation------------>
 
-    <nav class="nav">
+    <nav class="nav nav-s">
         <div class="nav__wrapper">
             <div class="nav__heading">
                 <h3>Navigation</h3>
                 <i id="nav-close" class="fas fa-times"></i>
             </div>
             <ul class="nav__menu">
-                <li class="nav__menu__item"><span class="nav__menu__item-text"><a href="/index.html">Home</a></span></li>
+                <li class="nav__menu__item"><span class="nav__menu__item-text"><a href="../index.html">Home</a></span>
+                </li>
                 <li class="nav__menu__item" id="nav-services"><span class="nav__menu__item-text submenu">Services</span>
                     <ul class="nav__menu__item__list">
-                        <li class="nav__menu__item__list-open">General contracting</li>
-                        <li class="nav__menu__item__list-open">Project design and engineering</li>
-                        <li class="nav__menu__item__list-open">Capital Improvements</li>
+                        <li class="nav__menu__item__list-open"><a href="#GC">General contracting</a></li>
+                        <li class="nav__menu__item__list-open"><a href="#PDE">Project design and engineering</a></li>
+                        <li class="nav__menu__item__list-open"><a href="#CI">Capital Improvements</a></li>
                     </ul>
                 </li>
                 <li class="nav__menu__item" id="nav-works"><span class="nav__menu__item-text submenu">Our Works</span>
@@ -104,13 +126,12 @@
                         <li class="nav__menu__item__list-open">Examples</li>
                     </ul>
                 </li>
-                <li class="nav__menu__item" id="nav-news"><span class="nav__menu__item-text submenu">News &
-                        Events</span>
+                <li class="nav__menu__item" id="nav-news"><span class="nav__menu__item-text submenu">News & Events</a></span>
                     <ul class="nav__menu__item__list">
-                        <li class="nav__menu__item__list-open">General news</li>
-                        <li class="nav__menu__item__list-open">Main events</li>
-                        <li class="nav__menu__item__list-open">Local area news</li>
-                        <li class="nav__menu__item__list-open">Events near you</li>
+                        <li class="nav__menu__item__list-open"><a href="post.html">General news</a></li>
+                        <li class="nav__menu__item__list-open"><a href="news.html#MA">Main events</a></li>
+                        <li class="nav__menu__item__list-open"><a href="news.html#LAN">Local area news</a></li>
+                        <li class="nav__menu__item__list-open"><a href="news.html#ENY">Events near you</a></li>
                     </ul>
                 </li>
                 <li class="nav__menu__item"><span class="nav__menu__item-text">Work with us</span></li>
@@ -153,9 +174,96 @@
     <!-----------Main--------------->
 
     <main class="main">
-
-        
-
+        <section class="section-outer">
+            <div class="section-inner section-s">
+                <div class="section-s__heading bottom-arrow" id="GC">
+                    <i class="fas fa-caret-down"></i>
+                    <h3 class="section-s__heading-header">General Contracting</h3>
+                    <p class="section-s__heading-text">This allows the Design and Engineering team to originate
+                            details and scopes of work that deliver exactly what the client had intended to achieve.</p>
+                </div>
+                <div class="section-s__images s-image1">
+                    <p class="section-s__images-count">2</p>
+                    <img src="../images/wrx.png" alt="section-s image">
+                </div>
+                <div class="section-s__article bottom-arrow" id="CI">
+                    <i class="fas fa-caret-down"></i>
+                    <h3 class="section-s__article-header">Capital Improvements</h3>
+                    <p class="section-s__article-text">This allows the Design and Engineering team to originate
+                        details and scopes of work that deliver exactly what the client had intended to achieve.</p>
+                </div>
+                <div class="section-s__news">
+                    <div class="section-s__news__wrapper">
+                        <h2 class="section-s__news-header">Popular Posts</h2>
+                        <time datetime="2015-02-12" class="section-s__news-time">12 february, 2015</time>
+                        <p class="section-s__news-text">Project Design and Engineering Services</p>
+                        <p class="section-s__news-comments"><a href="#">23 comments</a></p>
+                    </div>
+                </div>
+                <div class="section-s__images s-image2">
+                    <p class="section-s__images-count">1</p>
+                    <img src="../images/huracan.png" alt="section-s image">
+                </div>
+                <div class="section-s__article top-arrow" id="PDE">
+                    <i class="fas fa-caret-up"></i>
+                    <h3 class="section-s__article-header">Project design
+                        and engineering</h3>
+                    <p class="section-s__article-text">Through Stage-Gate, Design and Engineering methodology,
+                        DMCS ensure client-partners realize clearly defined project objective to achieve intended
+                        results.</p>
+                </div>
+                <div class="section-s__images s-image3">
+                    <p class="section-s__images-count">3</p>
+                    <img src="../images/rs.png" alt="section-s image">
+                </div>
+                <div class="section-s__square cent-icon pdf">
+                    <i class="fas fa-file-pdf"></i>
+                    <p class="section-s__square-text">Download Price</p>
+                </div>
+                <div class="section-s__article bottom-arrow">
+                    <i class="fas fa-caret-down"></i>
+                    <h3 class="section-s__article-header">Construction</h3>
+                    <p class="section-s__article-text">This allows the Design and Engineering team to originate
+                        details and scopes of work that deliver exactly what the client had intended to achieve. </p>
+                </div>
+                <div class="section-s__images s-image4">
+                    <p class="section-s__images-count">5</p>
+                    <img src="../images/rs.png" alt="section-s image">
+                </div>
+                <div class="section-s__article bottom-arrow">
+                    <i class="fas fa-caret-down"></i>
+                    <h3 class="section-s__article-header">Procurement</h3>
+                    <p class="section-s__article-text">This allows the Design and Engineering team to originate
+                        details and scopes of work that deliver exactly what the client had intended to achieve. </p>
+                </div>
+                <form class="section-s__subscribe">
+                    <h2 class="section-s__subscribe-header">Subscribe</h2>
+                    <div class="section-s__subscribe__wrapper">
+                        <input type="text" class='section-s__subscribe-text' placeholder="E-mail">
+                        <button class="section-s__subscribe-button">Sign Up</button>
+                    </div>
+                </form>
+                <div class="section-s__images s-image5">
+                    <p class="section-s__images-count">4</p>
+                    <img src="../images/huracan.png" alt="section-s image">
+                </div>
+                <div class="section-s__article top-arrow">
+                    <i class="fas fa-caret-up"></i>
+                    <h3 class="section-s__article-header">Expert Witness</h3>
+                    <p class="section-s__article-text">Through Stage-Gate, Design and Engineering methodology, DMCS
+                        ensure client-partners realize clearly defined project objective to achieve intended results.
+                    </p>
+                </div>
+                <div class="section-s__images s-image6">
+                    <p class="section-s__images-count">6</p>
+                    <img src="../images/wrx.png" alt="section-s image">
+                </div>
+                <div class="section-s__square cent-icon">
+                    <i class="fas fa-cogs"></i>
+                    <p class="section-s__square-text">Work with us</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!------------ /Main ----------------->
@@ -169,10 +277,10 @@
                 </p>
             </div>
             <ul class="footer__menu">
-                <li class="footer__menu-item">Services</li>
+                <li class="footer__menu-item"><a href="services.html">Services</a></li>
                 <li class="footer__menu-item">Our Works</li>
-                <li class="footer__menu-item">News & Events</li>
-                <li class="footer__menu-item">Work with us</li>
+                <li class="footer__menu-item"><a href="news.html">News & Events</a></li>
+                <li class="footer__menu-item"><a href="post.html">Work with us</a></li>
                 <li class="footer__menu-item">F.A.Q</li>
                 <li class="footer__menu-item">Contact us</li>
                 <li class="footer__menu-item">Shop</li>
@@ -182,7 +290,7 @@
 
     <!---------- /Footer -------------->
 
-    <script src="/script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

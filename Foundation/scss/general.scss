@@ -1,0 +1,298 @@
+// ========  Variables ======== //
+
+$color-yellow: #ffe400;
+$color-blue: #2297d8;
+$color-black: #363636;
+$color-text: #a0a0a0;
+
+$screen-phone: 480px;
+$screen-tablet: 600px;
+$screen-tablet-landscape: 900px;
+$screen-desktop: 1200px;
+$screen-big-desktop: 1800px;
+
+$screen-phone-max: 599px;
+$screen-tablet-max: 899px;
+$screen-tablet-landscape-max: 1199px;
+$screen-desktop-max: 1799px;
+
+// ======== / Variables ======== //
+
+/* ======== Mixins ======== */
+
+@mixin font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin article-block($color) {
+    background-color: $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        width: 73%;
+        text-transform: uppercase;
+        color: $color-black;
+        font-weight: 700;
+        margin: 0;
+
+        @media screen and (max-width: $screen-phone) {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
+    }
+
+    h2:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+        display: inline-block;
+    }
+
+    p {
+        color: $color-black;
+        line-height: 1.6rem;
+
+        @media screen and (max-width: $screen-phone) {
+            line-height: 1.2;
+        }
+
+        @media screen and (min-width: $screen-phone) and (max-width: $screen-tablet-landscape-max) {
+            font-size: 1.5rem;
+        }
+    }
+
+    a {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: white;
+        background-color: $color-black;
+        padding: 1.22em 1.8em;
+        text-transform: uppercase;
+        align-self: flex-start;
+    }  
+}
+
+@mixin arrow-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+
+    h3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        width: 75%;
+        color: $color-black;
+        font-weight: 700;
+        margin: 0;
+
+        @media screen and (max-width: $screen-phone) {
+            font-size: 1.5rem;
+            width: 90%; 
+        }
+    }
+
+    h3:after {
+        width: 40px;
+        padding-top: 1.21rem; 
+        border-bottom: 5px solid $color-black;
+        content: ""; 
+        display: inline-block;
+    }
+
+    p {
+        color: $color-text;
+        line-height: 1.9;
+
+        @media screen and (max-width: $screen-phone) {
+            line-height: 1.2;
+        }
+    }  
+}
+
+@mixin slider-square {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    background-color: white;
+
+    ul {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: $color-black;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        text-align: center;
+        display: flex;
+        line-height: 0.9;
+    }
+
+    li {
+        position: absolute;
+        display: flex; 
+        z-index: -1;  
+        background-color: white; 
+    }
+
+    #i1:checked ~ #slide-1,
+    #i2:checked ~ #slide-2,
+    #i3:checked ~ #slide-3,
+    #s2i1:checked ~ #s2-slide-1,
+    #s2i2:checked ~ #s2-slide-2,
+    #s5i1:checked ~ #s5-slide-1,
+    #s5i2:checked ~ #s5-slide-2,
+    #s5i3:checked ~ #s5-slide-3,
+    #s5i4:checked ~ #s5-slide-4,
+    #s5i5:checked ~ #s5-slide-5,
+    #s5i6:checked ~ #s5-slide-6,
+    #s5i7:checked ~ #s5-slide-7,
+    #s5i8:checked ~ #s5-slide-8,
+    #s5i9:checked ~ #s5-slide-9,
+    #ni1:checked ~ #n-slide-1,
+    #ni2:checked ~ #n-slide-2,
+    #ni3:checked ~ #n-slide-3,
+    #p1i1:checked ~ #p1-slide-1,
+    #p1i2:checked ~ #p1-slide-2 {
+        z-index: 9;
+    }
+
+    #i1, #i2, #i3, #s2i1, #s2i2, #s5i1, 
+    #s5i2, #s5i3, #s5i4, #s5i5, #s5i6, #s5i7,
+    #s5i8, #s5i9, #ni1, #ni2, #ni3, #p1i1, #p1i2 {
+       display: none;
+    }
+
+    .sideArrow-pre, .sideArrow-next {
+        position: absolute;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        box-shadow: -2px -2px #6c6c6c;
+        transform: rotate(135deg);
+        z-index: 99;
+    }
+
+    .sideArrow-pre {
+        bottom: 6.4rem; 
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: $screen-phone) {
+            left: -30%; 
+            bottom: 0;
+        }
+    }
+
+    .sideArrow-next {
+        top: 6.4rem; 
+
+        @media screen and (max-width: $screen-phone) {
+            top: 0;
+            left: 110%;
+        }
+    }
+
+    .small {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin cent-icon($color) {
+    background-color: $color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    i {
+        font-size: 5rem;
+    }
+
+    &-text {
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08px;
+    }
+
+    i:hover {
+        transition: 1.8s;
+        transform: rotateY(360deg);  
+    }
+
+    @media screen and (max-width: $screen-phone)  {
+        
+        i {
+            font-size: 4rem;
+        }
+    } 
+}
+
+@mixin critic-block($color) {
+    background-color: $color;
+    padding: 1.9rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    &__text p {
+        color: $color-text;
+        line-height: 1.6rem;
+        text-align: center;
+    }
+
+    &__author-name {
+        font-weight: 700;
+    }
+
+    i {
+        color:#ffae00;
+    }
+}
+
+// ======== / Mixins ======== //
+
+// ======== General ======== //
+
+html {
+    @include font-montserrat;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;  
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sizing:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+// ======== / General ======== //

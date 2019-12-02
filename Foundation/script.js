@@ -9,12 +9,11 @@ const menuText4 = menuItem4.querySelector('.submenu');
 const nav = document.querySelector('.nav');
 const closeNav = document.getElementById('nav-close');
 const menuHeader = document.getElementById('menu');
+const pageMenu = document.querySelector('.page-menu');
 const cart = document.getElementById('shopping-cart');
 const cartOpen = document.querySelector('.shopping-cart__wrapper');
 const menuAdaptIcon = document.querySelector('.menu');
-const menuAdapt = document.querySelector('.header__top__hidden__menu__wrapper');
-
-
+const menuAdapt = document.querySelector('.hidden-menu');
 
 menuText1.onclick = function() {
     menuItem1.classList.toggle('open');
@@ -37,7 +36,7 @@ closeNav.onclick = function() {
 }
 
 menuHeader.onclick = function() {
-    nav.classList.toggle('close');
+    pageMenu.classList.toggle('open');
 }
 
 cart.onclick = function() {

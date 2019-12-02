@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/7a583a3f9d.js"></script>
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Foundation</title>
 </head>
 
@@ -24,7 +24,7 @@
                 </div>
                 <div class="header__top__hidden">
                     <div class="header__top__hidden__menu"><a href="#" class="menu"><i class="fas fa-bars"></i></a>
-                        <div class="header__top__hidden__menu__wrapper">
+                        <div class="header__top__hidden__menu__wrapper hidden-menu">
                             <i class="fas fa-caret-up caret"></i>
                             <ul class="header__top__hidden__menu__list">
                             <li class="header__top__hidden__menu__list-item">
@@ -69,7 +69,21 @@
                             </div>
                         </div>
                     </li>
-                    <li class="header__top__menu-item"><a href="#" id="menu"><i class="fas fa-bars"></i></a></li>
+                    <li class="header__top__page"><a href="#" id="menu"><i class="fas fa-bars"></i></a>
+                        <div class="header__top__page__menu page-menu">
+                            <i class="fas fa-caret-up caret"></i>
+                            <ul class="header__top__page__menu__list">
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="index.html">Home</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="./html/services.html">Services</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="./html/news.html">News & Events</a>
+                                <li class="header__top__page__menu__list-item">
+                                    <a href="./html/post.html">Detailed News</a>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="header__section">
@@ -78,10 +92,29 @@
                         world around us</h2>
                     <p class="header__section__main-text">Still other clients have reserved for capital
                         improvement projects and will work directly with our Design and Engineering team.</p>
-                    <a href="#" class="header__section__main-readmore">Read More</a>
+                    <a href="#" class="header__section__main-readmore sizing">Read More</a>
                 </div>
-                <div class="header__section__slider slider-sqare">
-                    <p class="header__section__slider-content">01<span class="small">/03</span></p>
+                <div class="header__section__slider slider-square">
+                    <ul class="header__section__slider__wrapper">
+                        <input type="radio" name="arrows" id="i1" checked>
+                        <input type="radio" name="arrows" id="i2">
+                        <input type="radio" name="arrows" id="i3">
+                        <li class="header__section__slider__wrapper-item" id="slide-1">
+                            <label for="i3" class="sideArrow-pre"></label>
+                            <label for="i2" class="sideArrow-next"></label>
+                            <span class="bigOne">01</span><span class="small">/03</span>
+                        </li>
+                        <li class="header__section__slider__wrapper-item" id="slide-2">
+                            <label for="i1" class="sideArrow-pre"></label>
+                            <label for="i3" class="sideArrow-next"></label>
+                            <span class="bigOne">02</span><span class="small">/03</span>
+                        </li>
+                        <li class="header__section__slider__wrapper-item" id="slide-3">
+                            <label for="i2" class="sideArrow-pre"></label>
+                            <label for="i1" class="sideArrow-next"></label>
+                            <span class="bigOne">03</span><span class="small">/03</span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="header__section__video cent-icon">
                     <i class="far fa-play-circle"><a href="#"></a></i>
@@ -104,11 +137,11 @@
             </div>
             <ul class="nav__menu">
                 <li class="nav__menu__item"><span class="nav__menu__item-text"><a href="index.html">Home</a></span></li>
-                <li class="nav__menu__item" id="nav-services"><span class="nav__menu__item-text submenu"><a href="./html/services.html">Services</a></span>
+                <li class="nav__menu__item" id="nav-services"><span class="nav__menu__item-text submenu">Services</span>
                     <ul class="nav__menu__item__list">
-                        <li class="nav__menu__item__list-open">General contracting</li>
-                        <li class="nav__menu__item__list-open">Project design and engineering</li>
-                        <li class="nav__menu__item__list-open">Capital Improvements</li>
+                        <li class="nav__menu__item__list-open"><a href="./html/services.html#GC">General contracting</a></li>
+                        <li class="nav__menu__item__list-open"><a href="./html/services.html#PDE">Project design and engineering</a></li>
+                        <li class="nav__menu__item__list-open"><a href="./html/services.html#CI">Capital Improvements</a></li>
                     </ul>
                 </li>
                 <li class="nav__menu__item" id="nav-works"><span class="nav__menu__item-text submenu">Our Works</span>
@@ -117,13 +150,12 @@
                         <li class="nav__menu__item__list-open">Examples</li>
                     </ul>
                 </li>
-                <li class="nav__menu__item" id="nav-news"><span class="nav__menu__item-text submenu">News &
-                        Events</span>
+                <li class="nav__menu__item" id="nav-news"><span class="nav__menu__item-text submenu">News & Events</span>
                     <ul class="nav__menu__item__list">
-                        <li class="nav__menu__item__list-open">General news</li>
-                        <li class="nav__menu__item__list-open">Main events</li>
-                        <li class="nav__menu__item__list-open">Local area news</li>
-                        <li class="nav__menu__item__list-open">Events near you</li>
+                        <li class="nav__menu__item__list-open"><a href="./html/post.html">General news</a></li>
+                        <li class="nav__menu__item__list-open"><a href="./html/news.html#MA">Main events</a></li>
+                        <li class="nav__menu__item__list-open"><a href="./html/news.html#LAN">Local area news</a></li>
+                        <li class="nav__menu__item__list-open"><a href="./html/news.html#ENY">Events near you</a></li>
                     </ul>
                 </li>
                 <li class="nav__menu__item"><span class="nav__menu__item-text">Work with us</span></li>
@@ -189,8 +221,21 @@
                 <div class="section-block2__images block2-image2">
                     <img src="./images/huracan.png" alt="block-2 image">
                 </div>
-                <div class="section-block2__slider slider-sqare">
-                    <p class="section-block2__slider-content ">03<span class="small">/06</span></p>
+                <div class="section-block2__slider slider-square">
+                    <ul class="section-block2__slider__wrapper">
+                        <input type="radio" name="s2-arrows" id="s2i1" checked>
+                        <input type="radio" name="s2-arrows" id="s2i2">
+                        <li class="section-block2__slider__wrapper-item" id="s2-slide-1">
+                            <label for="s2i2" class="sideArrow-pre"></label>
+                            <label for="s2i2" class="sideArrow-next"></label>
+                            <span class="bigOne">03</span><span class="small">/06</span>
+                        </li>
+                        <li class="section-block2__slider__wrapper-item" id="s2-slide-2">
+                            <label for="s2i1" class="sideArrow-pre"></label>
+                            <label for="s2i1" class="sideArrow-next"></label>
+                            <span class="bigOne">06</span><span class="small">/06</span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="section-block2__article right-arrow">
                     <i class="fas fa-caret-right"></i>
@@ -275,7 +320,7 @@
                         good hands</h2>
                     <p class="section-block4__slogan-text">Our mission is to provide the highest level of service
                         for our client-partners from concept through construction.</p>
-                    <a href="#" class="section-block4__slogan-about">About Company</a>
+                    <a href="#" class="section-block4__slogan-about sizing">About Company</a>
                 </div>
                 <div class="section-block4__ratings critic-block milk">
                     <div class="section-block4__ratings__wrapper">
@@ -388,7 +433,7 @@
                                 who are able to deliver those skills. From</p>
                         </div>
                     </div>
-                    <a href="#" class="section-block5__main-view">View Project</a>
+                    <a href="#" class="section-block5__main-view sizing">View Project</a>
                 </div>
                 <div class="section-block5__image">
                     <img src="./images/sv.png" alt="big image">
@@ -397,8 +442,63 @@
                     <i class="fas fa-cogs"></i>
                     <p class="section-block5__square-text">Work with us</p>
                 </div>
-                <div class="section-block5__slider slider-sqare">
-                    <p class="section-block5__slider-content">01<span class="small">/09</span></p>
+                <div class="section-block5__slider slider-square">
+                    <ul class="section-block5__slider__wrapper">
+                        <input type="radio" name="s5-arrows" id="s5i1" checked>
+                        <input type="radio" name="s5-arrows" id="s5i2">
+                        <input type="radio" name="s5-arrows" id="s5i3">
+                        <input type="radio" name="s5-arrows" id="s5i4">
+                        <input type="radio" name="s5-arrows" id="s5i5">
+                        <input type="radio" name="s5-arrows" id="s5i6">
+                        <input type="radio" name="s5-arrows" id="s5i7">
+                        <input type="radio" name="s5-arrows" id="s5i8">
+                        <input type="radio" name="s5-arrows" id="s5i9">
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-1">
+                            <label for="s5i9" class="sideArrow-pre"></label>
+                            <label for="s5i2" class="sideArrow-next"></label>
+                            <span class="bigOne">01</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-2">
+                            <label for="s5i1" class="sideArrow-pre"></label>
+                            <label for="s5i3" class="sideArrow-next"></label>
+                            <span class="bigOne">02</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-3">
+                            <label for="s5i2" class="sideArrow-pre"></label>
+                            <label for="s5i4" class="sideArrow-next"></label>
+                            <span class="bigOne">03</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-4">
+                            <label for="s5i3" class="sideArrow-pre"></label>
+                            <label for="s5i5" class="sideArrow-next"></label>
+                            <span class="bigOne">04</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-5">
+                            <label for="s5i4" class="sideArrow-pre"></label>
+                            <label for="s5i6" class="sideArrow-next"></label>
+                            <span class="bigOne">05</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-6">
+                            <label for="s5i5" class="sideArrow-pre"></label>
+                            <label for="s5i7" class="sideArrow-next"></label>
+                            <span class="bigOne">06</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-7">
+                            <label for="s5i6" class="sideArrow-pre"></label>
+                            <label for="s5i8" class="sideArrow-next"></label>
+                            <span class="bigOne">07</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-8">
+                            <label for="s5i7" class="sideArrow-pre"></label>
+                            <label for="s5i9" class="sideArrow-next"></label>
+                            <span class="bigOne">08</span><span class="small">/09</span>
+                        </li>
+                        <li class="section-block5__slider__wrapper-item" id="s5-slide-9">
+                            <label for="s5i8" class="sideArrow-pre"></label>
+                            <label for="s5i1" class="sideArrow-next"></label>
+                            <span class="bigOne">09</span><span class="small">/09</span>
+                        </li>
+                    </ul>
                 </div>
                 <form class="section-block5__subscribe">
                     <h2 class="section-block5__subscribe-header">Subscribe</h2>
@@ -426,10 +526,10 @@
                 </p>
             </div>
             <ul class="footer__menu">
-                <li class="footer__menu-item">Services</li>
+                <li class="footer__menu-item"><a href="./html/services.html">Services</a></li>
                 <li class="footer__menu-item">Our Works</li>
-                <li class="footer__menu-item">News & Events</li>
-                <li class="footer__menu-item">Work with us</li>
+                <li class="footer__menu-item"><a href="./html/news.html">News & Events</a></li>
+                <li class="footer__menu-item"><a href="./html/post.html">Work with us</a></li>
                 <li class="footer__menu-item">F.A.Q</li>
                 <li class="footer__menu-item">Contact us</li>
                 <li class="footer__menu-item">Shop</li>
