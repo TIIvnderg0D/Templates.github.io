@@ -1,8 +1,6 @@
 const timerDisplay = document.querySelector('.header__countdown_value');
-const dateNow = new Date();
 
 function countDown(seconds) {
-   /* const now = Date.now();*/
     const now = new Date();
     const dayEnd = now.toTimeString();
     console.log(now, dayEnd);
@@ -10,6 +8,8 @@ function countDown(seconds) {
 }
 
 function countDays() {
+    setInterval(() => {
+    const dateNow = new Date();
     const month = dateNow.getMonth();
     const todays = dateNow.getDate();
     let days = 30;
@@ -20,23 +20,43 @@ function countDays() {
     } else {
         days = 31 - todays;}
     console.log(days);
+    }, 1000);
 }
 
 function countHours() {
-    const hour = dateNow.getHours();
-    const hoursLeft = 23 - hour;
-    console.log(hoursLeft);
+    setInterval(() => {
+        const dateNow = new Date();
+        const hour = dateNow.getHours();
+        var hoursLeft = 23 - hour;
+        if (hour === 0) {
+            hoursLeft = 0;
+        }
+        console.log(hoursLeft);
+    }, 1000)
 }
 
-function countMinutes() {
-    const minute = dateNow.getMinutes();
-    const minutesLeft = 59 - minute;
-    console.log(minutesLeft);
+function countMinutes() {  
+    setInterval(() => {
+        const dateNow = new Date();
+        const minute = dateNow.getMinutes();
+        var minutesLeft = 59 - minute;
+        if (minute === 0) {
+            minutesLeft = 0;
+        }
+        console.log(minutesLeft);
+    }, 1000)
 }
 
 function countSeconds() {
-    const second = dateNow.getSeconds();
-    const secondsLeft = 59 - second;
-    console.log(secondsLeft);
+    setInterval(() => {
+        const dateNow = new Date();
+        const second = dateNow.getSeconds();
+        var secondsLeft = 60 - second;
+        if (second === 0) {
+            secondsLeft = 0;
+        }
+        console.log(secondsLeft);
+    }, 1000)
+  
 }
 
