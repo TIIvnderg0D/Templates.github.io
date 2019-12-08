@@ -1,11 +1,7 @@
-const timerDisplay = document.querySelector('.header__countdown_value');
-
-function countDown(seconds) {
-    const now = new Date();
-    const dayEnd = now.toTimeString();
-    console.log(now, dayEnd);
-    timerDisplay.textContent = dayEnd;
-}
+const DaysDisplay = document.getElementById('daysLeft');
+const HoursDisplay = document.getElementById('hoursLeft');
+const MinutesDisplay = document.getElementById('minutesLeft');
+const SecondsDisplay = document.getElementById('secondsLeft');
 
 function countDays() {
     setInterval(() => {
@@ -19,7 +15,8 @@ function countDays() {
         days = 30 - todays;
     } else {
         days = 31 - todays;}
-    console.log(days);
+    //console.log(days);
+    DaysDisplay.textContent = days;
     }, 1000);
 }
 
@@ -29,9 +26,10 @@ function countHours() {
         const hour = dateNow.getHours();
         var hoursLeft = 23 - hour;
         if (hour === 0) {
-            hoursLeft = 0;
+            hoursLeft = 23;
         }
-        console.log(hoursLeft);
+        //console.log(hoursLeft);
+        HoursDisplay.textContent = hoursLeft;
     }, 1000)
 }
 
@@ -43,7 +41,8 @@ function countMinutes() {
         if (minute === 0) {
             minutesLeft = 0;
         }
-        console.log(minutesLeft);
+        //console.log(minutesLeft);
+        MinutesDisplay.textContent = minutesLeft;
     }, 1000)
 }
 
@@ -55,8 +54,8 @@ function countSeconds() {
         if (second === 0) {
             secondsLeft = 0;
         }
-        console.log(secondsLeft);
+        //console.log(secondsLeft);
+        SecondsDisplay.textContent = secondsLeft;
     }, 1000)
-  
 }
 
