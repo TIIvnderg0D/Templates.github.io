@@ -1,1 +1,77 @@
-/* No CSS */
+/* ======== Mixins ======== */
+/* ======== / Mixins ======== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.section-outer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.section-inner {
+  width: 86%;
+  height: 100%;
+  max-width: 1170px;
+}
+
+.header {
+  width: 100%;
+  height: 1150px;
+  background: url("../images/backpic.png") no-repeat;
+  background-position: 50% 0, 769px 0;
+}
+
+.header__topPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 43px 0;
+}
+
+.header__topPanel__logo_img {
+  width: 100%;
+}
+
+.header__topPanel__menu {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  font-size: 1.08rem;
+}
+
+.section-6__midWrap_img {
+  width: 100%;
+}

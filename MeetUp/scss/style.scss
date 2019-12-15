@@ -1,0 +1,113 @@
+// ========  Variables ======== //
+
+$color-main: #90d23d;
+$color-text: #242424;
+$color-table1 :#373737;
+$color-table2 :#4b4d4f;
+
+$screen-phone: 480px;
+$screen-tablet: 600px;
+$screen-tablet-landscape: 900px;
+$screen-desktop: 1200px;
+$screen-big-desktop: 1800px;
+
+$screen-phone-max: 599px;
+$screen-tablet-max: 899px;
+$screen-tablet-landscape-max: 1199px;
+$screen-desktop-max: 1799px;
+
+// ======== / Variables ======== //
+
+/* ======== Mixins ======== */
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+@mixin roboto-slab {
+    font-family: 'Roboto+Slab', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@mixin main-button {
+    width: 200px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: $color-main;
+}
+
+/* ======== / Mixins ======== */
+
+// ======== General ======== //
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    @include roboto;
+    font-size: 14px;
+}
+
+a {
+    color: white;
+    text-decoration: none;  
+}
+
+li {
+    list-style-type: none;
+}
+
+.section-outer {
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.section-inner {
+    width: 86%;
+    height: 100%;
+    max-width: 1170px;
+}
+
+// ======== / General ======== //
+
+// ======== Header ======== //
+
+.header {
+    width: 100%;
+    height: 1150px;
+    background: url('../images/backpic.png') no-repeat;
+    background-position: 50% 0, 769px 0;
+
+    &__topPanel {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 43px 0;
+
+        &__logo_img {
+            width: 100%;
+        }
+
+        &__menu {
+            text-transform: uppercase;
+            display: flex;
+            column-gap: 40px;
+            font-size: 1.08rem;
+        }
+    }
+}
+
+// ======== / Header ======== //
+
+.section-6 {
+
+    &__midWrap_img {
+        width: 100%;
+    }
+}
