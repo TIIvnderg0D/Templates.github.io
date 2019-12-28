@@ -23,11 +23,14 @@ $screen-desktop-max: 1799px;
 @mixin roboto {
     font-family: 'Roboto', sans-serif;
 }
+
 @mixin roboto-slab {
-    font-family: 'Roboto+Slab', sans-serif;
-    font-weight: 400;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: thin;
     text-transform: uppercase;
 }
+
+
 
 @mixin main-button {
     width: 200px;
@@ -99,7 +102,54 @@ li {
             display: flex;
             column-gap: 40px;
             font-size: 1.08rem;
+
+            &_item:hover a {
+                transition: 0.2s;
+                color: $color-main;
+            }
         }
+    }
+
+    &__countdown {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 975px;
+        border: 1px $color-main solid;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.8rem;
+        @include roboto-slab;
+        align-items: center;
+        padding: 0 80px;
+        
+        &__item {
+            text-align: center;
+            &_name {
+                @include roboto-slab;
+                
+                line-height: 0.8;
+                padding-bottom: 1.9rem;
+            }
+
+            &_num {
+                line-height: 0.8;
+                padding: 1.9rem 0;
+                font-size: 9.3rem;
+            }
+        }
+
+        .dpoint {
+            height: 195px;
+            font-size: 9.3rem;
+            line-height: 1.1;
+            }
+    }
+
+    &__botPanel {
+        
     }
 }
 

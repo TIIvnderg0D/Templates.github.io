@@ -38,11 +38,12 @@ function countMinutes() {
         const dateNow = new Date();
         const minute = dateNow.getMinutes();
         var minutesLeft = 59 - minute;
-        if (minute === 0) {
-            minutesLeft = 0;
-        }
+            if (minute === 0) {
+                minutesLeft = 0;
+            }
         //console.log(minutesLeft);
         MinutesDisplay.textContent = minutesLeft;
+        
     }, 1000)
 }
 
@@ -59,3 +60,12 @@ function countSeconds() {
     }, 1000)
 }
 
+function start() {
+    countDays();
+    countHours();
+    countSeconds();
+    countMinutes();
+}
+
+
+document.addEventListener("DOMContentLoaded" , start);
