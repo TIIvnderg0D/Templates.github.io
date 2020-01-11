@@ -26,11 +26,8 @@ $screen-desktop-max: 1799px;
 
 @mixin roboto-slab {
     font-family: 'Roboto Slab', sans-serif;
-    font-weight: thin;
     text-transform: uppercase;
 }
-
-
 
 @mixin main-button {
     width: 200px;
@@ -46,6 +43,7 @@ $screen-desktop-max: 1799px;
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -63,7 +61,6 @@ li {
 }
 
 .section-outer {
-    box-sizing: border-box;
     width: 100%;
     background: #ffffff;
     display: flex;
@@ -75,6 +72,20 @@ li {
     width: 86%;
     height: 100%;
     max-width: 1170px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__section-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 // ======== / General ======== //
@@ -89,9 +100,9 @@ li {
 
     &__topPanel {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        margin: 43px 0;
+        width: 90%;
 
         &__logo_img {
             width: 100%;
@@ -111,8 +122,7 @@ li {
     }
 
     &__countdown {
-        box-sizing: border-box;
-        margin: 0 auto;
+        width: 83%;
         max-width: 975px;
         border: 1px $color-main solid;
         border-radius: 20px;
@@ -127,9 +137,8 @@ li {
         
         &__item {
             text-align: center;
-            &_name {
-                @include roboto-slab;
-                
+
+            &_name {  
                 line-height: 0.8;
                 padding-bottom: 1.9rem;
             }
@@ -149,11 +158,224 @@ li {
     }
 
     &__botPanel {
-        
+        display: flex;
+        width: 90%;
+        align-items: center;
+        column-gap: 75px;
+        justify-content: space-between;
+
+        &__greetWrap {
+            width: 530px;
+            max-width: 50%;
+            padding-top: 290px;
+
+            &_header {
+                font-size: 3.6rem;
+                font-weight: 700;
+                line-height: 0.8;
+            }
+
+            &_para {
+                color: $color-text;
+                margin-top: 1.55rem; 
+
+                a {
+                    color: blue;
+                }
+            }
+        }
+
+        &__signForm {
+            width: 432px;
+            max-width: 50%;
+            background-color: #fff;
+            padding: 2rem;
+            border: 1px solid #dbdada;
+            box-shadow: 0 1px 2px rgba(0,0,0, 0.65);
+
+            &_header {
+                font-size: 2.1rem;
+                text-align: center;
+                padding-bottom: 1.35rem;
+                color: $color-text;
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+
+                &_input {
+                    line-height: 0.8;
+                    font-size: 1.35rem;
+                    padding: 1.3rem 1.2rem;
+                    border: 1px soild #bebebe;
+                    border-radius: 5px;
+                    color: #6c6c6c;
+                }
+
+                &_input:focus,
+                &_input:active {
+                    border-color: $color-main;
+                }
+
+                &_button {
+                    margin: 1.35rem 0;
+                    color: white;
+                    font-size: 1.55rem;
+                    border-radius: 5px;
+                    border: none;
+                    line-height: 0.8;
+                    padding: 1.3rem 1.2rem;
+                    background-color: $color-main;
+                    cursor: pointer;
+                }
+            }
+
+            &_comment {
+                text-align: center;
+                margin: 0 auto;
+                color: #6c6c6c;
+                font-size: 1.1rem;
+                max-width: 60%;
+            }
+        }
     }
 }
 
 // ======== / Header ======== //
+
+// ======== Section 1 ======== //
+
+.section-1 {
+    max-height: 485px;
+    width: 100%;
+    padding: 4rem 0;
+
+    &__listWrapper {
+        display: flex;
+        column-gap: 65px;
+        justify-content: center;
+
+        &__item {
+            max-width: 305px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color-text;
+
+            &_name {
+                font-size: 2.5rem;
+                margin: 1.3rem 0;
+            }
+
+            &_img {
+                max-width: 200px;
+                max-height: 200px;
+                margin: 1.2rem 0;
+            }
+
+            &_text {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// ======== / Section 1 ======== //
+
+// ======== Section 2 ======== //
+
+.section-2 {
+    max-height: 550px;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+
+    &__table {
+        width: 90%;
+
+        &__row, &__header {
+            display: flex;
+            line-height: 0.8;
+            
+            &_data {
+                padding: 25px 50px;
+            }
+
+            &_data:first-child {
+                max-width: 220px;
+                flex: 2;
+                text-align: center;
+            }
+
+            &_data:nth-child(2) {
+                flex: 7;
+            }
+            
+            &_data:last-child {
+                text-align: center;
+                flex: 1;
+            }
+        }
+
+        &__header {
+            background-color: $color-main;
+            color: white;
+            font-size: 2.1rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            
+            &_data {
+                text-align: center;
+            }
+
+            &_data:nth-child(2) {
+                text-align: left;
+            }
+        }
+
+        &__row {
+            color: white;
+            font-size: 1.4rem;
+
+            i {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        &__row:nth-of-type(even) {
+            background-color: $color-table1;
+        }
+    
+        &__row:nth-of-type(odd) {
+            background-color: $color-table2;
+        }
+
+        &__row:last-child {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .icon {
+            padding: 10px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__underText {
+        width: 80%;
+        margin: 40px 0;
+        color: $color-text;
+        text-align: center;
+    }
+}
+
+// ======== / Section 2 ======== //
 
 .section-6 {
 
