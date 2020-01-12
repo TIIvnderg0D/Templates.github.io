@@ -30,10 +30,11 @@ $screen-desktop-max: 1799px;
 }
 
 @mixin main-button {
-    width: 200px;
-    height: 55px;
+    max-width: 205px;
+    max-height: 58px;
     border-radius: 15px;
     background-color: $color-main;
+    color: white;
 }
 
 /* ======== / Mixins ======== */
@@ -73,18 +74,44 @@ li {
     height: 100%;
     max-width: 1170px;
 
-    &__header {
+    &__header,
+    &__section-2,
+    &__section-3,
+    &__section-4,
+    &__section-5,
+    &__section-6 {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         align-items: center;
     }
 
-    &__section-2 {
-        display: flex;
+    &__header {
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;
+    }
+
+    &__section-2 {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__section-3 {
+        padding: 0 4rem;
+        justify-content: flex-end;
+    }
+
+    &__section-4 {
+        padding: 0 4rem;
+        flex-direction: column;
+    }
+
+    &__section-5 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__section-6 {
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -229,6 +256,10 @@ li {
                     padding: 1.3rem 1.2rem;
                     background-color: $color-main;
                     cursor: pointer;
+                }
+
+                &_button:hover {
+                    color: $color-text;
                 }
             }
 
@@ -377,9 +408,377 @@ li {
 
 // ======== / Section 2 ======== //
 
-.section-6 {
+// ======== Section 3 ======== //
 
-    &__midWrap_img {
-        width: 100%;
+.section-3 {
+    height: 895px;
+    padding: 2rem 0;    
+    background-image: url('../images/rectangle.png');
+    background-position-x: 50%;
+    background-position-y: 45%;
+    background-repeat: no-repeat;
+
+    &__textBlock {
+        display: flex;
+        flex-direction: column;
+
+        &_header {
+            color: white;
+            font-size: 3.6rem;
+            line-height: 0.8;
+            margin: 1rem 0;
+            text-align: end;
+        }
+
+        &_text {
+            color: white;
+            margin: 1.8rem 0;
+            text-align: end;
+        }
+
+        &_button {
+            @include main-button;
+            align-self: flex-end;
+            font-size: 1.3rem;
+            padding: 1.2rem 2rem;
+            margin: 1rem 0;
+            white-space: nowrap;
+        }
+
+        &_button:hover {
+            color: $color-text;
+        }
+    }
+
+    &__imageWrap {
+        align-self: flex-start;
+
+        &_img {
+            max-width: 335px;
+            max-height: 335px;
+        }
     }
 }
+
+// ======== / Section 3 ======== //
+
+// ======== Section 4 ======== //
+
+.section-4 {
+    max-height: 1330px;
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+
+    &__topPanel {
+        color: $color-text;
+        padding: 0 3.5rem;
+
+        &_header {
+            padding: 1.4rem 0;
+            font-size: 3.6rem;
+            line-height: 0.8;
+        }
+
+        &_text {
+            max-width: 60%;
+            padding: 1.4rem 0;
+        }
+    }
+
+    &__grid {
+        margin: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 40px;
+
+        &__item {
+            border-radius: 15px;
+            width: 295px;
+            height: 295px;
+            background-color: #90d23d;
+            padding: 35px 35px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &_name {
+                font-size: 3.2rem;
+                color: white;
+                line-height: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &_name::after {
+                width: 84px;
+                padding-top: 0.5rem; 
+                border-bottom: 5px solid white;
+                content: ""; 
+            }
+
+            &_info {
+                padding: 1rem 0;
+                color: white;
+            }
+
+            &__socials {
+                display: flex;
+                column-gap: 1rem;
+
+                &_one:hover {
+                    transform: scale(1.3);
+                    transition: 0.3s;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .filled {
+            background-image: url('../images/filled.png');
+        }
+
+        .cent-image {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// ======== / Section 4 ======== //
+
+// ======== Section 5 ======== //
+
+.section-5 {
+    height: 890px;
+    padding: 4rem 0;    
+    background-image: url('../images/rectangle.png');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+
+    &__topWrap {
+        text-align: center;
+        color: white;
+        max-width: 50%;
+
+        &_header {
+            font-size: 3.6rem;
+            padding: 1rem 0;
+            line-height: 0.8;
+        }
+
+        &_text { 
+            margin: 1.8rem 0;
+        }
+    }
+
+    &__midWrap {
+        min-width: 598px;
+        padding: 1.8rem 0;
+        display: flex;
+        column-gap: 80px;
+
+        &_img {
+           object-fit: none;
+        }
+    }
+
+    &__button {
+        @include main-button;
+        margin: 2.8rem 0;
+        font-size: 1.6rem;
+        line-height: 0.8;
+        padding: 1.35rem 3.05rem;
+    }
+
+    &__button:hover {
+        color: $color-text;
+    }
+}
+
+// ======== / Section 5 ======== //
+
+// ======== Section 6 ======== //
+
+.section-6 {
+    height: 1310px;
+    padding: 0 0 4rem;  
+
+    &__topWrap {
+        color: $color-text;
+        max-width: 83%;
+
+        &_header {
+            font-size: 3.6rem;
+            line-height: 0.8;
+            padding: 40px 0;
+        }
+
+        &_text {
+            max-width: 62.5%;
+        }
+    }
+
+    &__midWrap {
+        display: grid;
+        max-width: 1170px;
+        margin: 100px 0;
+        grid-template-columns: 500px 100px 500px 70px;
+        grid-template-rows: 415px 370px;
+
+        &_img {
+            grid-column: span 2;  
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &_img:nth-of-type(3) {
+            grid-column: 1;
+        }
+
+        &_img:nth-of-type(4) {
+            grid-column: span 3;
+        }
+    }
+
+    &__button {
+        background-color: $color-text;
+        font-size: 1.6rem;
+        border-radius: 15px;
+        line-height: 0.8;
+        padding: 1.35rem 3.4rem;
+    }
+
+    &__button:hover {
+        color: $color-main;
+    }
+}
+
+// ======== / Section 6 ======== //
+
+// ======== Section 7 ======== //
+
+.section-7 {
+    height: 660px;
+    display: flex;
+    align-items: center;
+
+    &__map {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__form {
+        background-color: white;
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 970px;
+        height: 530px;
+        padding: 35px 48px;
+
+        &__address {
+            max-width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &_img {
+                padding: 2.85rem 0;
+            }
+
+            &_text {
+                font-size: 1.35rem;
+                padding: 0.7rem 0;
+                max-width: 75%;
+                text-align: center;
+                color: $color-text;
+            }
+
+            &_button {
+                margin: 1.4rem 0;
+                @include main-button;
+                font-size: 1.6rem;
+                border-radius: 15px;
+                line-height: 0.8;
+                padding: 1.35rem 3.4rem;
+            }
+        
+            &_button:hover {
+                color: $color-text;
+            }
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+
+            input, textarea {
+                width: 100%;
+                line-height: 0.8;
+                font-size: 1.35rem;
+                padding: 1.3rem 1.2rem;
+                border: 1px soild #bebebe;
+                border-radius: 5px;
+                color: #6c6c6c;
+                margin: 1rem;
+            }
+
+            input:focus,
+            input:active,
+            textarea:focus,
+            textarea:active {
+                border-color: $color-main;
+            }
+
+            &_email {
+                flex: 1;
+            }
+
+            &_message {
+                height: 250px;
+                resize: none;
+            }
+
+            &_button {
+                width: 100%;
+                border-radius: 5px;
+                background-color: $color-text;
+                color: white;
+                margin: 1.3rem 0;
+                font-size: 1.6rem;
+                line-height: 0.8;
+                padding: 1.35rem 0;
+                cursor: pointer;
+                border: none;
+            }
+
+            &_button:hover {
+                color: $color-main;
+            }
+        }
+    }
+}
+
+// ======== / Section 7 ======== //
+
+// ======== Footer ======== //
+// ======== / Footer ======== //
+
