@@ -15,8 +15,7 @@ function countDays() {
         days = 30 - todays;
     } else {
         days = 31 - todays;}
-    //console.log(days);
-    DaysDisplay.textContent = days;
+    days >= 10 ? DaysDisplay.textContent = days : DaysDisplay.textContent = '0'+ days;
     }, 1000);
 }
 
@@ -28,8 +27,7 @@ function countHours() {
         if (hour === 0) {
             hoursLeft = 23;
         }
-        //console.log(hoursLeft);
-        HoursDisplay.textContent = hoursLeft;
+        hoursLeft >= 10 ? HoursDisplay.textContent = hoursLeft : HoursDisplay.textContent = '0'+ hoursLeft;
     }, 1000)
 }
 
@@ -41,9 +39,7 @@ function countMinutes() {
             if (minute === 0) {
                 minutesLeft = 0;
             }
-        //console.log(minutesLeft);
-        MinutesDisplay.textContent = minutesLeft;
-        
+        minutesLeft >= 10 ? MinutesDisplay.textContent = minutesLeft : nutesDisplay.textContent = '0'+ minutesLeft;    
     }, 1000)
 }
 
@@ -55,8 +51,7 @@ function countSeconds() {
         if (second === 0) {
             secondsLeft = 0;
         }
-        //console.log(secondsLeft);
-        SecondsDisplay.textContent = secondsLeft;
+        secondsLeft >= 10 ? SecondsDisplay.textContent = secondsLeft : SecondsDisplay.textContent = '0'+ secondsLeft;
     }, 1000)
 }
 
