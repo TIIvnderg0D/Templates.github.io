@@ -23,6 +23,8 @@ li {
 }
 
 .section-outer {
+  max-width: 100vw;
+  overflow: hidden;
   width: 100%;
   background: #ffffff;
   display: -webkit-box;
@@ -41,6 +43,7 @@ li {
 }
 
 .section-inner__header, .section-inner__section-2, .section-inner__section-3, .section-inner__section-4, .section-inner__section-5, .section-inner__section-6, .section-inner__footer {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,8 +89,6 @@ li {
 .header {
   width: 100%;
   height: 1150px;
-  background: url("../images/backpic.png") no-repeat;
-  background-position: 50% 0, 769px 0;
 }
 
 .header__topPanel {
@@ -267,6 +268,18 @@ li {
   max-width: 60%;
 }
 
+.header:after {
+  top: -8%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  content: "";
+  z-index: 1;
+  width: 120%;
+  height: 800px;
+  background-color: #4b4d4f;
+  position: absolute;
+}
+
 .section-1 {
   max-height: 485px;
   width: 100%;
@@ -424,10 +437,7 @@ li {
 .section-3 {
   height: 895px;
   padding: 2rem 0;
-  background-image: url("../images/rectangle.png");
-  background-position-x: 50%;
-  background-position-y: 45%;
-  background-repeat: no-repeat;
+  position: relative;
 }
 
 .section-3__textBlock {
@@ -480,6 +490,18 @@ li {
 .section-3__imageWrap_img {
   max-width: 335px;
   max-height: 335px;
+}
+
+.section-3:after {
+  top: 18%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  content: "";
+  z-index: 1;
+  width: 120%;
+  height: 580px;
+  background-color: #4b4d4f;
+  position: absolute;
 }
 
 .section-4 {
@@ -602,11 +624,8 @@ li {
 
 .section-5 {
   height: 890px;
-  padding: 4rem 0;
-  background-image: url("../images/rectangle.png");
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-repeat: no-repeat;
+  padding: 2rem 0;
+  position: relative;
 }
 
 .section-5__topWrap {
@@ -656,6 +675,18 @@ li {
   color: #242424;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.section-5:after {
+  top: 13%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  content: "";
+  z-index: 1;
+  width: 120%;
+  height: 580px;
+  background-color: #4b4d4f;
+  position: absolute;
 }
 
 .section-6 {
