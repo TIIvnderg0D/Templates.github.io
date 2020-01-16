@@ -1,4 +1,9 @@
 /* ======== Mixins ======== */
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: local("Roboto-Bold"), url("https://nomail.com.ua/files/woff/afa7a91dadd77b23634a0fdf18c148f3.woff") format("woff");
+}
+
 /* ======== / Mixins ======== */
 * {
   margin: 0;
@@ -89,6 +94,7 @@ li {
 .header {
   width: 100%;
   height: 1150px;
+  position: relative;
 }
 
 .header__topPanel {
@@ -102,6 +108,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
+  z-index: 2;
 }
 
 .header__topPanel__logo_img {
@@ -144,6 +151,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 80px;
+  z-index: 2;
 }
 
 .header__countdown__item {
@@ -167,6 +175,12 @@ li {
   line-height: 1.1;
 }
 
+.header__image {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+}
+
 .header__botPanel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,22 +194,24 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 2;
 }
 
 .header__botPanel__greetWrap {
   width: 530px;
   max-width: 50%;
   padding-top: 290px;
+  color: #242424;
 }
 
 .header__botPanel__greetWrap_header {
   font-size: 3.6rem;
-  font-weight: 700;
+  font-size: 3.6rem;
+  font-family: 'Roboto-Bold';
   line-height: 0.8;
 }
 
 .header__botPanel__greetWrap_para {
-  color: #242424;
   margin-top: 1.55rem;
 }
 
@@ -218,6 +234,7 @@ li {
   text-align: center;
   padding-bottom: 1.35rem;
   color: #242424;
+  font-family: 'Roboto-Bold';
 }
 
 .header__botPanel__signForm__form {
@@ -254,6 +271,7 @@ li {
   padding: 1.3rem 1.2rem;
   background-color: #90d23d;
   cursor: pointer;
+  font-family: 'Roboto-Bold';
 }
 
 .header__botPanel__signForm__form_button:hover {
@@ -315,6 +333,7 @@ li {
 .section-1__listWrapper__item_name {
   font-size: 2.5rem;
   margin: 1.3rem 0;
+  font-family: 'Roboto-Bold';
 }
 
 .section-1__listWrapper__item_img {
@@ -381,6 +400,7 @@ li {
   font-size: 2.1rem;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  font-family: 'Roboto-Bold';
 }
 
 .section-2__table__header_data {
@@ -452,10 +472,11 @@ li {
 
 .section-3__textBlock_header {
   color: white;
-  font-size: 3.6rem;
-  line-height: 0.8;
   margin: 1rem 0;
   text-align: end;
+  font-size: 3.6rem;
+  font-family: 'Roboto-Bold';
+  line-height: 0.8;
 }
 
 .section-3__textBlock_text {
@@ -524,6 +545,7 @@ li {
 .section-4__topPanel_header {
   padding: 1.4rem 0;
   font-size: 3.6rem;
+  font-family: 'Roboto-Bold';
   line-height: 0.8;
 }
 
@@ -572,6 +594,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: 'Roboto-Bold';
 }
 
 .section-4__grid__item_name::after {
@@ -623,7 +646,8 @@ li {
 }
 
 .section-5 {
-  height: 890px;
+  max-height: 890px;
+  height: 850px;
   padding: 2rem 0;
   position: relative;
 }
@@ -635,8 +659,9 @@ li {
 }
 
 .section-5__topWrap_header {
-  font-size: 3.6rem;
   padding: 1rem 0;
+  font-size: 3.6rem;
+  font-family: 'Roboto-Bold';
   line-height: 0.8;
 }
 
@@ -701,8 +726,10 @@ li {
 
 .section-6__topWrap_header {
   font-size: 3.6rem;
-  line-height: 0.8;
   padding: 40px 0;
+  font-size: 3.6rem;
+  font-family: 'Roboto-Bold';
+  line-height: 0.8;
 }
 
 .section-6__topWrap_text {
