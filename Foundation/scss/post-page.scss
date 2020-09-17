@@ -33,12 +33,12 @@
 // ========== Header ========= //
 
 .header-p {
-    background: url("../images/centenario.png"),
-                      url("../images/gt86.png"); 
-    background-repeat: no-repeat, no-repeat;
-    background-position: -47.5% 0, 100% 0;
     height: 348px;
-
+    background: url("../images/centenario.png"),
+                rgba(128, 128, 128, 0.493); 
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 30%, 0% 0%;
+    
     i {
         font-size: 1.5em;
     }

@@ -34,12 +34,11 @@
 // ========== Header ========= //
 
 .header {
-    
     height: 826px;
     background: url("../images/centenario.png"),
-                      url("../images/gt86.png"); 
+                    rgba(128, 128, 128, 0.493); 
     background-repeat: no-repeat, no-repeat;
-    background-position: -47.5% 0, 100% 0;
+    background-position: 50% 30%, 0% 0%;
 
     i {
         font-size: 1.5em;
@@ -406,9 +405,9 @@
 
     @media screen and (min-width: $screen-desktop) and (max-width: $screen-big-desktop) {
         background: url("../images/centenario.png"),
-                      url("../images/gt86.png"); 
+                      rgba(128, 128, 128, 0.493); 
         background-repeat: no-repeat, no-repeat;
-        background-position: 0 0, 150% 0;
+        background-position: 50% 30%, 0% 0%;
     }
 
     @media screen and (min-width: $screen-phone) and (max-width: $screen-desktop) {
